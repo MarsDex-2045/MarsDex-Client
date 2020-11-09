@@ -1,4 +1,4 @@
-# Mars web project group XX
+# Mars web project group 23
 
 ## Before you start
 * Search for the string XX and replace it with the group number.
