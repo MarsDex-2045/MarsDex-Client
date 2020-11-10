@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="author" name="MarsDex">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/solid.css" integrity="sha384-yo370P8tRI3EbMVcDU+ziwsS/s62yNv3tgdMqDSsRSILohhnOrDNl142Df8wuHA+" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/fontawesome.css" integrity="sha384-ijEtygNrZDKunAWYDdV3wAZWvTHSrGhdUfImfngIba35nhQ03lSNgfTJAKaGFjk2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/company/header.css"/>
+    <title>MarsDex | Add Resource</title>
+</head>
+<body>
+    <header>
+        <h1><span id="companyName"><em class="dropCap">M</em>ars<em class="dropCap">D</em>ex</span></h1>
+
+        <nav>
+            <ul>
+                <li>
+                    <span><i class="fas fa-home"></i></span><a href="#">Home</a>
+                </li>
+                <li>
+                    <span><i class="fas fa-cubes"></i></span><a href="#">Resources</a>
+                </li>
+                <li>
+                    <span><i class="fas fa-city"></i></span><a href="#">Colonies</a>
+                </li>
+                <li>
+                    <span><i class="fas fa-shuttle-van"></i></span><a href="#">Shipping</a>
+                </li>
+                <li>
+                    <span><i class="fas fa-map-marked-alt"></i></span><a href="#">Global Map</a>
+                </li>
+                <li>
+                    <span><i class="fas fa-info"></i></span><a href="#">About Us</a>
+                </li>
+                <li>
+                    <span><i class="fas fa-comment"></i></span><a href="#">Contact</a>
+                </li>
+                <li>
+                    <span><i class="fas fa-bell"></i></span><a href="#">Notifications</a>
+                </li>
+                <li id="company-button">
+                    <img src="#" title="Company-Logo" alt="Company-Logo">
+                    <a href="#">Company</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Add Resource</h2>
+
+        <form action="#" method="post" id="resourceForm">
+
+            <label for="resourceExist">Resource Already Exist?</label>
+            <input type="checkbox" id="resourceExist" title="resourceExist"/>
+
+            <label for="resourceName">Resource Name</label>
+            <input title="resourceName" required type="text" id="resourceName">
+
+            <label for="resourceAmount">Resource Amount</label>
+            <input title="resourceAmount" required type="text" id="resourceAmount">
+
+            <label>
+                <select>
+                    <option selected value="KG">KG</option>
+                    <option value="Liter">Liter</option>
+                </select>
+            </label>
+
+            <div id="onlyNewResource">
+                <label for="resourceImage">Select Image</label>
+                <input type="file" id="resourceImage" name="resourceImage" required>
+            </div>
+
+            <input type="submit" value="Add Resource" title="Add Resource">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; Howest MarsDex 2020</p>
+    </footer>
+
+</body>
+</html>

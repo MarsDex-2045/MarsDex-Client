@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="author" name="MarsDex">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/solid.css" integrity="sha384-yo370P8tRI3EbMVcDU+ziwsS/s62yNv3tgdMqDSsRSILohhnOrDNl142Df8wuHA+" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/fontawesome.css" integrity="sha384-ijEtygNrZDKunAWYDdV3wAZWvTHSrGhdUfImfngIba35nhQ03lSNgfTJAKaGFjk2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="../../assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/company/header.css"/>
+    <title>MarsDex | Colonies</title>
+</head>
+<body>
+
+    <header>
+        <h1><span id="companyName"><em class="dropCap">M</em>ars<em class="dropCap">D</em>ex</span></h1>
+
+        <nav>
+            <ul>
+                <li>
+                    <span><i class="fas fa-home"></i></span><a href="#">Home</a>
+                </li>
+                <li>
+                    <span><i class="fas fa-cubes"></i></span><a href="#">Resources</a>
+                </li>
+                <li>
+                    <span><i class="fas fa-city"></i></span><a href="#">Colonies</a>
+                </li>
+                <li>
+                    <span><i class="fas fa-shuttle-van"></i></span><a href="#">Shipping</a>
+                </li>
+                <li>
+                    <span><i class="fas fa-map-marked-alt"></i></span><a href="#">Global Map</a>
+                </li>
+                <li>
+                    <span><i class="fas fa-info"></i></span><a href="#">About Us</a>
+                </li>
+                <li>
+                    <span><i class="fas fa-comment"></i></span><a href="#">Contact</a>
+                </li>
+                <li>
+                    <span><i class="fas fa-bell"></i></span><a href="#">Notifications</a>
+                </li>
+                <li id="company-button">
+                    <img src="#" title="Company-Logo" alt="Company-Logo">
+                    <a href="#">Company</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Colonies</h2>
+        <form>
+            <label for="searchColonies"></label>
+            <input type="text" id="searchColonies" name="search" placeholder="Search for a colony ...">
+        </form>
+
+        <form>
+            <label for="filtersColonies"></label>
+            <select name="filters" id="filtersColonies">
+                <option value="name">Name</option>
+                <option value="location">Location</option>
+                <option value="resources">Resources</option>
+            </select>
+        </form>
+
+        <!-- fill div with articles and colonies -->
+        <div id="coloniesResult">
+
+        </div>
+
+        <div id="buttonResult">
+            <a href="#">Previous Page</a>
+            <p id="pageNumber">1/2</p>
+            <a href="#">Next Page</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; Howest MarsDex 2020</p>
+    </footer>
+</body>
+</html>
