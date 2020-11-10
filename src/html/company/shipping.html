@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta content="author" name="MarsDex">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <title>MarsDex | Colonies</title>
-
-    <link rel="stylesheet" href="../assets/css/reset.css"/>
+    <link rel="stylesheet" href="../../assets/css/reset.css"/>
+    <title>MarsDex</title>
 </head>
 <body>
 
@@ -72,23 +70,24 @@
     </header>
 
     <main>
-        <h1>Colonies</h1>
+        <h1>Shipping</h1>
         <form>
-            <label for="searchColonies"></label>
-            <input type="text" id="searchColonies" name="search" placeholder="Search for a colony ...">
+            <label for="searchShipping"></label>
+            <input type="text" id="searchShipping" name="search" placeholder="Search for a shipping ...">
         </form>
 
         <form>
-            <label for="filtersColonies"></label>
-            <select name="filters" id="filtersColonies">
-                <option value="name">Name</option>
-                <option value="location">Location</option>
-                <option value="resources">Resources</option>
+            <label for="filtersShipping"></label>
+            <select name="filters" id="filtersShipping">
+                <option value="id">Shipping ID</option>
+                <option value="status">Status</option>
+                <option value="shortest">Shortest</option>
+                <option value="longest">Longest</option>
             </select>
         </form>
 
-        <!-- fill div with articles and colonies -->
-        <div id="coloniesResult">
+        <!-- fill div with articles and shipping's -->
+        <div id="shippingResult">
 
         </div>
 
@@ -102,5 +101,6 @@
     <footer>
         <p>&copy; Howest MarsDex 2020</p>
     </footer>
+
 </body>
 </html>
