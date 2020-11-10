@@ -6,10 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="../../assets/css/reset.css"/>
-    <title>MarsDex | Colonies</title>
+    <title>MarsDex | Edit Resource</title>
 </head>
 <body>
-
     <header>
         <div>
             <img src="#" title="Application-Logo" alt="Application-Logo">
@@ -71,35 +70,29 @@
     </header>
 
     <main>
-        <h2>Colonies</h2>
-        <form>
-            <label for="searchColonies"></label>
-            <input type="text" id="searchColonies" name="search" placeholder="Search for a colony ...">
+        <h2>Edit Resource</h2>
+
+        <form action="#" method="post" id="resourceForm">
+            <label for="resourceName">Resource Name</label>
+            <input title="resourceName" required type="text" id="resourceName" value="X152-476">
+
+            <label for="resourceAmount">Resource Amount </label>
+            <input title="resourceAmount" required type="text" id="resourceAmount">
+
+            <label>
+                <select>
+                    <option selected value="KG">KG</option>
+                    <option value="Liter">Liter</option>
+                </select>
+            </label>
+
+            <input type="submit" value="Save Changes" title="Save Changes">
         </form>
-
-        <form>
-            <label for="filtersColonies"></label>
-            <select name="filters" id="filtersColonies">
-                <option value="name">Name</option>
-                <option value="location">Location</option>
-                <option value="resources">Resources</option>
-            </select>
-        </form>
-
-        <!-- fill div with articles and colonies -->
-        <div id="coloniesResult">
-
-        </div>
-
-        <div id="buttonResult">
-            <a href="#">Previous Page</a>
-            <p id="pageNumber">1/2</p>
-            <a href="#">Next Page</a>
-        </div>
     </main>
 
     <footer>
         <p>&copy; Howest MarsDex 2020</p>
     </footer>
+
 </body>
 </html>
