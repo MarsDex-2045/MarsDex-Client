@@ -5,7 +5,7 @@
     <meta content="author" name="MarsDex">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>MarsDex | Contact</title>
+    <title>MarsDex | Colonies</title>
 
     <link rel="stylesheet" href="../assets/css/reset.css"/>
 </head>
@@ -54,13 +54,13 @@
                 </li>
 
                 <li>
-                    <img src="#" title="Notifications-Logo" alt="Notifications-Logo">
-                    <a href="#">Notifications</a>
+                    <img src="#" title="Contact-Logo" alt="Contact-Logo">
+                    <a href="#">Contact</a>
                 </li>
 
                 <li>
-                    <img src="#" title="Contact-Logo" alt="Contact-Logo">
-                    <a href="#">Contact</a>
+                    <img src="#" title="Notifications-Logo" alt="Notifications-Logo">
+                    <a href="#">Notifications</a>
                 </li>
 
                 <li id="company-button">
@@ -72,53 +72,36 @@
     </header>
 
     <main>
-        <div id="contactUsDiv">
+        <h1>Colonies</h1>
+        <form>
+            <label for="searchColonies"></label>
+            <input type="text" id="searchColonies" name="search" placeholder="Search for a colony ...">
+        </form>
 
-            <h1>Contact us</h1>
+        <form>
+            <label for="filtersColonies"></label>
+            <select name="filters" id="filtersColonies">
+                <option value="name">Name</option>
+                <option value="location">Location</option>
+                <option value="resources">Resources</option>
+            </select>
+        </form>
 
-            <form action="#" method="post" id="contactUsForm">
-
-                <label for="contactUsFullName">E-mail</label>
-                <input autofocus title="fullName" required type="text" id="contactUsFullName">
-
-                <label for="contactUsCompanyName">Company Name</label>
-                <input title="companyName" required type="text" id="contactUsCompanyName">
-
-                <label for="contactUsPhoneNumber">Phone Number</label>
-                <input title="companyPhoneNumber" required type="tel" id="contactUsPhoneNumber">
-
-                <label for="contactUsEmail">E-mail</label>
-                <input title="companyEmail" required type="email" id="contactUsEmail">
-
-                <label for="contactUsSubject">E-mail</label>
-                <input title="companySubject" required type="text" id="contactUsSubject">
-
-                <label for="contactUsMessage">Message</label>
-                <textarea required id="contactUsMessage" name="contactUsMessage"></textarea>
-
-                <input type="submit" value="Send" title="Send">
-
-            </form>
+        <!-- fill div with articles and colonies -->
+        <div id="coloniesResult">
 
         </div>
 
-        <div id="marsDexInformation">
-            <h1>MarsDex</h1>
-
-            <ul>
-                <li>Location Adres</li>
-                <li>Colony Number/Name</li>
-                <li>Phone Number</li>
-                <li>E-mail</li>
-            </ul>
-
-            <img src="#" title="MarsDex-Location" alt="MarsDex-Location">
+        <div id="buttonResult">
+            <a href="#">Previous Page</a>
+            <p id="pageNumber">1/2</p>
+            <a href="#">Next Page</a>
         </div>
+
     </main>
 
     <footer>
         <p>&copy; Howest MarsDex 2020</p>
     </footer>
-
 </body>
 </html>
