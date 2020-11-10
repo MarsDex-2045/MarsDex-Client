@@ -68,3 +68,13 @@ header nav ul i {
     color: var(--fill);
 }
 
+#company-button {
+    background-color: var(--fill);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#company-button a {
+    color: #ffffff;
+}
+
