@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>MarsDex | Login Company</title>
+    <title>MarsDex | Register Company</title>
 
     <link rel="stylesheet" href="../assets/css/reset.css"/>
 </head>
@@ -51,22 +51,28 @@
 
 <main>
 
-    <h1>Login</h1>
+    <h1>Register</h1>
     <h2>Company</h2>
 
-    <form action="#" method="post" id="LoginForm">
+    <form action="#" method="post" id="RegisterForm">
 
-        <label for="LoginEmail">E-mail</label>
-        <input autofocus title="email" required type="text" id="LoginEmail" placeholder="someone@outmars.com">
+        <label for="RegisterEmail">E-mail</label>
+        <input autofocus title="email" required type="text" id="RegisterEmail" placeholder="someone@outmars.com">
 
-        <label for="LoginPassword">Password</label>
-        <input title="password" required type="password" id="LoginPassword">
+        <label for="RegisterCompanyName">Company Name</label>
+        <input title="text" required type="text" id="RegisterCompanyName">
 
-        <input type="submit" value="Login" title="Login">
+        <label for="RegisterPassword">Password</label>
+        <input title="password" required type="password" id="RegisterPassword">
+
+        <label for="RegisterPasswordRepeat">Repeat Password</label>
+        <input title="password" required type="password" id="RegisterPasswordRepeat">
+
+        <input type="submit" value="Register" title="Register">
 
     </form>
 
-    <a href="#">I don't have an account yet.</a>
+    <a href="#">I already have an account.</a>
 
 </main>
 
