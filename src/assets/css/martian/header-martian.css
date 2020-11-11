@@ -1,0 +1,35 @@
+
+header nav ul li {
+    margin: 0 20px 0 20px;
+    padding: 10px 0 10px 0;
+}
+
+header nav ul li a {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: var(--fill);
+    margin-left: 10px;
+}
+
+header nav ul li > span {
+    font-size: 1.5rem;
+}
+
+#register-button, #login-button {
+    background-color: var(--fill);
+    border-radius: 10px;
+    padding: 20px 5px;
+}
+
+.white {
+    color: #FFFFFF;
+}
+
+header nav ul li a:hover {
+    background-color: var(--fill);
+    color: #ffffff;
+    border-radius: 7px;
+    transition: 0.3s all ease-in;
+}
+
