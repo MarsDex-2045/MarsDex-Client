@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,17 +10,28 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/solid.css" integrity="sha384-yo370P8tRI3EbMVcDU+ziwsS/s62yNv3tgdMqDSsRSILohhnOrDNl142Df8wuHA+" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/fontawesome.css" integrity="sha384-ijEtygNrZDKunAWYDdV3wAZWvTHSrGhdUfImfngIba35nhQ03lSNgfTJAKaGFjk2" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="../../assets/css/reset.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/css/martian/header.css"/>
-    <title>MarsDex | Colony Details</title>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/company/header.css"/>
+
+    <title>MarsDex | Global Maps</title>
 </head>
 <body>
+
     <header>
         <h1><span id="companyName"><em class="dropCap">M</em>ars<em class="dropCap">D</em>ex</span></h1>
 
         <nav>
             <ul>
                 <li>
+                    <span><i class="fas fa-home"></i></span><a href="company-overview.html">Home</a>
+                </li>
+                <li>
+                    <span><i class="fas fa-cubes"></i></span><a href="#">Resources</a>
+                </li>
+                <li>
                     <span><i class="fas fa-city"></i></span><a href="colonies.html">Colonies</a>
+                </li>
+                <li>
+                    <span><i class="fas fa-shuttle-van"></i></span><a href="shipping.html">Shipping</a>
                 </li>
                 <li>
                     <span><i class="fas fa-map-marked-alt"></i></span><a href="global-map.html">Global Map</a>
@@ -31,54 +42,30 @@
                 <li>
                     <span><i class="fas fa-comment"></i></span><a href="contact.html">Contact</a>
                 </li>
-                <li id="register-button">
-                    <span><i class="fas fa-user-plus"></i></span><a href="register.html">Register</a>
+                <li>
+                    <span><i class="fas fa-bell"></i></span><a href="#">Notifications</a>
                 </li>
-                <li id="login-button">
-                    <span><i class="fas fa-sign-in-alt"></i></span><a href="login.html">Login</a>
+                <li id="company-button">
+                    <img src="#" title="Company-Logo" alt="Company-Logo">
+                    <a href="#">Company</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h2 id="colony-title">Temporary title, should be Colony name</h2>
-        <section id="graphs">
-            <h2>Global available resources</h2>
+        <section>
+            <h2>Colonies overview</h2>
             <div>
-                <img src="#" alt="diagram">
-                <ul id="resources1">
-                    <!-- fill with resources -->
-                </ul>
-                <img src="#" alt="diagram">
-                <ul id="resources2">
-                    <!-- fill with resources -->
-                </ul>
-            </div>
-            <img src="#" alt="graph">
-        </section>
-        <section id="resources">
-            <h2>Resources in <span id="colony-name">temporary</span></h2>
-            <form>
-                <label for="search"></label>
-                <input type="text" id="search" name="search" placeholder="Search for a colony ...">
-            </form>
-            <form>
-                <label for="filters"></label>
-                <select name="filters" id="filters">
-                    <option value="name">Name</option>
-                    <option value="location">Location</option>
-                    <option value="resources">Resources</option>
-                </select>
-            </form>
-            <div>
-                <!-- fill with articles of resources -->
+                <!-- add articles with each colony + information -->
             </div>
         </section>
+        <img src="#" alt="map">
     </main>
 
     <footer>
         <p>&copy; Howest MarsDex 2020</p>
     </footer>
+
 </body>
 </html>
