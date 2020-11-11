@@ -72,7 +72,7 @@ form input[value] {
     letter-spacing: 0.15em;
     cursor: pointer;
     color: var(--background);
-    box-shadow: 1px var(--accent);;
+    box-shadow: 1px var(--accent);
     transition: transform 250ms ease-in-out;
 }
 

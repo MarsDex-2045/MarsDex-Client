@@ -88,16 +88,13 @@ section > h2 div, #overview-page div nav ul li div, #settings-page div h3 div {
 #settings-page div h3 {
     font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
     font-size: 1.3em;
-    margin: 0 0 3em 1em;
+    margin: 3em 0 1em 1em;
     color: #FFFFFF;
     width: max-content;
     border-bottom: 2px solid #ffffff;
     padding-bottom: 4px;
 }
 
-#settings-page div h3 {
-    margin: 3em 0 1em 1em;
-}
 
 #settings-page div form {
     margin: 0 0 4em 1em;
