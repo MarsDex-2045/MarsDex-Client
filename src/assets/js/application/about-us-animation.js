@@ -1,10 +1,12 @@
 "use strict";
 
+// Source: https://css-tricks.com/animate-a-container-on-mouse-over-using-perspective-and-transform/
+
 document.addEventListener("DOMContentLoaded", initAnimation);
 
 function initAnimation() {
     document.querySelectorAll("main article").forEach(container => {
-        let inner = container.querySelector('img');
+        const inner = container.querySelector('img');
         // Mouse
         const mouse = {
             _x: 0,
@@ -33,48 +35,38 @@ function initAnimation() {
         //----------------------------------------------------
 
         let counter = 0;
-        let refreshRate = 2;
-        let isTimeToUpdate = function() {
-            return counter++ % refreshRate === 0;
+        const refreshRate = 2;
+        const isTimeToUpdate = function() {
+            counter++;
+            return counter % refreshRate === 0;
         };
 
-        //----------------------------------------------------
-
-        let onMouseEnterHandler = function(event) {
-            console.log("Test")
-            update(event);
-        };
-
-        let onMouseLeaveHandler = function() {
-            inner.style = "rotateX(0deg) rotateY(0deg)";
-        };
-
-        let onMouseMoveHandler = function(event) {
-            if (isTimeToUpdate()) {
-                update(event);
-            }
-        };
-
-        //----------------------------------------------------
-
-        let update = function(event) {
-            mouse.updatePosition(event);
-            updateTransformStyle(
-                (mouse.y / container.offsetHeight / 2).toFixed(2),
-                (mouse.x / container.offsetWidth / 2).toFixed(2)
-            );
-        };
-
-        let updateTransformStyle = function(x, y) {
-            let style = "rotateX(" + x + "deg) rotateY(" + y + "deg)";
+        const updateTransformStyle = function(x, y) {
+            const style = `rotateX(${x}deg) rotateY(${y}deg)`;
             inner.style.transform = style;
-            inner.style.webkitTransform = style;
             inner.style.mozTranform = style;
             inner.style.msTransform = style;
             inner.style.oTransform = style;
         };
 
-        //--------------------------------------------------------
+        const update = function(event) {
+            mouse.updatePosition(event);
+            updateTransformStyle((mouse.y / container.offsetHeight / 2).toFixed(2), (mouse.x / container.offsetWidth / 2).toFixed(2));
+        };
+
+        const onMouseEnterHandler = function(event) {
+            update(event);
+        };
+
+        const onMouseMoveHandler = function(event) {
+            if (isTimeToUpdate()) {
+                update(event);
+            }
+        };
+
+        const onMouseLeaveHandler = function() {
+            inner.style = "rotateX(0deg) rotateY(0deg)";
+        };
 
         container.onmousemove = onMouseMoveHandler;
         container.onmouseleave = onMouseLeaveHandler;
