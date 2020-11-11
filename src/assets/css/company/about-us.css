@@ -29,7 +29,7 @@ main article:nth-child(even) {
 }
 
 article div {
-    width: 60%;
+    width: 75%;
     margin-top: auto;
     margin-bottom: auto;
 }
