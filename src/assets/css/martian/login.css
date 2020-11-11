@@ -1,0 +1,78 @@
+/* BODY */
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 1rem;
+}
+
+/* MAIN */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+main form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main h2 {
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    padding-top: 0.8em;
+    margin-bottom: 0.2em;
+}
+
+main h3 {
+    font-size: 2rem;
+    font-weight: lighter;
+    padding-bottom: 1em;
+}
+
+#loginEmail, #loginPassword {
+    height: 1.5em;
+    margin-bottom: 10px;
+    outline: none;
+    border: 2px solid #C0C0C0;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+#loginPassword {
+    margin-bottom: 0.9em;
+}
+
+form input[value] {
+    width: 100%;
+    height: 1.7em;
+    outline: none;
+    background-color: var(--accent);
+    border: 2px solid var(--accent);
+    border-radius: 7px;
+    font-size: 1.5rem;
+    letter-spacing: 0.15em;
+    cursor: pointer;
+    color: var(--background);
+}
+
+main a {
+    padding-top: 0.8em;
+    color: #C0C0C0;
+    text-decoration: none;
+}
+
+/* FOOTER */
+
+footer {
+    position:fixed;bottom:0;
+    width:100%;
+    display:block;
+}
