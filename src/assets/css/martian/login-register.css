@@ -47,6 +47,8 @@ main h3 {
 }
 
 .formBox {
+    display: flex;
+    align-items: center;
     padding: 3px 0;
     margin: 8px 0;
     border: none;
