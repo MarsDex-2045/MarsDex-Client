@@ -10,7 +10,6 @@ main {
     display: grid;
     grid-template-columns: auto;
     margin: 3em 6em 3em 6em;
-    perspective: 100px;
 }
 
 main article {
@@ -21,6 +20,7 @@ main article {
     border-radius: 1em;
     margin-bottom: 2em;
     box-shadow: 2px 2px 50px #b5d0ff;
+    perspective: 100px;
 }
 
 main article:nth-child(odd) {
