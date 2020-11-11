@@ -1,0 +1,54 @@
+/* BODY */
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 1rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto;
+    margin: 3em 6em 3em 6em;
+}
+
+main article {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    justify-content: space-evenly;
+    border-radius: 15px;
+    margin-bottom: 2em;
+}
+
+main article:nth-child(odd) {
+    background: linear-gradient(90deg, #b5d0ff 10%, #92FE9D 100%);
+}
+
+main article:nth-child(even) {
+    background: linear-gradient(90deg, #92FE9D 12%, #b5d0ff 100%);
+}
+
+article div {
+    width: 60%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+article img {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+div h2 {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    font-size: 2.8rem;
+    color: var(--fill);
+}
+
+div p {
+    letter-spacing: 0.1em;
+    font-size: 1.2rem;
+    color: black;
+    margin-bottom: 0.3em;
+}
