@@ -40,14 +40,109 @@ header nav ul {
     justify-content: space-around;
 }
 
-header nav ul li a {
-    padding: 20px 3px 20px 5px;
+header nav > ul li>  p {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    font-size: 1.1em;
+    padding: 10px 7px;
+    color: #FFFFFF;
+    background-color: var(--fill);
+    border: 2px solid var(--fill);
+    border-radius: 10px;
 }
 
-header nav ul li a span, header nav ul li a div {
+header nav > ul li > p:hover {
+    color: var(--fill);
+    background-color: var(--accent);
+    cursor: pointer;
+    transition: 0.3s all ease-in;
+}
+
+header nav > ul li a, .heading {
+    padding: 5px;
+}
+
+header nav > ul li a span, header nav > ul li a div, .heading span, .heading div, .dropdown-content > div ul li span, .dropdown-content > div ul li div, .resourcesDropDown div, .resourcesDropDown span {
     display: inline;
 }
 
-header nav ul li a div {
+header nav > ul li a div, .heading div, .dropdown-content > div ul li div, .resourcesDropDown div {
     margin-left: 10px;
+}
+
+/* DROPDOWNS */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content > div {
+    display: block;
+    background-color: #336562;
+    border-top: 2px solid #ffffff;
+    padding-bottom: 15px;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-align: center;
+}
+
+.dropdown-content > div p {
+    font-size: 1em;
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    color: #FFFFFF;
+    margin: 5px auto 0 auto;
+
+}
+
+.dropdown-content > div ul {
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.dropdown-content > div ul li {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    color: #FFFFFF;
+    text-align: left;
+    margin: 5px auto 5px 0;
+}
+
+.dropdown-content > div .details {
+    background-color: var(--accent);
+    color: var(--fill);
+    padding: 3px 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: min-content;
+    border: 2px solid var(--fill);
+}
+
+.dropdown-content > div .details:hover {
+    background-color: var(--fill);
+    color: var(--accent);
+    border-color: #FFFFFF;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--fill);
+    color: #ffffff;
+    border-radius: 10px 10px 0 0;
+}
+
+.dropdown .resourcesDropDown {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1em;
+    margin-top: 10px;
 }

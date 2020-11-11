@@ -25,8 +25,16 @@
                 <li>
                     <a href="company-overview.html"><span class="fas fa-home"></span><div>Home</div></a>
                 </li>
-                <li id="resources">
-                    <a href="#"><span class="fas fa-cubes"></span><div>Resources</div></a>
+                <li class="dropdown">
+                    <div class="heading dropbtn"><span class="fas fa-cubes"></span><div>Resources</div></div>
+                    <div class="dropdown-content">
+                        <div>
+                            <a href="my-resources.html" class="resourcesDropDown"><span class="fas fa-user-shield"></span><div>my resources</div></a>
+                        </div>
+                        <div>
+                            <a href="all-resources.html" class="resourcesDropDown"><span class="fas fa-globe-europe"></span><div>all resources</div></a>
+                        </div>
+                    </div>
                 </li>
                 <li>
                     <a href="colonies.html"><span class="fas fa-city"></span><div>Colonies</div></a>
@@ -43,11 +51,39 @@
                 <li>
                     <a href="contact.html"><span class="fas fa-comment"></span><div>Contact</div></a>
                 </li>
-                <li>
-                    <a href="#"><span class="fas fa-bell"></span><div>Notifications</div></a>
+                <li class="dropdown">
+                    <div class="heading dropbtn"><span class="fas fa-bell"></span><div>Notifications</div></div>
+                    <div class="dropdown-content">
+                        <!-- these are examples, please add correct notifications -->
+                        <div>
+                            <p>Resources Low</p>
+                            <ul>
+                                <li><span class="fas fa-cubes"></span><div>Gold</div></li>
+                                <li><span class="fas fa-box-open"></span><div>10kg left</div></li>
+                            </ul>
+                            <a href="#" class="details">details</a>
+                        </div>
+                        <div>
+                            <p>Resources Low</p>
+                            <ul>
+                                <li><span class="fas fa-cubes"></span><div>Gold</div></li>
+                                <li><span class="fas fa-box-open"></span><div>10kg left</div></li>
+                            </ul>
+                            <a href="#" class="details">details</a>
+                        </div>
+                        <div>
+                            <p>Resources Low</p>
+                            <ul>
+                                <li><span class="fas fa-cubes"></span><div>Gold</div></li>
+                                <li><span class="fas fa-box-open"></span><div>10kg left</div></li>
+                            </ul>
+                            <a href="#" class="details">details</a>
+                        </div>
+                        <!-- end of example -->
+                    </div>
                 </li>
                 <li id="company-button">
-                    <a href="#"><img src="#" title="Company-Logo" alt="Company-Logo">Company</a>
+                    <p>Company</p>
                 </li>
             </ul>
         </nav>

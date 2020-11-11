@@ -53,7 +53,7 @@ section > h2 {
 
 /* OVERVIEW */
 
-section > h2 span, section > h2 div, #overview-page div nav ul li span, #overview-page div nav ul li div, #settings-page div h3 span, #settings-page div h3 div {
+section > h2 span, section > h2 div, #overview-page div nav ul li span, #overview-page div nav ul li div, #settings-page div h3 span, #settings-page div h3 div, #settings-page #privacy-policy span, #settings-page #privacy-policy div {
     display: inline;
 }
 
@@ -88,8 +88,82 @@ section > h2 div, #overview-page div nav ul li div, #settings-page div h3 div {
 #settings-page div h3 {
     font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
     font-size: 1.3em;
+    margin: 0 0 3em 1em;
+    color: #FFFFFF;
+    width: max-content;
+    border-bottom: 2px solid #ffffff;
+    padding-bottom: 4px;
+}
+
+#settings-page div h3 {
     margin: 3em 0 1em 1em;
 }
 
+#settings-page div form {
+    margin: 0 0 4em 1em;
+}
+
+#settings-page div form div {
+    margin-bottom: 1em;
+}
+
+#settings-page div form input {
+    margin-right: 15px;
+}
+
+#settings-page div form div label {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    font-size: 1.3em;
+    text-transform: capitalize;
+    margin-right: 40px;
+}
+
+#settings-page div form div label:hover {
+    cursor: pointer;
+    color: var(--accent);
+    transition: 0.3s all ease-in;
+}
+
+/* ACCOUNT */
+
+#account-page form {
+    width: 90%;
+    margin: auto;
+}
+
+#account-page form label {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    font-size: 1.1em;
+    text-transform: capitalize;
+    display: block;
+    margin: 15px 0 5px 0;
+}
+
+#account-page form input {
+    width: 100%;
+    border-radius: 10px;
+    padding: 5px 0 5px 10px;
+    border: none;
+}
+
+#account-page #save {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    font-size: 1em;
+    color: var(--fill);
+    background-color: #FFFFFF;
+    border: none;
+    margin-top: 25px;
+    width: max-content;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#account-page #save:hover {
+    border: 1px solid #ffffff;
+    background-color: var(--fill);
+    color: #ffffff;
+    cursor: pointer;
+    transition: 0.3s all ease-in;
+}
 
 

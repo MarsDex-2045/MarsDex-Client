@@ -1,10 +1,9 @@
 
-header nav ul li {
-    margin: 0 20px 0 20px;
-    padding: 10px 0 10px 0;
+header nav > ul li {
+    margin: 20px;
 }
 
-header nav ul li a {
+header nav > ul li a {
     font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
     font-size: 1.3rem;
     text-decoration: none;
@@ -12,21 +11,28 @@ header nav ul li a {
     margin-left: 10px;
 }
 
-header nav ul li > span {
+header nav > ul li > span {
     font-size: 1.5rem;
 }
 
-#register-button, #login-button {
+#register-button a, #login-button a {
     background-color: var(--fill);
     border-radius: 10px;
-    padding: 20px 5px;
+    border: 3px solid var(--fill);
+    padding: 10px;
+}
+
+#register-button a:hover, #login-button a:hover {
+    background-color: var(--accent);
+    color: var(--fill);
+    cursor: pointer;
 }
 
 .white {
     color: #FFFFFF;
 }
 
-header nav ul li a:hover {
+header nav > ul li a:hover {
     background-color: var(--fill);
     color: #ffffff;
     border-radius: 7px;
