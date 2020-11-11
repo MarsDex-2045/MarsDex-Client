@@ -36,7 +36,8 @@ main h3 {
     padding-bottom: 1em;
 }
 
-#loginEmail, #loginPassword {
+#loginEmail, #loginPassword, #registerEmail, #registerCompanyName, #registerColonyName, #registerCompanyPhoneNumber, #registerPassword, #registerPasswordRepeat {
+    width: 22rem;
     height: 1.5em;
     margin-bottom: 10px;
     outline: none;
@@ -46,7 +47,7 @@ main h3 {
     font-weight: lighter;
 }
 
-#loginPassword {
+#registerPasswordRepeat, #loginPassword {
     margin-bottom: 0.9em;
 }
 
