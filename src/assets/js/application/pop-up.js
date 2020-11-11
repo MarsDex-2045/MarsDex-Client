@@ -2,6 +2,10 @@
 
 document.addEventListener('DOMContentLoaded', init);
 
+const overviewPageName = 'overview-page';
+const settingsPageName = 'settings-page';
+const accountPageName = 'account-page';
+
 function init() {
     addHtmlPopUp();
     document.querySelector('#company-button').addEventListener('click', showOverview);
@@ -18,28 +22,28 @@ function addHtmlPopUp() {
 
 function showOverview(e) {
     e.preventDefault();
-    document.getElementById('overview-page').classList.remove('hidden');
-    document.getElementById('settings-page').classList.add('hidden');
-    document.getElementById('account-page').classList.add('hidden');
+    document.getElementById(overviewPageName).classList.remove('hidden');
+    document.getElementById(settingsPageName).classList.add('hidden');
+    document.getElementById(accountPageName).classList.add('hidden');
 }
 
 function showSettings(e) {
     e.preventDefault();
-    document.getElementById('settings-page').classList.remove('hidden');
-    document.getElementById('account-page').classList.add('hidden');
-    document.getElementById('overview-page').classList.add('hidden');
+    document.getElementById(settingsPageName).classList.remove('hidden');
+    document.getElementById(accountPageName).classList.add('hidden');
+    document.getElementById(overviewPageName).classList.add('hidden');
 }
 
 function showAccount(e) {
     e.preventDefault();
-    document.getElementById('account-page').classList.remove('hidden');
-    document.getElementById('overview-page').classList.add('hidden');
-    document.getElementById('settings-page').classList.add('hidden');
+    document.getElementById(accountPageName).classList.remove('hidden');
+    document.getElementById(overviewPageName).classList.add('hidden');
+    document.getElementById(settingsPageName).classList.add('hidden');
 }
 
 function hidePopUp(e) {
     e.preventDefault();
-    document.getElementById('overview-page').classList.add('hidden');
-    document.getElementById('settings-page').classList.add('hidden');
-    document.getElementById('account-page').classList.add('hidden');
+    document.getElementById(overviewPageName).classList.add('hidden');
+    document.getElementById(settingsPageName).classList.add('hidden');
+    document.getElementById(accountPageName).classList.add('hidden');
 }
