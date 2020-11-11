@@ -14,9 +14,9 @@ main {
 main article {
     display: flex;
     flex-wrap: wrap;
-    padding: 30px;
+    padding: 2em;
     justify-content: space-evenly;
-    border-radius: 15px;
+    border-radius: 1em;
     margin-bottom: 2em;
 }
 
