@@ -36,16 +36,6 @@ main h3 {
     padding-bottom: 35px;
 }
 
-main a {
-    padding-top: 20px;
-    color: #C0C0C0;
-    text-decoration: none;
-}
-
-#loginPassword {
-    margin-bottom: 20px;
-}
-
 #loginEmail, #loginPassword {
     height: 30px;
     margin-bottom: 10px;
@@ -54,6 +44,10 @@ main a {
     border-radius: 7px;
     font-size: 1.2rem;
     font-weight: lighter;
+}
+
+#loginPassword {
+    margin-bottom: 20px;
 }
 
 form input[value] {
@@ -67,6 +61,12 @@ form input[value] {
     letter-spacing: 5px;
     cursor: pointer;
     color: var(--background);
+}
+
+main a {
+    padding-top: 25px;
+    color: #C0C0C0;
+    text-decoration: none;
 }
 
 /* FOOTER */
