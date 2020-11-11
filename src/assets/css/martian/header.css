@@ -69,9 +69,13 @@ header nav ul i {
 }
 
 #register-button, #login-button {
-    background-color: var(--fill);
+    background-color: var(--accent);
     border-radius: 10px;
     padding: 10px;
+}
+
+#register-button a, #register-button span i, #login-button a, #login-button span i {
+    color: white;
 }
 
 .white {
