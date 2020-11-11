@@ -21,15 +21,15 @@ main article {
 }
 
 main article:nth-child(odd) {
-    background: linear-gradient(90deg, #b5d0ff 10%, #92FE9D 100%);
+    background: linear-gradient(90deg, #b5d0ff 5%, #92FE9D 100%);
 }
 
 main article:nth-child(even) {
-    background: linear-gradient(90deg, #92FE9D 12%, #b5d0ff 100%);
+    background: linear-gradient(90deg, #92FE9D 30%, #b5d0ff 100%);
 }
 
 article div {
-    width: 75%;
+    width: 70%;
     margin-top: auto;
     margin-bottom: auto;
 }
