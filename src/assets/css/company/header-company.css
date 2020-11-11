@@ -1,0 +1,23 @@
+
+header nav > ul > li {
+    margin: 10px;
+}
+
+header nav > ul > li > a, header .heading {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    font-size: 1rem;
+    text-decoration: none;
+    color: var(--fill);
+}
+
+header nav > ul > li > span {
+    font-size: 1rem;
+}
+
+header nav > ul > li > a:hover {
+    background-color: var(--fill);
+    color: #ffffff;
+    border-radius: 7px;
+    transition: 0.2s all ease-in;
+}
+

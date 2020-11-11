@@ -1,0 +1,147 @@
+/* LOGO */
+
+:root{
+    --fill: #336562;
+    --accent: #39E991;
+    --background: #F2F1F4;
+}
+
+h1 {
+    font-family: 'Big Shoulders Stencil Display', 'Arial', 'Helvetica', cursive;
+    font-size: 5rem;
+    padding: 10px;
+}
+
+h1 .dropCap{
+    font-style: italic;
+    margin-right: 10px;
+    color: var(--accent);
+}
+
+#companyName {
+    color: var(--fill);
+}
+
+/* HEADER */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    background-color: var(--background);
+    border-bottom: 3px solid var(--fill);
+}
+
+header nav ul {
+    height: 100%;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+header nav > ul li>  p {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    font-size: 1.1em;
+    padding: 10px 7px;
+    color: #FFFFFF;
+    background-color: var(--fill);
+    border: 2px solid var(--fill);
+    border-radius: 10px;
+}
+
+header nav > ul li > p:hover {
+    color: var(--fill);
+    background-color: var(--accent);
+    cursor: pointer;
+    transition: 0.3s all ease-in;
+}
+
+header nav > ul li a, .heading {
+    padding: 5px;
+}
+
+header nav > ul li a span, header nav > ul li a div, .heading span, .heading div, .dropdown-content > div ul li span, .dropdown-content > div ul li div, .resourcesDropDown div, .resourcesDropDown span {
+    display: inline;
+}
+
+header nav > ul li a div, .heading div, .dropdown-content > div ul li div, .resourcesDropDown div {
+    margin-left: 10px;
+}
+
+/* DROPDOWNS */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    z-index: 1;
+    min-width: 200px;
+}
+
+.dropdown-content > div {
+    display: block;
+    background-color: #336562;
+    border-top: 2px solid #ffffff;
+    padding: 15px 3px;
+    text-align: center;
+}
+
+.dropdown-content > div p {
+    font-size: 1em;
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    color: #FFFFFF;
+    margin: 5px auto 5px auto;
+
+}
+
+.dropdown-content > div ul {
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+
+.dropdown-content > div ul li {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    color: #FFFFFF;
+    text-align: left;
+    margin: 5px auto 5px 0;
+}
+
+.dropdown-content > div .details {
+    background-color: var(--accent);
+    color: var(--fill);
+    padding: 3px 5px;
+    border-radius: 10px;
+    text-decoration: none;
+    width: min-content;
+    border: 2px solid var(--fill);
+}
+
+.dropdown-content > div .details:hover {
+    background-color: var(--fill);
+    color: var(--accent);
+    border-color: #FFFFFF;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: var(--fill);
+    color: #ffffff;
+    border-radius: 10px 10px 0 0;
+}
+
+.dropdown .resourcesDropDown {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1em;
+    margin-top: 10px;
+}
