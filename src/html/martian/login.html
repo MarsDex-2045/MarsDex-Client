@@ -9,9 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/solid.css" integrity="sha384-yo370P8tRI3EbMVcDU+ziwsS/s62yNv3tgdMqDSsRSILohhnOrDNl142Df8wuHA+" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/fontawesome.css" integrity="sha384-ijEtygNrZDKunAWYDdV3wAZWvTHSrGhdUfImfngIba35nhQ03lSNgfTJAKaGFjk2" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" href="../../assets/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="../../assets/css/header.css"/>
     <link rel="stylesheet" type="text/css" href="../../assets/css/martian/header-martian.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/martian/header.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/martian/login-register.css"/>
 
     <title>MarsDex | Login</title>
 </head>
@@ -50,17 +53,21 @@
 
         <form action="#" method="post" id="loginForm">
 
-            <label for="loginEmail">E-mail</label>
-            <input autofocus title="email" required type="text" id="loginEmail" placeholder="someone@outmars.com">
+            <div class="formBox">
+                <em class="fas fa-envelope"></em>
+                <input autofocus title="email" required type="text" id="loginEmail" placeholder="E-mail">
+            </div>
 
-            <label for="loginPassword">Password</label>
-            <input title="password" required type="password" id="loginPassword">
+            <div class="formBox">
+                <em class="fas fa-lock"></em>
+                <input title="password" required type="password" placeholder="Password" id="loginPassword">
+            </div>
 
             <input type="submit" value="Login" title="Login">
 
         </form>
 
-        <a href="#">I don't have an account yet.</a>
+        <a href="register.html">I don't have an account yet.</a>
     </main>
 
     <footer>

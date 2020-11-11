@@ -9,6 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/solid.css" integrity="sha384-yo370P8tRI3EbMVcDU+ziwsS/s62yNv3tgdMqDSsRSILohhnOrDNl142Df8wuHA+" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/fontawesome.css" integrity="sha384-ijEtygNrZDKunAWYDdV3wAZWvTHSrGhdUfImfngIba35nhQ03lSNgfTJAKaGFjk2" crossorigin="anonymous">
+
     <link rel="stylesheet" type="text/css" href="../../assets/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="../../assets/css/header.css"/>
     <link rel="stylesheet" type="text/css" href="../../assets/css/martian/header-martian.css"/>
@@ -50,29 +51,41 @@
 
         <form action="#" method="post" id="registerForm">
 
-            <label for="registerEmail">Email</label>
-            <input autofocus title="email" required type="text" id="registerEmail" placeholder="someone@outmars.com">
+            <div class="formBox">
+                <em class="fas fa-envelope"></em>
+                <input autofocus title="email" required type="text" id="registerEmail" placeholder="E-mail">
+            </div>
 
-            <label for="registerCompanyName">Company Name</label>
-            <input title="companyName" required type="text" id="registerCompanyName">
+            <div class="formBox">
+                <em class="fas fa-building"></em>
+                <input placeholder="Company Name" title="companyName" required type="text" id="registerCompanyName">
+            </div>
 
-            <label for="registerColonyName">Colony Name</label>
-            <input title="colonyName" required type="text" id="registerColonyName">
+            <div class="formBox">
+                <em class="fas fa-monument"></em>
+                <input placeholder="Colony Name" title="colonyName" required type="text" id="registerColonyName">
+            </div>
 
-            <label for="registerCompanyPhoneNumber">Phone Number</label>
-            <input title="companyPhoneNumber" required type="tel" id="registerCompanyPhoneNumber">
+            <div class="formBox">
+                <em class="fas fa-mobile"></em>
+                <input placeholder="Company Phone Number" title="companyPhoneNumber" required type="tel" id="registerCompanyPhoneNumber">
+            </div>
 
-            <label for="registerPassword">Password</label>
-            <input title="password" required type="password" id="registerPassword">
+            <div class="formBox">
+                <em class="fas fa-lock"></em>
+                <input placeholder="Password" title="password" required type="password" id="registerPassword">
+            </div>
 
-            <label for="registerPasswordRepeat">Repeat Password</label>
-            <input title="password" required type="password" id="registerPasswordRepeat">
+            <div class="formBox">
+                <em class="fas fa-lock"></em>
+                <input placeholder="Repeat Password" title="password" required type="password" id="registerPasswordRepeat">
+            </div>
 
             <input type="submit" value="Register" title="Register">
 
         </form>
 
-        <a href="#">I already have an account.</a>
+        <a href="login.html">I already have an account.</a>
     </main>
 
     <footer>
