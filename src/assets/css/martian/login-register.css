@@ -10,14 +10,14 @@ body {
 main {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
-    margin-bottom: 2rem;
-    margin-top: 2rem;
 }
 
 main form {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
 }
 
@@ -38,17 +38,24 @@ main h3 {
 
 #loginEmail, #loginPassword, #registerEmail, #registerCompanyName, #registerColonyName, #registerCompanyPhoneNumber, #registerPassword, #registerPasswordRepeat {
     width: 22rem;
-    height: 1.5em;
-    margin-bottom: 10px;
     outline: none;
-    border: 2px solid #C0C0C0;
-    border-radius: 7px;
+    border: none;
+    background: none;
     font-size: 1.2rem;
     font-weight: lighter;
+    margin: 0 10px;
 }
 
-#registerPasswordRepeat, #loginPassword {
-    margin-bottom: 0.9em;
+.formBox {
+    padding: 3px 0;
+    margin: 8px 0;
+    border: none;
+    border-bottom: 1px solid var(--accent);
+}
+
+.formBox em {
+    text-align: center;
+    padding-left: 5px;
 }
 
 form input[value] {
@@ -59,9 +66,12 @@ form input[value] {
     border: 2px solid var(--accent);
     border-radius: 7px;
     font-size: 1.5rem;
+    margin-top: 1rem;
     letter-spacing: 0.15em;
     cursor: pointer;
     color: var(--background);
+    box-shadow: 1px var(--accent);;
+    transition: transform 250ms ease-in-out;
 }
 
 main a {
@@ -76,4 +86,14 @@ footer {
     position:fixed;bottom:0;
     width:100%;
     display:block;
+}
+
+/* ANIMATION */
+
+form input[value]:hover {
+    transform: scale(1.025);
+}
+
+form input[value]:active {
+    transform: scale(.9);
 }
