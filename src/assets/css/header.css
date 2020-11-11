@@ -80,15 +80,14 @@ header nav > ul li a div, .heading div, .dropdown-content > div ul li div, .reso
     position: absolute;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     z-index: 1;
+    min-width: 200px;
 }
 
 .dropdown-content > div {
     display: block;
     background-color: #336562;
     border-top: 2px solid #ffffff;
-    padding-bottom: 15px;
-    padding-left: 3px;
-    padding-right: 3px;
+    padding: 15px 3px;
     text-align: center;
 }
 
@@ -96,7 +95,7 @@ header nav > ul li a div, .heading div, .dropdown-content > div ul li div, .reso
     font-size: 1em;
     font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
     color: #FFFFFF;
-    margin: 5px auto 0 auto;
+    margin: 5px auto 5px auto;
 
 }
 
