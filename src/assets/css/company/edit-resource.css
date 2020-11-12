@@ -10,9 +10,6 @@ body {
 main {
     width: 70%;
     margin: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
 main h2 {
@@ -31,7 +28,7 @@ main h2 {
 }
 
 #resourceForm div {
-    width: 100%;
+    width: 40rem;
     display: inline-flex;
     flex-direction: row;
     align-items: center;
@@ -42,7 +39,7 @@ main h2 {
 }
 
 #resourceForm div:last-of-type {
-    width: 30%;
+    width: 15em;
 }
 
 #resourceForm div input {
@@ -76,7 +73,7 @@ select {
 }
 
 form > input {
-    width: 50%;
+    width: 20rem;
     height: 2.5rem;
     letter-spacing: 0.15em;
     background-color: var(--accent);
@@ -109,3 +106,16 @@ form > input:hover {
 form > input:active {
     transform: scale(.9);
 }
+
+/* Resizing */
+
+@media only screen and (max-width: 760px) {
+    #resourceForm {
+        width: 90%;
+    }
+
+    #resourceForm div:first-of-type {
+        width: 25rem;
+    }
+}
+

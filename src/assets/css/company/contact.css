@@ -157,6 +157,15 @@ main {
     }
 }
 
+@media only screen and (max-width: 650px) {
+    #contactUsDiv, #marsDexInformation {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+}
+
 @media only screen and (max-width: 1050px) {
     .formBoxContact {
         flex-direction: column;
