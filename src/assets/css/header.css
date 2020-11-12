@@ -96,7 +96,6 @@ header nav > ul li a div, .heading div, .dropdown-content > div ul li div, .reso
     font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
     color: #FFFFFF;
     margin: 5px auto 5px auto;
-
 }
 
 .dropdown-content > div ul {
@@ -125,6 +124,8 @@ header nav > ul li a div, .heading div, .dropdown-content > div ul li div, .reso
     background-color: var(--fill);
     color: var(--accent);
     border-color: #FFFFFF;
+    cursor: pointer;
+    transition: 0.3s all ease-in;
 }
 
 .dropdown:hover .dropdown-content {

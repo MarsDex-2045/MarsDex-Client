@@ -54,7 +54,7 @@ function buildCompanyHeader() {
                                 <li><span class="fas fa-cubes"></span><div>Gold</div></li>
                                 <li><span class="fas fa-box-open"></span><div>10kg left</div></li>
                             </ul>
-                            <a href="#" class="details">details</a>
+                            <p class="details">details</p>
                         </div>
                         <div>
                             <p>Resources Low</p>
@@ -62,7 +62,7 @@ function buildCompanyHeader() {
                                 <li><span class="fas fa-cubes"></span><div>Gold</div></li>
                                 <li><span class="fas fa-box-open"></span><div>10kg left</div></li>
                             </ul>
-                            <a href="#" class="details">details</a>
+                            <p class="details">details</p>
                         </div>
                         <div>
                             <p>Resources Low</p>
@@ -70,7 +70,7 @@ function buildCompanyHeader() {
                                 <li><span class="fas fa-cubes"></span><div>Gold</div></li>
                                 <li><span class="fas fa-box-open"></span><div>10kg left</div></li>
                             </ul>
-                            <a href="#" class="details">details</a>
+                            <p class="details">details</p>
                         </div>
                         <!-- end of example -->
                     </div>
