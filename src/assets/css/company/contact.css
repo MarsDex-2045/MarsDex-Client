@@ -1,0 +1,182 @@
+/* BODY */
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 1rem;
+}
+
+/* MAIN */
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-top: 3rem;
+}
+
+/* FORM */
+
+#contactUsDiv {
+    width: 50%;
+}
+
+#contactUsDiv h2 {
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-bottom: 2rem;
+}
+
+#contactUsForm {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.formBoxContact {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.formBoxContact input {
+    width: 100%;
+    outline: none;
+    border: none;
+    margin: 0 10px;
+    color: var(--fill);
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.formInputBox {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    padding: 3px 0;
+    margin: 1em 0;
+    border: none;
+    border-bottom: 1px solid var(--accent);
+}
+
+.formInputBox em {
+    text-align: center;
+    padding-left: 5px;
+}
+
+.formAreaBox {
+    width: 100%;
+    margin: 1rem 0;
+}
+
+.formAreaBox textarea {
+    width: 100%;
+    height: 9rem;
+    resize: none;
+    color: var(--fill);
+    font-size: 1.2rem;
+    font-weight: lighter;
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    letter-spacing: 1px;
+    border: 2px solid var(--accent);
+    border-radius: 5px;
+}
+
+#formSendButton {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    height: 2.5rem;
+    letter-spacing: 0.15em;
+    background-color: var(--accent);
+    border-radius: 7px;
+    box-shadow: 1px var(--accent);
+    transition: transform 250ms ease-in-out;
+}
+
+#formSendButton input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* ANIMATION */
+
+#formSendButton:hover {
+    transform: scale(1.025);
+}
+
+#formSendButton:active {
+    transform: scale(.9);
+}
+
+/* INFORMATION TAB */
+
+#marsDexInformation {
+    margin-top: 1.8rem;
+    width: 25%;
+}
+
+#marsDexInformation h3 {
+    color: var(--fill);
+    font-weight: lighter;
+    font-size: 2.8rem;
+    margin-bottom: 3.2rem;
+}
+
+#marsDexInformation ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#marsDexInformation ul li {
+    padding: 7px 0;
+    letter-spacing: 2px;
+}
+
+#marsDexInformation ul li:last-of-type {
+    margin-bottom: 22px;
+}
+
+#marsDexInformation ul em {
+   margin-right: 5px;
+}
+
+/* Screen Resizing */
+
+@media only screen and (min-width: 650px) {
+    main {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .formBoxContact {
+        flex-direction: column;
+    }
+
+    .formInputBox {
+        width: 100%;
+    }
+
+    #formSendButton {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: block;
+}

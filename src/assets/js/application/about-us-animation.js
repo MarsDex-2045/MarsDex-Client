@@ -65,11 +65,11 @@ function initAnimation() {
         };
 
         const onMouseLeaveHandler = function() {
-            inner.style = "rotateX(0deg) rotateY(0deg)";
+            inner.style = '';
         };
 
+        container.onmouseenter = onMouseEnterHandler;
         container.onmousemove = onMouseMoveHandler;
         container.onmouseleave = onMouseLeaveHandler;
-        container.onmouseenter = onMouseEnterHandler;
     });
 }

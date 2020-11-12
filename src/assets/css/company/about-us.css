@@ -3,8 +3,9 @@
 body {
     font-family: 'Arial', 'Helvetica', sans-serif;
     font-size: 1rem;
-
 }
+
+/* MAIN */
 
 main {
     display: grid;
@@ -21,6 +22,7 @@ main article {
     margin-bottom: 2em;
     box-shadow: 2px 2px 50px #b5d0ff;
     perspective: 100px;
+    transition: transform 250ms ease-in-out;
 }
 
 main article:nth-child(odd) {
@@ -60,6 +62,14 @@ div h2::selection, div p::selection{
     color: white;
 }
 
+/* FOOTER */
+
 footer p {
     color: var(--fill);
+}
+
+/* ANIMATION */
+
+main article:hover {
+    transform: scale(1.025);
 }

@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="../../assets/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="../../assets/css/header.css"/>
     <link rel="stylesheet" type="text/css" href="../../assets/css/company/header-company.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/company/contact.css"/>
     <link rel="stylesheet" type="text/css" href="../../assets/css/pup-up.css"/>
 
     <title>MarsDex | Contact</title>
@@ -29,25 +30,48 @@
 
             <form action="#" method="post" id="contactUsForm">
 
-                <label for="contactUsFullName">E-mail</label>
-                <input autofocus title="fullName" required type="text" id="contactUsFullName">
+                <div class="formBoxContact">
+                    <div class="formInputBox">
+                        <em class="fas fa-user"></em>
+                        <input placeholder="Full Name" autofocus title="fullName" required type="text" id="contactUsFullName">
+                    </div>
 
-                <label for="contactUsCompanyName">Company Name</label>
-                <input title="companyName" required type="text" id="contactUsCompanyName">
+                    <div class="formInputBox">
+                        <em class="fas fa-building"></em>
+                        <input placeholder="Company Name" title="companyName" required type="text" id="contactUsCompanyName">
+                    </div>
 
-                <label for="contactUsPhoneNumber">Phone Number</label>
-                <input title="companyPhoneNumber" required type="tel" id="contactUsPhoneNumber">
+                </div>
 
-                <label for="contactUsEmail">E-mail</label>
-                <input title="companyEmail" required type="email" id="contactUsEmail">
+                <div class="formBoxContact">
+                    <div class="formInputBox">
+                        <em class="fas fa-mobile"></em>
+                        <input placeholder="Company Phone Number" title="companyPhoneNumber" required type="tel" id="contactUsPhoneNumber">
+                    </div>
 
-                <label for="contactUsSubject">E-mail</label>
-                <input title="companySubject" required type="text" id="contactUsSubject">
+                    <div class="formInputBox">
+                        <em class="fas fa-envelope"></em>
+                        <input placeholder="E-mail" title="companyEmail" required type="email" id="contactUsEmail">
+                    </div>
+                </div>
 
-                <label for="contactUsMessage">Message</label>
-                <textarea required id="contactUsMessage" name="contactUsMessage"></textarea>
+                <div class="formBoxContact">
+                    <div class="formInputBox">
+                        <em class="fas fa-comment-alt"></em>
+                        <input placeholder="Subject" title="companySubject" required type="text" id="contactUsSubject">
+                    </div>
+                </div>
 
-                <input type="submit" value="Send" title="Send">
+                <div class="formBoxContact">
+                    <div class="formAreaBox">
+                        <label for="contactUsMessage"></label>
+                        <textarea placeholder="Typ here your message!" required id="contactUsMessage" name="contactUsMessage"></textarea>
+                    </div>
+                </div>
+
+                <div id="formSendButton">
+                    <input type="submit" value="Send" title="Send">
+                </div>
 
             </form>
 
@@ -57,13 +81,14 @@
             <h3>MarsDex</h3>
 
             <ul>
-                <li>Location Adres</li>
-                <li>Colony Number/Name</li>
-                <li>Phone Number</li>
-                <li>E-mail</li>
+                <li><em class="fas fa-map-marker-alt"></em>Somewhere on Mars</li>
+                <li><em class="fas fa-monument"></em>X157-8138</li>
+                <li><em class="fas fa-mobile"></em>0211 15 85 51 45</li>
+                <li><em class="fas fa-envelope"></em>info.marsdex@outlook.com</li>
             </ul>
-
-            <img src="#" title="MarsDex-Location" alt="MarsDex-Location">
+            <!-- Source Image: https://www.google.com/search?q=maps&sxsrf=ALeKk01cPwHhMJJcRSskq3lPkr0FeIEpZQ:1605180869605&source=lnms&tbm=isch&sa=X&ved=2ahUKEwjarqHc9PzsAhVH_KQKHTlgDgoQ_AUoAnoECAUQBA&biw=1920&bih=937#imgrc=ZqnUXmqJFt3PoM -->
+            <img src="../../assets/images/maps.png"
+                 height="200" width="350" title="MarsDex-Location" alt="MarsDex-Location">
         </div>
     </main>
 
