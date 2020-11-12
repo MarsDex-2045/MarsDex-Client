@@ -55,7 +55,7 @@ main h3 {
     border-bottom: 1px solid var(--accent);
 }
 
-.formBox em {
+.formBox span {
     text-align: center;
     padding-left: 5px;
 }

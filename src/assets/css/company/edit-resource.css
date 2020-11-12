@@ -1,0 +1,121 @@
+/* BODY */
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 1rem;
+}
+
+/* MAIN */
+
+main {
+    width: 70%;
+    margin: auto;
+}
+
+main h2 {
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+#resourceForm {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#resourceForm div {
+    width: 40rem;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 3px 0;
+    margin: 1em 0;
+    border: none;
+    border-bottom: 1px solid var(--accent);
+}
+
+#resourceForm div:last-of-type {
+    width: 15em;
+}
+
+#resourceForm div input {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    margin: 0 10px;
+    color: var(--fill);
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+#resourceForm div:first-of-type input {
+    pointer-events: none;
+}
+
+#resourceForm div input:last-of-type {
+    width: 100%;
+}
+
+#resourceForm div span {
+    text-align: center;
+    padding-left: 5px;
+}
+
+select {
+    outline: none;
+    background: none;
+    border: none;
+}
+
+form > input {
+    width: 20rem;
+    height: 2.5rem;
+    letter-spacing: 0.15em;
+    background-color: var(--accent);
+    border-radius: 7px;
+    box-shadow: 1px var(--accent);
+    transition: transform 250ms ease-in-out;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+
+/* FOOTER */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: block;
+}
+
+/* ANIMATION */
+
+form > input:hover {
+    transform: scale(1.025);
+}
+
+form > input:active {
+    transform: scale(.9);
+}
+
+/* Resizing */
+
+@media only screen and (max-width: 760px) {
+    #resourceForm {
+        width: 90%;
+    }
+
+    #resourceForm div:first-of-type {
+        width: 25rem;
+    }
+}
+

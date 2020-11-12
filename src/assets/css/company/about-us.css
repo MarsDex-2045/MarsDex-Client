@@ -20,7 +20,6 @@ main article {
     justify-content: space-evenly;
     border-radius: 1em;
     margin-bottom: 2em;
-    box-shadow: 2px 2px 50px #b5d0ff;
     perspective: 100px;
     transition: transform 250ms ease-in-out;
 }
@@ -72,4 +71,5 @@ footer p {
 
 main article:hover {
     transform: scale(1.025);
+    box-shadow: 2px 2px 50px #b5d0ff;
 }
