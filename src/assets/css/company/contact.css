@@ -62,7 +62,7 @@ main {
     border-bottom: 1px solid var(--accent);
 }
 
-.formInputBox em {
+.formInputBox span {
     text-align: center;
     padding-left: 5px;
 }
@@ -145,7 +145,7 @@ main {
     margin-bottom: 22px;
 }
 
-#marsDexInformation ul em {
+#marsDexInformation ul span {
    margin-right: 5px;
 }
 
