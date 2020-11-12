@@ -13,7 +13,6 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 3rem;
 }
 
 main h2 {
@@ -21,6 +20,7 @@ main h2 {
     font-weight: bold;
     letter-spacing: 0.1em;
     color: var(--accent);
+    margin-top: 3rem;
     margin-bottom: 2rem;
 }
 
