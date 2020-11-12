@@ -9,8 +9,9 @@ body {
 
 main {
     display: flex;
-    justify-content: space-evenly;
     flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-evenly;
     margin-top: 3rem;
 }
 
@@ -117,5 +118,65 @@ main {
 
 /* INFORMATION TAB */
 
+#marsDexInformation {
+    margin-top: 1.8rem;
+    width: 25%;
+}
 
+#marsDexInformation h3 {
+    color: var(--fill);
+    font-weight: lighter;
+    font-size: 2.8rem;
+    margin-bottom: 3.2rem;
+}
 
+#marsDexInformation ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#marsDexInformation ul li {
+    padding: 7px 0;
+    letter-spacing: 2px;
+}
+
+#marsDexInformation ul li:last-of-type {
+    margin-bottom: 22px;
+}
+
+#marsDexInformation ul em {
+   margin-right: 5px;
+}
+
+/* Screen Resizing */
+
+@media only screen and (min-width: 600px) {
+    main {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .formBoxContact {
+        flex-direction: column;
+    }
+
+    .formInputBox {
+        width: 100%;
+    }
+
+    #formSendButton {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: block;
+}
