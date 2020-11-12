@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="../../assets/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="../../assets/css/header.css"/>
     <link rel="stylesheet" type="text/css" href="../../assets/css/company/header-company.css"/>
+    <link rel="stylesheet" type="text/css" href="../../assets/css/company/edit-resource.css"/>
     <link rel="stylesheet" type="text/css" href="../../assets/css/pup-up.css"/>
 
     <title>MarsDex | Edit Resource</title>
@@ -26,18 +27,23 @@
         <h2>Edit Resource</h2>
 
         <form action="#" method="post" id="resourceForm">
-            <label for="resourceName">Resource Name</label>
-            <input title="resourceName" required type="text" id="resourceName" value="X152-476">
 
-            <label for="resourceAmount">Resource Amount </label>
-            <input title="resourceAmount" required type="text" id="resourceAmount">
+            <div>
+                <em class="fas fa-cubes"></em>
+                <input tabindex="-1" title="resourceName" required type="text" id="resourceName" value="Gold Bars">
+                <em class="fas fa-lock"></em>
+            </div>
 
-            <label>
-                <select>
-                    <option selected value="KG">KG</option>
-                    <option value="Liter">Liter</option>
-                </select>
-            </label>
+            <div>
+                <em class="fas fa-weight-hanging"></em>
+                <input placeholder="1 527" title="resourceAmount" required type="text" id="resourceAmount">
+                <label>
+                    <select>
+                        <option selected value="KG">KG</option>
+                        <option value="Liter">Liter</option>
+                    </select>
+                </label>
+            </div>
 
             <input type="submit" value="Save Changes" title="Save Changes">
         </form>
