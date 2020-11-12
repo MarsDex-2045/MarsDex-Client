@@ -1,0 +1,184 @@
+/* BODY */
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 1rem;
+}
+
+/* MAIN */
+
+main {
+    width: 70%;
+    margin: auto;
+}
+
+main h2 {
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+#resourceForm {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+#resourceForm div:first-of-type, #resourceImageDiv p {
+    font-size: 1.6rem;
+    color: var(--fill);
+    margin-bottom: 1rem;
+}
+
+#resourceForm div:first-of-type input {
+    width: 1.6em;
+    height: 1.6em;
+    background-color: var(--accent);
+}
+
+#resourceForm div:not(:first-of-type) input {
+    width: 100%;
+    border: none;
+    background: none;
+    outline: none;
+    margin: 0 10px;
+    color: var(--fill);
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+
+.inputBox {
+    width: 40rem;
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 3px 0;
+    margin: 1em 0;
+    border: none;
+    border-bottom: 1px solid var(--accent);
+}
+
+select {
+    outline: none;
+    background: none;
+    border: none;
+}
+
+.inputResourceWeight {
+    width: 15em;
+}
+
+/* Upload Input Source: https://codepen.io/adamlaki/pen/VYpewx */
+
+#onlyNewResource {
+    position: relative;
+    width: 20rem;
+    height: 60px;
+}
+
+#onlyNewResource:after {
+     content: 'Choose a file!';
+     font-size: 18px;
+     position: absolute;
+     top: 0;
+     left: 0;
+     background: #e0e0e0;
+     padding: 10px 15px;
+     display: block;
+     width: calc(100% - 40px);
+     pointer-events: none;
+     z-index: 20;
+     height: 30px;
+     line-height: 30px;
+     color: #999;
+     border-radius: 5px 10px 10px 5px;
+     font-weight: 300;
+ }
+
+#onlyNewResource:before {
+     content: 'Upload';
+     position: absolute;
+     top: 0;
+     right: 0;
+     display: inline-block;
+     height: 50px;
+     background: var(--accent);
+     color: #fff;
+     font-weight: 700;
+     z-index: 25;
+     font-size: 16px;
+     line-height: 50px;
+     padding: 0 15px;
+     text-transform: uppercase;
+     pointer-events: none;
+     border-radius: 0 5px 5px 0;
+ }
+
+#onlyNewResource input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+}
+
+#resourceImageDiv p {
+    margin-top: 1.8rem;
+}
+
+form > input {
+    letter-spacing: 0.15em;
+    font-size: 1.2rem;
+    width: 25rem;
+    height: 2.5rem;
+    margin-top: 2rem;
+    background-color: var(--accent);
+    border-radius: 7px;
+    transition: transform 250ms ease-in-out;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+/* FOOTER */
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: block;
+}
+
+/* ANIMATION */
+
+form > input:hover {
+    transform: scale(1.025);
+}
+
+form > input:active {
+    transform: scale(.9);
+}
+
+/* Resizing */
+
+@media only screen and (max-width: 760px) {
+    #resourceForm {
+        width: 100%;
+    }
+
+    #resourceForm div, #resourceForm input {
+        width: 90%;
+    }
+}
+
