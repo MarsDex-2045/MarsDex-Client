@@ -3,7 +3,7 @@
     display: none;
 }
 
-#overview-page, #settings-page, #account-page {
+#overview-page, #settings-page, #account-page, #notificationDetails {
     font-family: "Arial", "Helvetica", sans-serif;
     color: #ffffff;
     position: fixed;
@@ -19,7 +19,7 @@
     border-radius: 20px;
 }
 
-#overview-page .close, #settings-page .close, #account-page .close {
+#overview-page .close, #settings-page .close, #account-page .close, #notificationDetails .close {
     color: var(--fill);
     border: 2px solid var(--fill);
     font-weight: bold;
@@ -38,7 +38,7 @@
     cursor: pointer;
 }
 
-#overview-page .close:hover, #settings-page .close:hover, #account-page .close:hover {
+#overview-page .close:hover, #settings-page .close:hover, #account-page .close:hover, #notificationDetails .close:hover {
     color: #ffffff;
     background-color: var(--fill);
     transition: 0.3s all ease-in;
@@ -53,8 +53,12 @@ section > h2 {
 
 /* OVERVIEW */
 
-section > h2 span, section > h2 div, #overview-page div nav ul li span, #overview-page div nav ul li div, #settings-page div h3 span, #settings-page div h3 div, #settings-page #privacy-policy span, #settings-page #privacy-policy div {
+section > h2 span, section > h2 div, #overview-page div nav ul li span, #overview-page div nav ul li div, #settings-page div h3 span, #settings-page div h3 div, #settings-page #privacy-policy span, #settings-page #privacy-policy div, #notificationDetails ul li span, #notificationDetails ul li div, #notificationDetails h3 span, #notificationDetails h3 div {
     display: inline;
+}
+
+section > h2 div, #overview-page div nav ul li div, #settings-page div h3 div, #notificationDetails ul li div, #notificationDetails h3 div {
+    margin-left: 15px;
 }
 
 #overview-page div nav ul {
@@ -71,10 +75,6 @@ section > h2 span, section > h2 div, #overview-page div nav ul li span, #overvie
 #overview-page div nav ul li a {
     text-decoration: none;
     color: #ffffff;
-}
-
-section > h2 div, #overview-page div nav ul li div, #settings-page div h3 div {
-    margin-left: 15px;
 }
 
 #overview-page div nav ul li:hover, #overview-page div nav ul li a:hover {
@@ -163,4 +163,40 @@ section > h2 div, #overview-page div nav ul li div, #settings-page div h3 div {
     transition: 0.3s all ease-in;
 }
 
+/* NOTIFICATION DETAILS */
 
+#notificationDetails h2 {
+    margin-bottom: 60px;
+}
+
+#notificationDetails ul {
+    width: max-content;
+    margin: 0 auto;
+    border: 2px solid #ffffff;
+    padding: 20px 100px;
+    border-radius: 20px;
+}
+
+#notificationDetails h3, #notificationDetails div {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#notificationDetails ul li {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+#notificationDetails h3 {
+    margin-top: 60px;
+    margin-bottom: 10px;
+}
+
+#notificationDetails div p {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    font-size: 1em;
+    text-align: justify;
+    line-height: 1em;
+    color: #FFFFFF;
+}

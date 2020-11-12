@@ -83,3 +83,24 @@ function addPopUp() {
         </section>
     `;
 }
+
+function generateDetails() {
+    document.querySelector('body').innerHTML += `
+        <section id="notificationDetails" class="hidden">
+            <h2>Details <span id="notificationTitle">Low Resources</span></h2>
+            <ul>
+                <li><span class="fas fa-cubes"></span><div>Resource: <span id="resourceTitle">Gold</span></div></li>
+                <li><span class="fas fa-box-open"></span><div>Remaining resources: <span id="resourceLeft">15kg</span></div></li>
+                <li><span class="fas fa-clock"></span><div>Date and time: <span id="dateAndTime">15/03/2065 14:45</span></div></li>
+            </ul>
+            <h3><span class="fas fa-envelope"></span><div>Message</div></h3>
+            <div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+            <a href="#" class="close"><span class="fas fa-times"></span></a>
+        </section>
+    `;
+}
