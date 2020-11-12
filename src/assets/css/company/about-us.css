@@ -22,6 +22,7 @@ main article {
     margin-bottom: 2em;
     box-shadow: 2px 2px 50px #b5d0ff;
     perspective: 100px;
+    transition: transform 250ms ease-in-out;
 }
 
 main article:nth-child(odd) {
@@ -65,4 +66,10 @@ div h2::selection, div p::selection{
 
 footer p {
     color: var(--fill);
+}
+
+/* ANIMATION */
+
+main article:hover {
+    transform: scale(1.025);
 }
