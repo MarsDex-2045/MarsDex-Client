@@ -3,8 +3,9 @@
 body {
     font-family: 'Arial', 'Helvetica', sans-serif;
     font-size: 1rem;
-
 }
+
+/* MAIN */
 
 main {
     display: grid;
@@ -59,6 +60,8 @@ div p {
 div h2::selection, div p::selection{
     color: white;
 }
+
+/* FOOTER */
 
 footer p {
     color: var(--fill);
