@@ -21,7 +21,7 @@
     align-items: center;
 }
 
-#map > div p span {
+#map > div p a {
     font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
     background-color: #FFFFFF;
     border: 2px solid var(--fill);
@@ -29,6 +29,7 @@
     padding: 5px;
     width: max-content;
     color: var(--fill);
+    text-decoration: none;
 }
 
 #map > div p img {
