@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../../assets/css/header.css"/>
     <link rel="stylesheet" type="text/css" href="../../assets/css/company/header-company.css"/>
     <link rel="stylesheet" type="text/css" href="../../assets/css/pup-up.css"/>
+    <link rel="stylesheet" href="../../assets/css/company/add-resource.css">
 
     <title>MarsDex | Add Resource</title>
 </head>
@@ -26,26 +27,35 @@
 
         <form action="#" method="post" id="resourceForm">
 
-            <label for="resourceExist">Resource Already Exist?</label>
-            <input type="checkbox" id="resourceExist" title="resourceExist"/>
-
-            <label for="resourceName">Resource Name</label>
-            <input title="resourceName" required type="text" id="resourceName">
-
-            <label for="resourceAmount">Resource Amount</label>
-            <input title="resourceAmount" required type="text" id="resourceAmount">
-
-            <label>
-                <select>
-                    <option selected value="KG">KG</option>
-                    <option value="Liter">Liter</option>
-                </select>
-            </label>
-
-            <div id="onlyNewResource">
-                <label for="resourceImage">Select Image</label>
-                <input type="file" id="resourceImage" name="resourceImage" required>
+            <div>
+                <label for="resourceExist">Resource already exist?</label>
+                <input type="checkbox" id="resourceExist" title="resourceExist"/>
             </div>
+
+            <div class="inputBox">
+                <span class="fas fa-cubes"></span>
+                <input placeholder="Resource Name" title="resourceName" required type="text" id="resourceName">
+            </div>
+
+            <div class="inputBox">
+                <span class="fas fa-weight-hanging"></span>
+                <input placeholder="Resource Amount" title="resourceAmount" required type="text" id="resourceAmount">
+                <label>
+                    <select>
+                        <option selected value="KG">KG</option>
+                        <option value="Liter">Liter</option>
+                    </select>
+                </label>
+            </div>
+
+            <div id="resourceImageDiv">
+                <p>Resource Image</p>
+
+                <div id="onlyNewResource">
+                    <input type="file" name="resourceImage" required>
+                </div>
+            </div>
+
             <input type="submit" value="Add Resource" title="Add Resource">
         </form>
     </main>
