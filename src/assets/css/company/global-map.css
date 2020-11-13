@@ -1,0 +1,257 @@
+#map h2 {
+    font-family: 'Big Shoulders Stencil Display', 'Arial', 'Helvetica', cursive;
+    font-size: 3em;
+    text-align: center;
+    color: var(--fill);
+    margin: 20px 0;
+    text-transform: capitalize;
+}
+
+#map > div {
+    background-image: url("../../images/mars.jpg");
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    height: 800px;
+    z-index: -1;
+    border: 4px solid var(--fill);
+    position: relative;
+}
+
+#map > div p {
+    display: flex;
+    align-items: center;
+}
+
+#map > div p a {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    background-color: #FFFFFF;
+    border: 2px solid var(--fill);
+    border-radius: 5px;
+    padding: 5px;
+    width: max-content;
+    color: var(--fill);
+    text-decoration: none;
+}
+
+#map > div p img {
+    width: 30px;
+    margin-right: 10px;
+}
+
+/* LOCATIONS */
+
+.location1 {
+    position: absolute;
+    top: 90px;
+    left: 90px;
+}
+
+.location2 {
+    position: absolute;
+    top: 45px;
+    left: 500px;
+}
+
+.location3 {
+    position: absolute;
+    top: 200px;
+    right: 100px;
+}
+
+.location4 {
+    position: absolute;
+    top: 330px;
+    left: 300px;
+}
+
+.location5 {
+    position: absolute;
+    top: 610px;
+    left: 150px;
+}
+
+.location6 {
+    position: absolute;
+    top: 350px;
+    left: 700px;
+}
+
+.location7 {
+    position: absolute;
+    bottom: 100px;
+    right: 200px;
+}
+
+.location8 {
+    position: absolute;
+    bottom: 50px;
+    left: 500px;
+}
+
+/* ARROWS */
+
+.indicator {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+}
+
+.indicator span {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 5px solid #ffffff;
+    border-right: 5px solid #ffffff;
+    animation: animate 1s linear infinite;
+}
+
+.indicator span:nth-child(1){
+     top:-30px;
+     left:-30px;
+     animation-delay:0s;
+}
+
+.indicator span:nth-child(2){
+     top:-15px;
+     left:-15px;
+     animation-delay:0.2s;
+}
+
+.indicator span:nth-child(3){
+     top:0;
+     left:0;
+     animation-delay:0.4s;
+}
+
+.indicator span:nth-child(4){
+     top:15px;
+     left:15px;
+     animation-delay:0.6s;
+}
+
+.indicator span:nth-child(5){
+     top:30px;
+     left:30px;
+     animation-delay:0.8s;
+}
+
+.indicator span:nth-child(6){
+    top:45px;
+    left:45px;
+    animation-delay:1.0s;
+}
+
+.indicator span:nth-child(7){
+    top:60px;
+    left:60px;
+    animation-delay:1.2s;
+}
+
+.indicator span:nth-child(8){
+    top:75px;
+    left:75px;
+    animation-delay:1.4s;
+}
+
+@keyframes animate{
+    0%{
+        border-color:#fff;
+        transform:translate(0,0);
+    }
+    20%{
+        border-color:#fff;
+        transform:translate(15px,15px);
+    }
+    20.1%,100%{
+        border-color: #ffffff;
+    }
+}
+
+.oneTwo {
+    transform: rotate(-55deg);
+    top: 75px;
+    left: 295px;
+}
+
+.twoThree {
+    transform: rotate(-25deg);
+    top: 100px;
+    right: 430px;
+}
+
+.twoFour {
+    transform: rotate(80deg);
+    top: 170px;
+    left: 430px;
+}
+
+.fourOne {
+    transform: rotate(185deg);
+    top: 240px;
+    left: 210px;
+}
+
+.threeSix {
+    transform: rotate(105deg);
+    top: 255px;
+    right: 280px;
+}
+
+.sixTwo {
+    transform: rotate(190deg);
+    top: 240px;
+    right: 530px;
+}
+
+.fourSix {
+    transform: rotate(-40deg);
+    top: 345px;
+    left: 500px;
+}
+
+.fourEight {
+    transform: rotate(20deg);
+    bottom: 280px;
+    left: 410px;
+}
+
+.eightFive {
+    transform: rotate(150deg);
+    bottom: 100px;
+    left: 380px;
+}
+
+.fiveFour {
+    transform: rotate(260deg);
+    bottom: 260px;
+    left: 210px;
+}
+
+.sixSeven {
+    transform: rotate(10deg);
+    bottom: 280px;
+    right: 390px;
+}
+
+.sevenEight {
+    transform: rotate(125deg);
+    bottom: 80px;
+    right: 395px;
+}
+
+.eightSix {
+    transform: rotate(255deg);
+    bottom: 200px;
+    right: 600px;
+}
+
+.sevenThree {
+    transform: rotate(-125deg);
+    bottom: 290px;
+    right: 210px;
+}
