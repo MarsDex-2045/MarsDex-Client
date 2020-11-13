@@ -36,6 +36,8 @@
     margin-right: 10px;
 }
 
+/* LOCATIONS */
+
 .location1 {
     position: absolute;
     top: 90px;
@@ -76,6 +78,12 @@
     position: absolute;
     bottom: 100px;
     right: 200px;
+}
+
+.location8 {
+    position: absolute;
+    bottom: 50px;
+    left: 500px;
 }
 
 /* ARROWS */
@@ -175,8 +183,8 @@
 
 .twoFour {
     transform: rotate(80deg);
-    top: 150px;
-    left: 450px;
+    top: 170px;
+    left: 430px;
 }
 
 .fourOne {
@@ -189,4 +197,58 @@
     transform: rotate(105deg);
     top: 255px;
     right: 280px;
+}
+
+.sixTwo {
+    transform: rotate(190deg);
+    top: 240px;
+    right: 530px;
+}
+
+.fourSix {
+    transform: rotate(-40deg);
+    top: 345px;
+    left: 500px;
+}
+
+.fourEight {
+    transform: rotate(20deg);
+    bottom: 280px;
+    left: 410px;
+}
+
+.eightFive {
+    transform: rotate(150deg);
+    bottom: 100px;
+    left: 380px;
+}
+
+.fiveFour {
+    transform: rotate(260deg);
+    bottom: 260px;
+    left: 210px;
+}
+
+.sixSeven {
+    transform: rotate(10deg);
+    bottom: 280px;
+    right: 390px;
+}
+
+.sevenEight {
+    transform: rotate(125deg);
+    bottom: 80px;
+    right: 395px;
+}
+
+.eightSix {
+    transform: rotate(255deg);
+    bottom: 200px;
+    right: 600px;
+}
+
+.sevenThree {
+    transform: rotate(-125deg);
+    bottom: 290px;
+    right: 210px;
 }
