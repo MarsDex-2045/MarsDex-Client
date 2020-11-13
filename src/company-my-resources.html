@@ -9,12 +9,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/solid.css" integrity="sha384-yo370P8tRI3EbMVcDU+ziwsS/s62yNv3tgdMqDSsRSILohhnOrDNl142Df8wuHA+" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/fontawesome.css" integrity="sha384-ijEtygNrZDKunAWYDdV3wAZWvTHSrGhdUfImfngIba35nhQ03lSNgfTJAKaGFjk2" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../../assets/css/reset.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/css/header.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/css/company/header-company.css"/>
-    <link rel="stylesheet" type="text/css" href="../../assets/css/pup-up.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/header.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/company/header-company.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/pup-up.css"/>
 
-    <title>MarsDex | Shipping</title>
+    <title>MarsDex | My Resources</title>
 </head>
 <body>
 
@@ -23,24 +23,24 @@
 </header>
 
     <main>
-        <h2>Shipping</h2>
+        <h2>My Resources</h2>
+        <a href="#">ADD RESOURCE</a>
         <form>
-            <label for="searchShipping"></label>
-            <input type="text" id="searchShipping" name="search" placeholder="Search for a shipping ...">
+            <label for="searchMyResources"></label>
+            <input type="text" id="searchMyResources" name="search" placeholder="Search for a resource ...">
         </form>
 
         <form>
-            <label for="filtersShipping"></label>
-            <select name="filters" id="filtersShipping">
-                <option value="id">Shipping ID</option>
-                <option value="status">Status</option>
-                <option value="shortest">Shortest</option>
-                <option value="longest">Longest</option>
+            <label for="filtersResources"></label>
+            <select name="filters" id="filtersResources">
+                <option value="name">Name</option>
+                <option value="resources">Highest Storage</option>
+                <option value="location">Lowest Storage</option>
             </select>
         </form>
 
-        <!-- fill div with articles and shipping's -->
-        <div id="shippingResult">
+        <!-- fill div with articles and resources -->
+        <div id="resourcesResult">
 
         </div>
 
@@ -55,8 +55,8 @@
         <p>&copy; Howest MarsDex 2020</p>
     </footer>
 
-    <script src="../../assets/js/application/html-generator/company-header-generator.js"></script>
-    <script src="../../assets/js/application/pop-up.js"></script>
-    <script src="../../assets/js/application/html-generator/pop-up-generator.js"></script>
+    <script src="assets/js/application/html-generator/company-header-generator.js"></script>
+    <script src="assets/js/application/pop-up.js"></script>
+    <script src="assets/js/application/html-generator/pop-up-generator.js"></script>
 </body>
 </html>

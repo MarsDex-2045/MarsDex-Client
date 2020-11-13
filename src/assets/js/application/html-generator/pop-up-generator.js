@@ -10,7 +10,7 @@ function addPopUp() {
                         <li id="settings"><span class="fas fa-cog"></span><div>settings</div></li>
                         <li id="account"><span class="fas fa-user-circle"></span><div>account</div></li>
                         <li><a href="#"><span class="fas fa-info-circle"></span><div>help</div></a></li>
-                        <li><a href="../martian/login.html"><span class="fas fa-sign-out-alt"></span><div>logout</div></a></li>
+                        <li><a href="index.html"><span class="fas fa-sign-out-alt"></span><div>logout</div></a></li>
                     </ul>
                 </nav>
                 <a href="#" class="close"><span class="fas fa-times"></span></a>
