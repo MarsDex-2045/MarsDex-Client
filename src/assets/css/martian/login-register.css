@@ -8,10 +8,29 @@ body {
 /* MAIN */
 
 main {
+    width: 50%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    margin: 5rem auto;
     flex-wrap: wrap;
     align-items: center;
+    border-radius: 20px;
+    box-shadow: 20px 20px 50px #b5d0ff;
+}
+
+main section {
+    width: 50%;
+}
+
+main section:last-of-type {
+    text-align: center;
+}
+
+main section img {
+    width: 425px;
+    height: 475px;
+    border-radius: 20px 0 0 20px;
+    vertical-align: bottom;
 }
 
 main form {
@@ -26,18 +45,20 @@ main h2 {
     font-weight: bold;
     letter-spacing: 0.1em;
     color: var(--accent);
-    padding-top: 0.8em;
+    margin-top: 1rem;
     margin-bottom: 0.2em;
+    text-align: center;
 }
 
 main h3 {
     font-size: 2rem;
     font-weight: lighter;
+    text-align: center;
     padding-bottom: 1em;
 }
 
 #loginEmail, #loginPassword, #registerEmail, #registerCompanyName, #registerColonyName, #registerCompanyPhoneNumber, #registerPassword, #registerPasswordRepeat {
-    width: 22rem;
+    width: 100%;
     outline: none;
     border: none;
     background: none;
@@ -53,6 +74,7 @@ main h3 {
     margin: 8px 0;
     border: none;
     border-bottom: 1px solid var(--accent);
+    width: 90%;
 }
 
 .formBox span {
@@ -61,7 +83,7 @@ main h3 {
 }
 
 form input[value] {
-    width: 100%;
+    width: 90%;
     height: 1.7em;
     outline: none;
     background-color: var(--accent);
@@ -69,6 +91,7 @@ form input[value] {
     border-radius: 7px;
     font-size: 1.5rem;
     margin-top: 1rem;
+    margin-bottom: 0.5rem;
     letter-spacing: 0.15em;
     cursor: pointer;
     color: var(--background);
@@ -77,7 +100,6 @@ form input[value] {
 }
 
 main a {
-    padding-top: 0.8em;
     color: #C0C0C0;
     text-decoration: none;
 }
