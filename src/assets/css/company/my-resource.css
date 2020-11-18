@@ -17,7 +17,7 @@ main {
     flex-wrap: wrap;
     align-items: center;
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 #section-top h2 {
@@ -50,6 +50,123 @@ main {
     padding-left: 7px;
 }
 
+/* FORM */
+
+#search-form {
+    width: 100%;
+    display: inline-flex;
+    margin-bottom: 3rem;
+}
+
+#search-form div {
+    width: 25rem;
+    margin-right: 15px;
+}
+
+#search-form select {
+    width: 11rem;
+}
+
+#search-form div, #search-form select {
+    outline: none;
+    border: none;
+    background-color: var(--background);
+    padding: 10px;
+    border-radius: 5px;
+    transition: 1s;
+}
+
+#search-form div input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 23rem;
+    font-size: 1.1rem;
+    color: var(--fill);
+}
+
+#search-form select {
+    color: var(--fill);
+    font-size: 1.1rem;
+  }
+
+#search-form div:hover, #search-form select:hover {
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 #edeff1 inset,
+    0 0 20px 0 #edeff1 inset;
+}
+
+/* Result Article */
+
+#resourcesResultList {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+}
+
+.resourceResult {
+    position: relative;
+    flex: 0 1 45%;
+    display: flex;
+    padding: 15px;
+    box-shadow: 0 0 15px 10px var(--background);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.resourceResult img {
+    padding-right: 25px;
+}
+
+.resourceResult > ul {
+    display: inline-flex;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.resourceResult > ul li {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.resourceResult > ul li:first-of-type {
+    background-color: orange;
+}
+
+.resourceResult > ul li:last-of-type {
+    background-color: red;
+    margin-left: 10px;
+}
+
+.resourceResult > ul a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.resourceResult > ul span {
+    padding-right: 5px;
+}
+
+.resourceInformation h2 {
+    font-size: 1.8rem;
+    color: var(--accent);
+    padding-bottom: 0.75rem;
+}
+
+.resourceInformation ul {
+    display: inline-flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+}
+
+.resourceInformation ul li {
+    width: 48%;
+    color: var(--fill);
+    padding-bottom: 0.4rem;
+}
+
 /* ANIMATION */
 
 #add-button:hover {
@@ -58,4 +175,12 @@ main {
 
 #add-button:active {
     transform: scale(.9);
+}
+
+/* Screen Resizing */
+
+@media only screen and (max-width: 765px) {
+    .resourceResult {
+        flex: 0 1 100%;
+    }
 }
