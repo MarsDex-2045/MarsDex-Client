@@ -65,6 +65,8 @@ main {
 
 #search-form select {
     width: 11rem;
+    color: var(--fill);
+    font-size: 1.1rem;
 }
 
 #search-form div, #search-form select {
@@ -84,11 +86,6 @@ main {
     font-size: 1.1rem;
     color: var(--fill);
 }
-
-#search-form select {
-    color: var(--fill);
-    font-size: 1.1rem;
-  }
 
 #search-form div:hover, #search-form select:hover {
     background-color: #fff;
