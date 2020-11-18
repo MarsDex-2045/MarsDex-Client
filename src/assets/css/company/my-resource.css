@@ -55,7 +55,7 @@ main {
 #search-form {
     width: 100%;
     display: inline-flex;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 #search-form div {
@@ -73,7 +73,7 @@ main {
     background-color: var(--background);
     padding: 10px;
     border-radius: 5px;
-    transition: 1s;
+    transition: 0.5s;
 }
 
 #search-form div input {
@@ -92,8 +92,8 @@ main {
 
 #search-form div:hover, #search-form select:hover {
     background-color: #fff;
-    box-shadow: 0 0 20px 0 #edeff1 inset,
-    0 0 20px 0 #edeff1 inset;
+    box-shadow: 0 0 20px 0 #f3f3f3 inset,
+    0 0 20px 0 #f3f3f3 inset;
 }
 
 /* Result Article */
@@ -113,6 +113,7 @@ main {
     box-shadow: 0 0 15px 10px var(--background);
     border-radius: 5px;
     margin-bottom: 1rem;
+    transition: transform 250ms ease-in-out;
 }
 
 .resourceResult img {
@@ -167,13 +168,47 @@ main {
     padding-bottom: 0.4rem;
 }
 
+#buttonResult {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+#buttonResult a {
+    width: 8rem;
+    padding: 7px;
+    background-color: #3da9ff;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 250ms ease-in-out;
+}
+
+#buttonResult p {
+    color: var(--fill);
+    font-size: 1.3rem;
+    font-weight: lighter;
+}
+
+#buttonResult span:first-of-type {
+    padding-left: 5px;
+}
+
+#buttonResult span:last-of-type {
+    padding-right: 5px;
+}
+
+
 /* ANIMATION */
 
-#add-button:hover {
+#add-button:hover, .resourceResult:hover, #buttonResult a:hover {
     transform: scale(1.025);
 }
 
-#add-button:active {
+#add-button:active, #buttonResult a:active {
     transform: scale(.9);
 }
 
