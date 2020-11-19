@@ -16,12 +16,12 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 #section-top h2 {
-    font-size: 5rem;
+    font-size: 3rem;
     font-weight: bold;
     letter-spacing: 0.1em;
     color: var(--accent);
@@ -52,24 +52,28 @@ main {
 
 /* FORM */
 
-#search-form {
+#filtersResources:hover {
+    cursor: pointer;
+}
+
+#search-my-resources-form {
     width: 100%;
     display: inline-flex;
     margin-bottom: 2rem;
 }
 
-#search-form div {
+#search-my-resources-form div {
     width: 25rem;
     margin-right: 15px;
 }
 
-#search-form select {
+#search-my-resources-form select {
     width: 11rem;
     color: var(--fill);
     font-size: 1.1rem;
 }
 
-#search-form div, #search-form select {
+#search-my-resources-form div, #search-my-resources-form select {
     outline: none;
     border: none;
     background-color: var(--background);
@@ -78,7 +82,7 @@ main {
     transition: 0.5s;
 }
 
-#search-form div input {
+#search-my-resources-form div input {
     background: none;
     border: none;
     outline: none;
@@ -87,7 +91,7 @@ main {
     color: var(--fill);
 }
 
-#search-form div:hover, #search-form select:hover {
+#search-my-resources-form div:hover, #search-my-resources-form select:hover {
     background-color: #fff;
     box-shadow: 0 0 20px 0 #f3f3f3 inset,
     0 0 20px 0 #f3f3f3 inset;
@@ -97,9 +101,9 @@ main {
 
 #resourcesResultList {
     width: 100%;
-    display: flex;
-    flex-flow: wrap row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: center;
 }
 
 .resourceResult {
@@ -109,7 +113,7 @@ main {
     padding: 15px;
     box-shadow: 0 0 15px 10px var(--background);
     border-radius: 5px;
-    margin-bottom: 1rem;
+    margin: 1rem;
     transition: transform 250ms ease-in-out;
 }
 
@@ -207,12 +211,4 @@ main {
 
 #add-button:active, #buttonResult a:active {
     transform: scale(.9);
-}
-
-/* Screen Resizing */
-
-@media only screen and (max-width: 765px) {
-    .resourceResult {
-        flex: 0 1 100%;
-    }
 }
