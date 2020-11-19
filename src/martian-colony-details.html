@@ -1,21 +1,24 @@
 <!doctype html>
 <html lang="en">
 <head>
+    <!-- meta -->
     <meta charset="UTF-8">
     <meta content="author" name="MarsDex">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <!-- browser tab icon -->
     <link rel="icon" href="assets/images/mars-dex-icon.png">
-
+    <!-- fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/solid.css" integrity="sha384-yo370P8tRI3EbMVcDU+ziwsS/s62yNv3tgdMqDSsRSILohhnOrDNl142Df8wuHA+" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/fontawesome.css" integrity="sha384-ijEtygNrZDKunAWYDdV3wAZWvTHSrGhdUfImfngIba35nhQ03lSNgfTJAKaGFjk2" crossorigin="anonymous">
+    <!-- stylesheet -->
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/header.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/martian/header-martian.css"/>
-
+    <link rel="stylesheet" type="text/css" href="assets/css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/martian/colony-details.css"/>
+    <!-- title -->
     <title>MarsDex | Colony Details</title>
 </head>
 <body>
@@ -24,37 +27,266 @@
     </header>
 
     <main>
-        <h2 id="colony-title">Temporary title, should be Colony name</h2>
-        <section id="graphs">
-            <h2>Global available resources</h2>
-            <div>
-                <img src="#" alt="diagram">
-                <ul id="resources1">
-                    <!-- fill with resources -->
-                </ul>
-                <img src="#" alt="diagram">
-                <ul id="resources2">
-                    <!-- fill with resources -->
-                </ul>
+        <h2 id="colony-title"><img src="assets/images/colony-flags/colony-flag.jpg" alt="The crater bay colony" title="The crater bay colony">The crater bay colony</h2>
+        <a class="back" href="martian-colonies.html"><span class="fas fa-arrow-left"></span></a>
+
+        <section>
+            <h2 class="subTitle"><span class="fas fa-globe"></span>Overview resources in <span class="colony-name">The crater bay colony</span></h2>
+            <div id="upperPart">
+                    <section id="miningResources">
+                        <h3>Mining Resources</h3>
+                        <div>
+                            <div>
+                                <!-- fill with correct resources -->
+                                <div class="resourceWithCircle">
+                                    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="circle-chart__background" stroke="#ffffff" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431"/>
+                                        <circle class="circle-chart__circle" stroke=var(--fill) stroke-width="2" stroke-dasharray="30,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                        <g class="circle-chart__info">
+                                            <text class="circle-chart__percent" x="16.91549431" y="16.91549431" alignment-baseline="central" text-anchor="middle" font-size="8">30%</text>
+                                        </g>
+                                    </svg>
+                                    <img src="assets/images/resources/stone.png" alt="Stone" title="Stone">
+                                    <p>Stone</p>
+                                </div>
+                                <div class="resourceWithCircle">
+                                    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="circle-chart__background" stroke="#ffffff" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431"/>
+                                        <circle class="circle-chart__circle" stroke=var(--fill) stroke-width="2" stroke-dasharray="35,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                        <g class="circle-chart__info">
+                                            <text class="circle-chart__percent" x="16.91549431" y="16.91549431" alignment-baseline="central" text-anchor="middle" font-size="8">35%</text>
+                                        </g>
+                                    </svg>
+                                    <img src="assets/images/resources/gold.png" alt="Gold" title="Gold">
+                                    <p>Gold</p>
+                                </div>
+                                <div class="resourceWithCircle">
+                                    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="circle-chart__background" stroke="#ffffff" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431"/>
+                                        <circle class="circle-chart__circle" stroke=var(--fill) stroke-width="2" stroke-dasharray="40,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                        <g class="circle-chart__info">
+                                            <text class="circle-chart__percent" x="16.91549431" y="16.91549431" alignment-baseline="central" text-anchor="middle" font-size="8">40%</text>
+                                        </g>
+                                    </svg>
+                                    <img src="assets/images/resources/copper.png" alt="Copper" title="Copper">
+                                    <p>Copper</p>
+                                </div>
+                                <div class="resourceWithCircle">
+                                    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="circle-chart__background" stroke="#ffffff" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431"/>
+                                        <circle class="circle-chart__circle" stroke=var(--fill) stroke-width="2" stroke-dasharray="45,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                        <g class="circle-chart__info">
+                                            <text class="circle-chart__percent" x="16.91549431" y="16.91549431" alignment-baseline="central" text-anchor="middle" font-size="8">45%</text>
+                                        </g>
+                                    </svg>
+                                    <img src="assets/images/resources/diamond.png" alt="Diamond" title="Diamond">
+                                    <p>Diamond</p>
+                                </div>
+                                <div class="resourceWithCircle">
+                                    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="circle-chart__background" stroke="#ffffff" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431"/>
+                                        <circle class="circle-chart__circle" stroke=var(--fill) stroke-width="2" stroke-dasharray="50,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                        <g class="circle-chart__info">
+                                            <text class="circle-chart__percent" x="16.91549431" y="16.91549431" alignment-baseline="central" text-anchor="middle" font-size="8">50%</text>
+                                        </g>
+                                    </svg>
+                                    <img src="assets/images/resources/silver.png" alt="Silver" title="Silver">
+                                    <p>Silver</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="resourceWithCircle">
+                                    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="circle-chart__background" stroke="#ffffff" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431"/>
+                                        <circle class="circle-chart__circle" stroke=var(--fill) stroke-width="2" stroke-dasharray="88,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                        <g class="circle-chart__info">
+                                            <text class="circle-chart__percent" x="16.91549431" y="16.91549431" alignment-baseline="central" text-anchor="middle" font-size="3">All Resources</text>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="growingResources">
+                        <h3>Food Resources</h3>
+                        <!-- fill with resources -->
+                        <div>
+                            <div>
+                                <div class="resourceWithCircle">
+                                    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="circle-chart__background" stroke="#ffffff" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431"/>
+                                        <circle class="circle-chart__circle" stroke=var(--fill) stroke-width="2" stroke-dasharray="55,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                        <g class="circle-chart__info">
+                                            <text class="circle-chart__percent" x="16.91549431" y="16.91549431" alignment-baseline="central" text-anchor="middle" font-size="8">55%</text>
+                                        </g>
+                                    </svg>
+                                    <img src="assets/images/resources/potato.png" alt="Potato" title="Potato">
+                                    <p>Potatoes</p>
+                                </div>
+                                <div class="resourceWithCircle">
+                                    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="circle-chart__background" stroke="#ffffff" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431"/>
+                                        <circle class="circle-chart__circle" stroke=var(--fill) stroke-width="2" stroke-dasharray="60,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                        <g class="circle-chart__info">
+                                            <text class="circle-chart__percent" x="16.91549431" y="16.91549431" alignment-baseline="central" text-anchor="middle" font-size="8">60%</text>
+                                        </g>
+                                    </svg>
+                                    <img src="assets/images/resources/carrot.png" alt="Carrot" title="Carrot">
+                                    <p>Carrots</p>
+                                </div>
+                                <div class="resourceWithCircle">
+                                    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="circle-chart__background" stroke="#ffffff" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431"/>
+                                        <circle class="circle-chart__circle" stroke=var(--fill) stroke-width="2" stroke-dasharray="65,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                        <g class="circle-chart__info">
+                                            <text class="circle-chart__percent" x="16.91549431" y="16.91549431" alignment-baseline="central" text-anchor="middle" font-size="8">65%</text>
+                                        </g>
+                                    </svg>
+                                    <img src="assets/images/resources/lettuce.png" alt="Lettuce" title="Lettuce">
+                                    <p>Lettuce</p>
+                                </div>
+                                <div class="resourceWithCircle">
+                                    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="circle-chart__background" stroke="#ffffff" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431"/>
+                                        <circle class="circle-chart__circle" stroke=var(--fill) stroke-width="2" stroke-dasharray="70,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                        <g class="circle-chart__info">
+                                            <text class="circle-chart__percent" x="16.91549431" y="16.91549431" alignment-baseline="central" text-anchor="middle" font-size="8">70%</text>
+                                        </g>
+                                    </svg>
+                                    <img src="assets/images/resources/apple.png" alt="Apple" title="Apple">
+                                    <p>Apples</p>
+                                </div>
+                                <div class="resourceWithCircle">
+                                    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="circle-chart__background" stroke="#ffffff" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431"/>
+                                        <circle class="circle-chart__circle" stroke=var(--fill) stroke-width="2" stroke-dasharray="75,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                        <g class="circle-chart__info">
+                                            <text class="circle-chart__percent" x="16.91549431" y="16.91549431" alignment-baseline="central" text-anchor="middle" font-size="8">75%</text>
+                                        </g>
+                                    </svg>
+                                    <img class="peer" src="assets/images/resources/peer.png" alt="Peer" title="Peer">
+                                    <p>Peers</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="resourceWithCircle">
+                                    <svg class="circle-chart" viewbox="0 0 33.83098862 33.83098862" width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+                                        <circle class="circle-chart__background" stroke="#ffffff" stroke-width="2" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431"/>
+                                        <circle class="circle-chart__circle" stroke=var(--fill) stroke-width="2" stroke-dasharray="88,100" stroke-linecap="round" fill="none" cx="16.91549431" cy="16.91549431" r="15.91549431" />
+                                        <g class="circle-chart__info">
+                                            <text class="circle-chart__percent" x="16.91549431" y="16.91549431" alignment-baseline="central" text-anchor="middle" font-size="3">All Resources</text>
+                                        </g>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section id="graph">
+                        <h3>Chart</h3>
+                        <p>Here will the chart be</p>
+                    </section>
             </div>
-            <img src="#" alt="graph">
         </section>
+
         <section id="resources">
-            <h2>Resources in <span id="colony-name">temporary</span></h2>
-            <form>
-                <label for="search"></label>
-                <input type="text" id="search" name="search" placeholder="Search for a colony ...">
-            </form>
-            <form>
-                <label for="filters"></label>
-                <select name="filters" id="filters">
+            <h2 class="subTitle"><span class="fas fa-cubes"></span>Details resources in <span class="colony-name">The crater bay colony</span></h2>
+            <form id="search-colony-details-resources-form">
+                <div>
+                    <label for="searchMyColonyDetailsResources"></label>
+                    <input type="text" id="searchMyColonyDetailsResources" name="search" placeholder="Search for a resource ...">
+                    <span class="fas fa-search"></span>
+                </div>
+
+                <label for="filtersColonyDetailsResources"></label>
+                <select name="filters" id="filtersColonyDetailsResources">
                     <option value="name">Name</option>
-                    <option value="location">Location</option>
-                    <option value="resources">Resources</option>
+                    <option value="resources">Highest Storage</option>
+                    <option value="location">Lowest Storage</option>
                 </select>
             </form>
-            <div>
+            <div class="martianColonyDetailsResources">
                 <!-- fill with articles of resources -->
+                <article class="martianColonyDetailsResource">
+                    <img src="assets/images/resources/gold.png" alt="Gold" title="Gold">
+                    <div class="resourceInformation">
+                        <h2>Gold</h2>
+                        <ul>
+                            <li><span class="fas fa-box-open"></span><div><strong>Available Resources: </strong>15 ton</div></li>
+                            <li><span class="fas fa-clock"></span><div><strong>Resource Added: </strong>12/10/2054 16:04:14</div></li>
+                            <li><span class="fas fa-signal"></span><div><strong>Rarity: </strong>5%</div></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="martianColonyDetailsResource">
+                    <img src="assets/images/resources/stone.png" alt="Stone" title="Stone">
+                    <div class="resourceInformation">
+                        <h2>Stone</h2>
+                        <ul>
+                            <li><span class="fas fa-box-open"></span><div><strong>Available Resources: </strong>15 ton</div></li>
+                            <li><span class="fas fa-clock"></span><div><strong>Resource Added: </strong>12/10/2054 16:04:14</div></li>
+                            <li><span class="fas fa-signal"></span><div><strong>Rarity: </strong>5%</div></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="martianColonyDetailsResource">
+                    <img src="assets/images/resources/diamond.png" alt="Diamond" title="Diamond">
+                    <div class="resourceInformation">
+                        <h2>Diamond</h2>
+                        <ul>
+                            <li><span class="fas fa-box-open"></span><div><strong>Available Resources: </strong>15 ton</div></li>
+                            <li><span class="fas fa-clock"></span><div><strong>Resource Added: </strong>12/10/2054 16:04:14</div></li>
+                            <li><span class="fas fa-signal"></span><div><strong>Rarity: </strong>5%</div></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="martianColonyDetailsResource">
+                    <img src="assets/images/resources/carrot.png" alt="Carrot" title="Carrot">
+                    <div class="resourceInformation">
+                        <h2>Carrots</h2>
+                        <ul>
+                            <li><span class="fas fa-box-open"></span><div><strong>Available Resources: </strong>15 ton</div></li>
+                            <li><span class="fas fa-clock"></span><div><strong>Resource Added: </strong>12/10/2054 16:04:14</div></li>
+                            <li><span class="fas fa-signal"></span><div><strong>Rarity: </strong>5%</div></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="martianColonyDetailsResource">
+                    <img src="assets/images/resources/lettuce.png" alt="Lettuce" title="Lettuce">
+                    <div class="resourceInformation">
+                        <h2>Lettuce</h2>
+                        <ul>
+                            <li><span class="fas fa-box-open"></span><div><strong>Available Resources: </strong>15 ton</div></li>
+                            <li><span class="fas fa-clock"></span><div><strong>Resource Added: </strong>12/10/2054 16:04:14</div></li>
+                            <li><span class="fas fa-signal"></span><div><strong>Rarity: </strong>5%</div></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="martianColonyDetailsResource">
+                    <img src="assets/images/resources/potato.png" alt="Potatoes" title="Potatoes">
+                    <div class="resourceInformation">
+                        <h2>Potatoes</h2>
+                        <ul>
+                            <li><span class="fas fa-box-open"></span><div><strong>Available Resources: </strong>15 ton</div></li>
+                            <li><span class="fas fa-clock"></span><div><strong>Resource Added: </strong>12/10/2054 16:04:14</div></li>
+                            <li><span class="fas fa-signal"></span><div><strong>Rarity: </strong>5%</div></li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="colonyDetailsInformation">
+            <h2 class="subTitle"><span class="fas fa-info-circle"></span>Colony information</h2>
+            <div>
+                <img src="assets/images/colony-flags/colony-flag.jpg" alt="The crater bay colony" title="The crater bay colony">
+                <ul>
+                    <li><strong>Colony name: </strong>The crater bay colony</li>
+                    <li><strong>Population: </strong>63478 inhabitants</li>
+                    <li><strong>Surface: </strong>60,4 km²</li>
+                    <li><strong>Location: </strong>RK 0u 54m 54s | Dec +5° 14′ 46″</li>
+                    <li><strong>Population density: </strong>1050,97 inhabitants/km²</li>
+                    <li><strong>Mayor: </strong>X Æ A-12 (Mars Ruling Party MRP)</li>
+                </ul>
             </div>
         </section>
     </main>
