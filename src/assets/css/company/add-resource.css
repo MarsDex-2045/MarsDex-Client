@@ -90,7 +90,7 @@ select {
      display: block;
      width: calc(100% - 40px);
      pointer-events: none;
-     z-index: 20;
+     z-index: 2;
      height: 30px;
      line-height: 30px;
      color: #999;
@@ -108,7 +108,7 @@ select {
      background: var(--accent);
      color: #fff;
      font-weight: 700;
-     z-index: 25;
+     z-index: 3;
      font-size: 16px;
      line-height: 50px;
      padding: 0 15px;
