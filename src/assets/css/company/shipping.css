@@ -1,0 +1,201 @@
+/* BODY */
+
+body {
+    font-family: 'Arial', 'Helvetica', sans-serif;
+    font-size: 1rem;
+}
+
+/* MAIN */
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+#section-top {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+#section-top h2 {
+    font-size: 5rem;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    color: var(--accent);
+}
+
+/* FORM */
+
+#search-form {
+    width: 100%;
+    display: inline-flex;
+    margin-bottom: 2rem;
+}
+
+#search-form div {
+    width: 25rem;
+    margin-right: 15px;
+}
+
+#search-form select {
+    width: 11rem;
+    color: var(--fill);
+    font-size: 1.1rem;
+}
+
+#search-form div, #search-form select {
+    outline: none;
+    border: none;
+    background-color: var(--background);
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+#search-form div input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 23rem;
+    font-size: 1.1rem;
+    color: var(--fill);
+}
+
+#search-form div:hover, #search-form select:hover {
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 #f3f3f3 inset,
+    0 0 20px 0 #f3f3f3 inset;
+}
+
+/* Result Article */
+
+#shippingResultList {
+    width: 100%;
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: center;
+}
+
+.shippingResult {
+    width: 100%;
+    position: relative;
+    display: flex;
+    padding: 15px;
+    box-shadow: 0 0 15px 10px var(--background);
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    transition: transform 250ms ease-in-out;
+}
+
+.shippingResult > ul {
+    display: inline-flex;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.shippingResult > ul span {
+    padding-left: 10px;
+    padding-right: 5px;
+}
+
+.shippingResult > a {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    background-color: var(--accent);
+    border-radius: 5px;
+}
+
+.shippingResult > ul li {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.shippingResult > ul li:first-of-type {
+    padding-right: 10px;
+}
+
+.shippingInformation {
+    width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.shippingInformation ul {
+    width: 100%;
+    display: inline-flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+}
+
+.shippingInformation ul li {
+    width: 20%;
+    color: var(--fill);
+    padding-bottom: 0.4rem;
+    text-align: center;
+}
+
+.shippingInformation ul li p:first-of-type {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.shippingInformation ul li p > span {
+    padding-right: 3px;
+}
+
+.shippingInformation img {
+    width: 30%;
+    height: 50%;
+}
+
+#buttonResult {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+#buttonResult a {
+    width: 8rem;
+    padding: 7px;
+    background-color: #3da9ff;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 250ms ease-in-out;
+}
+
+#buttonResult p {
+    color: var(--fill);
+    font-size: 1.3rem;
+    font-weight: lighter;
+}
+
+#buttonResult span:first-of-type {
+    padding-left: 5px;
+}
+
+#buttonResult span:last-of-type {
+    padding-right: 5px;
+}
+
+/* ANIMATION */
+
+#add-button:hover, .shippingResult:hover, #buttonResult a:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+}
+
+#add-button:active, #buttonResult a:active {
+    transform: scale(.9);
+}
