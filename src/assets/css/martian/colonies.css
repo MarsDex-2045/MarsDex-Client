@@ -138,11 +138,3 @@ main > h2 {
     color: var(--fill);
     transition: 0.3s all ease-in;
 }
-
-/* Screen Resizing */
-
-@media only screen and (max-width: 765px) {
-    .resourceResult {
-        flex: 0 1 100%;
-    }
-}

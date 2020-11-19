@@ -1,0 +1,269 @@
+/* colony info part */
+
+#colonyDetailsInformation {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    font-size: 1.5rem;
+    color: var(--fill);
+    margin-top: 2rem;
+}
+
+#colonyDetailsInformation > div {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: center;
+}
+
+#colonyDetailsInformation > div ul {
+    text-align: left;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+#colonyDetailsInformation > div ul li {
+    line-height: 2.4rem;
+}
+
+#colonyDetailsInformation > div img {
+    width: 300px;
+    margin: 50px auto;
+}
+
+/* charts part */
+/* circles */
+.circle-chart__circle {
+    animation: circle-chart-fill 2s reverse;
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+
+.circle-chart__info {
+    animation: circle-chart-appear 2s forwards;
+    opacity: 0;
+    transform: translateY(0.3em);
+}
+
+.circle-chart__info text {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    color: var(--fill);
+}
+
+@keyframes circle-chart-fill {
+    to { stroke-dasharray: 0 100; }
+}
+
+@keyframes circle-chart-appear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#upperPart {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: center;
+    margin: 40px 0;
+}
+
+#miningResources, #growingResources, #graph {
+    background-color: var(--accent);
+    border: 5px solid var(--fill);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+#miningResources > div, #growingResources > div {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#miningResources > div > div, #growingResources > div > div {
+    margin: 10px 0;
+}
+
+#miningResources h3, #growingResources h3, #graph h3 {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    font-size: 1.5rem;
+    color: var(--fill);
+    text-align: center;
+}
+
+#graph {
+    background-color: #3da9ff;
+}
+
+.resourceWithCircle {
+    display: flex;
+    align-items: center;
+    color: var(--fill);
+    margin: 10px
+}
+
+.resourceWithCircle p {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+}
+
+.resourceWithCircle svg {
+    margin-right: 20px;
+}
+
+.resourceWithCircle img {
+    height: 30px;
+    margin-right: 10px;
+    background-color: #92FE9D;
+    border-radius: 20px;
+    border: 1px solid var(--fill);
+    padding: 3px;
+}
+
+#colony-title {
+    display: flex;
+    font-size: 3rem;
+    justify-content: center;
+    color: var(--accent);
+    text-align: center;
+    margin: 2rem auto;
+    width: max-content;
+}
+
+#colony-title img {
+    height: 50px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.colony-name {
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.subTitle {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    font-size: 1.5rem;
+    color: #ffffff;
+    background-color: var(--fill);
+    padding: 30px 0 30px 40px;
+}
+
+.subTitle span {
+    padding-right: 15px;
+}
+
+main > a {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    font-size: 2rem;
+    margin-right: 30px;
+    color: var(--accent);
+    padding: 10px;
+    background-color: var(--background);
+    border: 3px solid var(--fill);
+    border-radius: 40px;
+}
+
+main > a:hover {
+    background-color: var(--accent);
+    color: var(--fill);
+}
+
+/* BOTTOM PART */
+
+/* FORM */
+
+#filtersColonyDetailsResources:hover {
+    cursor: pointer;
+}
+
+#search-colony-details-resources-form {
+    width: 80%;
+    display: flex;
+    margin: 2rem auto;
+}
+
+#search-colony-details-resources-form div {
+    width: 25rem;
+    margin-right: 15px;
+}
+
+#search-colony-details-resources-form select {
+    width: 11rem;
+    color: var(--fill);
+    font-size: 1.1rem;
+}
+
+#search-colony-details-resources-form div, #search-colony-details-resources-form select {
+    outline: none;
+    border: none;
+    background-color: var(--background);
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+#search-colony-details-resources-form div input {
+    background: none;
+    border: none;
+    outline: none;
+    width: 23rem;
+    font-size: 1.1rem;
+    color: var(--fill);
+}
+
+#search-colony-details-resources-form div:hover, #search-colony-details-resources-form select:hover {
+    background-color: #fff;
+    box-shadow: 0 0 20px 0 #f3f3f3 inset,
+    0 0 20px 0 #f3f3f3 inset;
+}
+
+/* Result Article */
+
+.martianColonyDetailsResources {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    row-gap: 1rem;
+    column-gap: 1rem;
+    align-items: center;
+}
+
+.martianColonyDetailsResource {
+    position: relative;
+    flex: 0 1 45%;
+    display: flex;
+    padding: 15px;
+    box-shadow: 0 0 15px 10px var(--background);
+    border-radius: 5px;
+    transition: transform 250ms ease-in-out;
+    color: var(--fill);
+}
+
+.martianColonyDetailsResource img {
+    margin-right: 25px;
+    height: 10rem;
+    border-radius: 10px;
+}
+
+.martianColonyDetailsResource h2 {
+    font-size: 1.8rem;
+    color: var(--accent);
+    margin: 0 20px 0.75rem 0;
+}
+
+.resourceInformation ul li {
+    margin: 10px 0;
+    line-height: 1.3rem;
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+}
+
+.resourceInformation ul li span, .resourceInformation ul li div {
+    display: inline;
+}
+
+.resourceInformation ul li span {
+    margin-right: 20px;
+}
