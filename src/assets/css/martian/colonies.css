@@ -73,6 +73,8 @@ main > h2 {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    row-gap: 1rem;
+    column-gap: 1rem;
     align-items: center;
 }
 
@@ -83,7 +85,6 @@ main > h2 {
     padding: 15px;
     box-shadow: 0 0 15px 10px var(--background);
     border-radius: 5px;
-    margin: 1rem;
     transition: transform 250ms ease-in-out;
     color: var(--fill);
 }
