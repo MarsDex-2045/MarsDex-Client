@@ -1,0 +1,100 @@
+/* circles */
+.circle-chart__circle {
+    animation: circle-chart-fill 2s reverse;
+    transform: rotate(-90deg);
+    transform-origin: center;
+}
+
+.circle-chart__info {
+    animation: circle-chart-appear 2s forwards;
+    opacity: 0;
+    transform: translateY(0.3em);
+}
+
+.circle-chart__info text {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    color: var(--fill);
+}
+
+@keyframes circle-chart-fill {
+    to { stroke-dasharray: 0 100; }
+}
+
+@keyframes circle-chart-appear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* CUSTOM */
+
+#upperPart {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    align-items: center;
+}
+
+#miningResources, #growingResources, #graph {
+    border-radius: 20px;
+    padding: 20px;
+    margin: 60px 20px;
+}
+
+#miningResources > div, #growingResources > div {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#miningResources > div > div, #growingResources > div > div {
+    margin: 10px 0;
+}
+
+#miningResources h3, #growingResources h3, #graph h3 {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    font-size: 1.5rem;
+    color: var(--fill);
+    text-align: center;
+}
+
+.resourceWithCircle {
+    display: flex;
+    align-items: center;
+    color: var(--fill);
+    margin: 10px
+}
+
+.resourceWithCircle p {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+}
+
+.resourceWithCircle svg {
+    margin-right: 20px;
+}
+
+.resourceWithCircle img {
+    height: 30px;
+    margin-right: 10px;
+    background-color: #92FE9D;
+    border-radius: 20px;
+    border: 1px solid var(--fill);
+    padding: 3px;
+}
+
+/* COMMON TITLE STYLE */
+
+.subTitle {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    font-size: 1.5rem;
+    text-align: left;
+    color: #ffffff;
+    background-color: var(--fill);
+    padding: 30px 0 30px 40px;
+    text-transform: capitalize;
+}
+
+.subTitle span {
+    padding-right: 15px;
+}
