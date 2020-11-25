@@ -60,6 +60,7 @@ main {
     margin: 1em 0;
     border: none;
     border-bottom: 1px solid var(--accent);
+    color: var(--fill);
 }
 
 .formInputBox span {
@@ -139,6 +140,7 @@ main {
 #marsDexInformation ul li {
     padding: 7px 0;
     letter-spacing: 2px;
+    color: var(--fill);
 }
 
 #marsDexInformation ul li:last-of-type {
