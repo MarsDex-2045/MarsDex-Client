@@ -17,7 +17,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/header.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/company/header-company.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/pup-up.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/martian/colonies.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/colonies.css">
     <link rel="stylesheet" type="text/css" href="assets/css/footer.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/sub-titles.css"/>
     <!-- title -->
@@ -31,25 +31,21 @@
 
     <main>
         <h2 class="subTitle"><span class="fas fa-city"></span>Colonies</h2>
-        <form>
-            <label for="searchColonies"></label>
-            <input type="text" id="searchColonies" name="search" placeholder="Search for a colony ...">
-        </form>
-
-        <form id="search-martian-colonies-form">
-            <div>
-                <label for="searchMartianColonies"></label>
-                <input type="text" id="searchMartianColonies" name="search" placeholder="Search for a colony ...">
-                <span class="fas fa-search"></span>
-            </div>
-
-            <label for="filtersMartianColonies"></label>
-            <select name="filters" id="filtersMartianColonies">
-                <option value="name">Name</option>
-                <option value="resources">Highest Storage</option>
-                <option value="location">Lowest Storage</option>
-            </select>
-        </form>
+        <div class="margin-left">
+            <form id="search-martian-colonies-form">
+                <div>
+                    <label for="searchMartianColonies"></label>
+                    <input type="text" id="searchMartianColonies" name="search" placeholder="Search for a colony ...">
+                    <span class="fas fa-search"></span>
+                </div>
+                <label for="filtersMartianColonies"></label>
+                <select name="filters" id="filtersMartianColonies">
+                    <option value="name">Name</option>
+                    <option value="resources">Highest Storage</option>
+                    <option value="location">Lowest Storage</option>
+                </select>
+            </form>
+        </div>
 
         <!-- fill div with articles and colonies -->
         <div id="martianColonies">
