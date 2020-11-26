@@ -79,6 +79,8 @@ body {
     width: 100%;
     height: 9rem;
     resize: none;
+    padding: 10px;
+    box-sizing: border-box;
     color: var(--fill);
     font-size: 1.2rem;
     font-weight: lighter;
