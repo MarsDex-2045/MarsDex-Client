@@ -17,41 +17,156 @@
     <link rel="stylesheet" type="text/css" href="assets/css/header.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/company/header-company.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/pup-up.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/martian/colonies.css">
     <link rel="stylesheet" type="text/css" href="assets/css/footer.css"/>
     <!-- title -->
     <title>MarsDex | Colonies</title>
 </head>
 <body>
 
-<header>
-    <!-- Dynamic loading header -->
-</header>
+    <header>
+        <!-- Dynamic loading header -->
+    </header>
 
     <main>
         <h2>Colonies</h2>
-        <form>
-            <label for="searchColonies"></label>
-            <input type="text" id="searchColonies" name="search" placeholder="Search for a colony ...">
-        </form>
 
-        <form>
-            <label for="filtersColonies"></label>
-            <select name="filters" id="filtersColonies">
+        <form id="search-martian-colonies-form">
+            <div>
+                <label for="searchMartianColonies"></label>
+                <input type="text" id="searchMartianColonies" name="search" placeholder="Search for a colony ...">
+                <span class="fas fa-search"></span>
+            </div>
+
+            <label for="filtersMartianColonies"></label>
+            <select name="filters" id="filtersMartianColonies">
                 <option value="name">Name</option>
-                <option value="location">Location</option>
-                <option value="resources">Resources</option>
+                <option value="resources">Highest Storage</option>
+                <option value="location">Lowest Storage</option>
             </select>
         </form>
 
         <!-- fill div with articles and colonies -->
-        <div id="coloniesResult">
+        <div id="martianColonies">
+            <article class="martianColony">
+                <img src="assets/images/colony-flags/colony-flag.jpg" alt="The crater bay colony" title="The crater bay colony">
+                <div class="colonyInformation">
+                    <h2>The crater bay colony</h2>
+                    <ul>
+                        <li><span class="fas fa-box-open"></span><div><strong>Available Resources: </strong>15 ton</div></li>
+                        <li><span class="fas fa-map-marker-alt"></span><div><strong>Location: </strong>RK 0u 54m 49s | Dec +5° 13′ 6″</div></li>
+                    </ul>
+                </div>
+                <a href="martian-colony-details.html" class="martianColonyDetails"><span class="fas fa-info-circle"></span>details</a>
+            </article>
 
-        </div>
+            <article class="martianColony">
+                <img src="assets/images/colony-flags/colony-flag2.png" alt="The crater bay colony" title="The crater bay colony">
+                <div class="colonyInformation">
+                    <h2>The crater bay colony</h2>
+                    <ul>
+                        <li><span class="fas fa-box-open"></span><div><strong>Available Resources: </strong>15 ton</div></li>
+                        <li><span class="fas fa-map-marker-alt"></span><div><strong>Location: </strong>RK 0u 54m 49s | Dec +5° 13′ 6″</div></li>
+                    </ul>
+                </div>
+                <a href="martian-colony-details.html" class="martianColonyDetails"><span class="fas fa-info-circle"></span>details</a>
+            </article>
 
-        <div id="buttonResult">
-            <a href="#">Previous Page</a>
-            <p id="pageNumber">1/2</p>
-            <a href="#">Next Page</a>
+            <article class="martianColony">
+                <img src="assets/images/colony-flags/colony-flag3.jpg" alt="The crater bay colony" title="The crater bay colony">
+                <div class="colonyInformation">
+                    <h2>The crater bay colony</h2>
+                    <ul>
+                        <li><span class="fas fa-box-open"></span><div><strong>Available Resources: </strong>15 ton</div></li>
+                        <li><span class="fas fa-map-marker-alt"></span><div><strong>Location: </strong>RK 0u 54m 49s | Dec +5° 13′ 6″</div></li>
+                    </ul>
+                </div>
+                <a href="martian-colony-details.html" class="martianColonyDetails"><span class="fas fa-info-circle"></span>details</a>
+            </article>
+
+            <article class="martianColony">
+                <img src="assets/images/colony-flags/colony-flag4.png" alt="The crater bay colony" title="The crater bay colony">
+                <div class="colonyInformation">
+                    <h2>The crater bay colony</h2>
+                    <ul>
+                        <li><span class="fas fa-box-open"></span><div><strong>Available Resources: </strong>15 ton</div></li>
+                        <li><span class="fas fa-map-marker-alt"></span><div><strong>Location: </strong>RK 0u 54m 49s | Dec +5° 13′ 6″</div></li>
+                    </ul>
+                </div>
+                <a href="martian-colony-details.html" class="martianColonyDetails"><span class="fas fa-info-circle"></span>details</a>
+            </article>
+
+            <article class="martianColony">
+                <img src="assets/images/colony-flags/colony-flag5.png" alt="The crater bay colony" title="The crater bay colony">
+                <div class="colonyInformation">
+                    <h2>The crater bay colony</h2>
+                    <ul>
+                        <li><span class="fas fa-box-open"></span><div><strong>Available Resources: </strong>15 ton</div></li>
+                        <li><span class="fas fa-map-marker-alt"></span><div><strong>Location: </strong>RK 0u 54m 49s | Dec +5° 13′ 6″</div></li>
+                    </ul>
+                </div>
+                <a href="martian-colony-details.html" class="martianColonyDetails"><span class="fas fa-info-circle"></span>details</a>
+            </article>
+
+            <article class="martianColony">
+                <img src="assets/images/colony-flags/colony-flag5.png" alt="The crater bay colony" title="The crater bay colony">
+                <div class="colonyInformation">
+                    <h2>The crater bay colony</h2>
+                    <ul>
+                        <li><span class="fas fa-box-open"></span><div><strong>Available Resources: </strong>15 ton</div></li>
+                        <li><span class="fas fa-map-marker-alt"></span><div><strong>Location: </strong>RK 0u 54m 49s | Dec +5° 13′ 6″</div></li>
+                    </ul>
+                </div>
+                <a href="martian-colony-details.html" class="martianColonyDetails"><span class="fas fa-info-circle"></span>details</a>
+            </article>
+
+            <article class="martianColony">
+                <img src="assets/images/colony-flags/colony-flag4.png" alt="The crater bay colony" title="The crater bay colony">
+                <div class="colonyInformation">
+                    <h2>The crater bay colony</h2>
+                    <ul>
+                        <li><span class="fas fa-box-open"></span><div><strong>Available Resources: </strong>15 ton</div></li>
+                        <li><span class="fas fa-map-marker-alt"></span><div><strong>Location: </strong>RK 0u 54m 49s | Dec +5° 13′ 6″</div></li>
+                    </ul>
+                </div>
+                <a href="martian-colony-details.html" class="martianColonyDetails"><span class="fas fa-info-circle"></span>details</a>
+            </article>
+
+            <article class="martianColony">
+                <img src="assets/images/colony-flags/colony-flag3.jpg" alt="The crater bay colony" title="The crater bay colony">
+                <div class="colonyInformation">
+                    <h2>The crater bay colony</h2>
+                    <ul>
+                        <li><span class="fas fa-box-open"></span><div><strong>Available Resources: </strong>15 ton</div></li>
+                        <li><span class="fas fa-map-marker-alt"></span><div><strong>Location: </strong>RK 0u 54m 49s | Dec +5° 13′ 6″</div></li>
+                    </ul>
+                </div>
+                <a href="martian-colony-details.html" class="martianColonyDetails"><span class="fas fa-info-circle"></span>details</a>
+            </article>
+
+            <article class="martianColony">
+                <img src="assets/images/colony-flags/colony-flag2.png" alt="The crater bay colony" title="The crater bay colony">
+                <div class="colonyInformation">
+                    <h2>The crater bay colony</h2>
+                    <ul>
+                        <li><span class="fas fa-box-open"></span><div><strong>Available Resources: </strong>15 ton</div></li>
+                        <li><span class="fas fa-map-marker-alt"></span><div><strong>Location: </strong>RK 0u 54m 49s | Dec +5° 13′ 6″</div></li>
+                    </ul>
+                </div>
+                <a href="martian-colony-details.html" class="martianColonyDetails"><span class="fas fa-info-circle"></span>details</a>
+            </article>
+
+            <article class="martianColony">
+                <img src="assets/images/colony-flags/colony-flag.jpg" alt="The crater bay colony" title="The crater bay colony">
+                <div class="colonyInformation">
+                    <h2>The crater bay colony</h2>
+                    <ul>
+                        <li><span class="fas fa-box-open"></span><div><strong>Available Resources: </strong>15 ton</div></li>
+                        <li><span class="fas fa-map-marker-alt"></span><div><strong>Location: </strong>RK 0u 54m 49s | Dec +5° 13′ 6″</div></li>
+                    </ul>
+                </div>
+                <a href="martian-colony-details.html" class="martianColonyDetails"><span class="fas fa-info-circle"></span>details</a>
+            </article>
         </div>
     </main>
 
