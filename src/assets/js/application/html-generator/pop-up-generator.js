@@ -104,3 +104,42 @@ function generateDetails() {
         </section>
     `;
 }
+
+function loadShippingHtml() {
+    document.querySelector('body').innerHTML += `
+        <section id="shipping-details" class="hidden">
+            <h2>Shipping ID <span id="shipping-ID">032932243234</span></h2>
+            <div class="infoWrapper">
+                <ul class="shipping-information">
+                    <li><span class="fas fa-clock"></span>Datetime of departure:<span id="send-time" class="info">15/03/2055 08:16:00</span></li>
+                    <li><span class="fas fa-city"></span>Colony sender:<span id="sender" class="info">The Crater Bay Colony</span></li>
+                    <li><span class="fas fa-hourglass-half"></span>Estimated time:<span id="duration" class="info">34 hours</span></li>
+                    <li><span class="fas fa-weight-hanging"></span>Weight:<span id="weight" class="info">3500 kilograms</span></li>
+                    <li><span class="fas fa-shuttle-van"></span>Mode of transportation:<span id="status" class="info">train</span></li>
+                </ul>
+            </div>
+            <div class="tableWrapper">
+                <ul class="shipping-table">
+                    <li>
+                        <p>Potato</p>
+                        <p><span class="fas fa-weight-hanging"></span>150kg</p>
+                    </li>
+                    <li>
+                        <span class="fas fa-arrow-right"></span>
+                    </li>
+                    <li>
+                        <p>Estimated Time</p>
+                        <p><span class="fas fa-clock"></span>1h 30m</p>
+                    </li>
+                    <li>
+                        <span class="fas fa-arrow-right"></span>
+                    </li>
+                    <li>
+                        <p id="destination">Your colony</p>
+                    </li>
+                </ul>
+            </div>
+            <a href="#" class="close"><span class="fas fa-times"></span></a>
+        </section>
+    `;
+}

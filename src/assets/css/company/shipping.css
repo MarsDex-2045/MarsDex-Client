@@ -205,3 +205,100 @@ body {
     border-color: var(--fill);
     color: var(--fill);
 }
+
+/* POPUPS */
+#shipping-details {
+    font-family: "Arial", "Helvetica", sans-serif;
+    color: #ffffff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    height: 22em;
+    width: 50em;
+    background-color: var(--fill);
+    border: 3px solid var(--fill);
+    padding: 20px;
+    z-index: 3;
+    border-radius: 20px;
+}
+
+#shipping-details .close {
+    color: var(--fill);
+    border: 2px solid var(--fill);
+    font-weight: bold;
+    background-color: #ffffff;
+    display: inline-block;
+    border-radius: 23px;
+    padding: 5px;
+    text-transform: uppercase;
+    font-family: "Arial", sans-serif;
+    font-size: 0.8rem;
+    text-decoration: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(50%) translateY(-50%);
+    cursor: pointer;
+}
+
+#shipping-details .close:hover {
+    color: #ffffff;
+    background-color: var(--fill);
+    transition: 0.3s all ease-in;
+}
+
+#shipping-details li {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    font-size: 1rem;
+    color: #ffffff;
+    width: max-content;
+}
+
+#shipping-details .shipping-information {
+    display: inline-block;
+    margin: 1rem 0;
+}
+
+#shipping-details .infoWrapper {
+    width: 60%;
+    margin: auto;
+}
+
+#shipping-details .tableWrapper {
+    width: 80%;
+    margin: auto;
+}
+
+#shipping-details .shipping-information li {
+    margin: 1rem 0;
+}
+
+#shipping-details .shipping-information span {
+    margin-right: 15px;
+}
+
+#shipping-details .info {
+    margin-left: 15px;
+}
+
+#shipping-details .shipping-table {
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#shipping-details .shipping-table li p span {
+    margin-right: 10px;
+}
+
+#shipping-details .shipping-table li {
+    text-align: center;
+}
+
+#shipping-details .shipping-table li p {
+    line-height: 1.5rem;
+}
