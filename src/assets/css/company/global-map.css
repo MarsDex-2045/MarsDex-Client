@@ -1,16 +1,6 @@
-#map h2 {
-    font-family: 'Big Shoulders Stencil Display', 'Arial', 'Helvetica', cursive;
-    font-size: 3em;
-    text-align: center;
-    color: var(--fill);
-    margin: 20px 0;
-    text-transform: capitalize;
-}
-
 #map > div {
     background-image: url("../../images/mars.jpg");
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2rem auto;
     width: 1200px;
     height: 800px;
     z-index: -1;

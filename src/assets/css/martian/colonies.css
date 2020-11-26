@@ -5,21 +5,6 @@ body {
     font-size: 1rem;
 }
 
-/* MAIN */
-
-main {
-    width: 80%;
-    margin: auto;
-}
-
-main > h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-    margin: 2rem 0;
-}
-
 /* FORM */
 
 #filtersMartianColonies:hover {
@@ -29,7 +14,7 @@ main > h2 {
 #search-martian-colonies-form {
     width: 100%;
     display: inline-flex;
-    margin-bottom: 2rem;
+    margin: 2rem 0;
 }
 
 #search-martian-colonies-form div {
@@ -67,10 +52,16 @@ main > h2 {
     0 0 20px 0 #f3f3f3 inset;
 }
 
+.margin-left {
+    width: 80%;
+    margin: auto;
+}
+
 /* Result Article */
 
 #martianColonies {
-    width: 100%;
+    width: 80%;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     row-gap: 1rem;

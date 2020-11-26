@@ -1,0 +1,15 @@
+/* COMMON TITLE STYLE */
+
+.subTitle {
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    font-size: 1.5rem;
+    text-align: left;
+    color: #ffffff;
+    background-color: var(--fill);
+    padding: 30px 0 30px 40px;
+    text-transform: capitalize;
+}
+
+.subTitle span {
+    padding-right: 15px;
+}
