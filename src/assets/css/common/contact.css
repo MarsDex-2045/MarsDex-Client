@@ -7,18 +7,19 @@ body {
 
 /* MAIN */
 
-main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    align-items: center;
     justify-content: space-evenly;
-    margin-top: 3rem;
+    margin-top: 40px;
 }
 
 /* FORM */
 
 #contactUsDiv {
-    width: 50%;
+    width: 80%;
+    margin: auto;
 }
 
 #contactUsDiv h2 {
@@ -53,13 +54,15 @@ main {
 }
 
 .formInputBox {
-    width: 45%;
+    width: 40%;
     display: flex;
     align-items: center;
+    justify-content: center;
     padding: 3px 0;
-    margin: 1em 0;
+    margin: 1rem 0;
     border: none;
     border-bottom: 1px solid var(--accent);
+    color: var(--fill);
 }
 
 .formInputBox span {
@@ -97,6 +100,7 @@ main {
     border-radius: 7px;
     box-shadow: 1px var(--accent);
     transition: transform 250ms ease-in-out;
+    margin-bottom: 2rem;
 }
 
 #formSendButton input {
@@ -121,8 +125,13 @@ main {
 /* INFORMATION TAB */
 
 #marsDexInformation {
-    margin-top: 1.8rem;
-    width: 25%;
+    width: 100%;
+    margin: auto;
+}
+
+#marsDexInformation > div {
+    width: 80%;
+    margin: auto;
 }
 
 #marsDexInformation h3 {
@@ -141,6 +150,11 @@ main {
 #marsDexInformation ul li {
     padding: 7px 0;
     letter-spacing: 2px;
+    color: var(--fill);
+}
+
+#marsDexInformation > div img {
+    margin-bottom: 4rem;
 }
 
 #marsDexInformation ul li:last-of-type {
@@ -149,6 +163,10 @@ main {
 
 #marsDexInformation ul span {
    margin-right: 5px;
+}
+
+#contactUsMessage {
+    padding: 10px;
 }
 
 /* Screen Resizing */

@@ -7,26 +7,6 @@ body {
 
 /* MAIN */
 
-main {
-    width: 80%;
-    margin: auto;
-}
-
-#section-top {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-#section-top h2 {
-    font-size: 3rem;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-    color: var(--accent);
-}
-
 #add-button {
     display: flex;
     margin-left: 1.5rem;
@@ -57,9 +37,9 @@ main {
 }
 
 #search-my-resources-form {
-    width: 100%;
+    width: 80%;
     display: inline-flex;
-    margin-bottom: 2rem;
+    margin: 2rem 0 2rem 10%;
 }
 
 #search-my-resources-form div {
@@ -100,7 +80,8 @@ main {
 /* Result Article */
 
 #resourcesResultList {
-    width: 100%;
+    width: 80%;
+    margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     align-items: center;
@@ -171,11 +152,10 @@ main {
 }
 
 #buttonResult {
-    width: 100%;
+    width: 80%;
     display: inline-flex;
     justify-content: space-between;
-    margin-top: 1.5rem;
-    margin-bottom: 2.5rem;
+    margin: 1.5rem 10% 2.5rem 10%;
 }
 
 #buttonResult a {
