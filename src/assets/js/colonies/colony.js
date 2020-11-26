@@ -24,33 +24,36 @@ function loadColonies() {
 }
 
 function calculateLocation(colonyLocation) {
-    let colonyLatitude = colonyLocation.latitude.toString();
-    let colonyLongitude = colonyLocation.longitude.toString();
+    const colonyLatitude = colonyLocation.latitude.toString();
+    const colonyLongitude = colonyLocation.longitude.toString();
 
     if (colonyLatitude === "0" && colonyLongitude === "0") {
         return "0°N 0°E";
     }
 
-    console.log(colonyLatitude, colonyLongitude);
-
-    // Calculate Latitude to degrees, minutes, seconds
-    locationToDegrees(colonyLatitude);
-    locationToDegrees(colonyLongitude);
-
-    console.log(locationToDegrees(colonyLatitude), locationToDegrees(colonyLongitude));
-
-    return `${locationToDegrees(colonyLatitude)} ${locationToDegrees(colonyLongitude)}`;
+    return `${locationToDegrees(colonyLatitude, "latitude")} ${locationToDegrees(colonyLongitude, "longtitude")}`;
 }
 
-function locationToDegrees(location) {
-    let degrees = location.substring(0, location.indexOf("."));
-    let minutes = "0" + location.substring(location.indexOf("."), location.length);
+function locationToDegrees(location, type) {
+    console.log("LOCATION: " + location);
 
-    let minutesToInt = parseFloat(minutes);
+    const degrees = location.substring(0, location.indexOf("."));
+    const minutesCalculation = (parseFloat("0" + location.substring(location.indexOf("."), location.length)) * 60).toString();
+    const minutes = minutesCalculation.substring(0, minutesCalculation.indexOf("."));
+    const seconds = Math.round(parseFloat("0" + minutesCalculation.substring(minutesCalculation.indexOf("."), minutesCalculation.length)) * 60);
 
-    console.log(minutesToInt);
+    let locationString = "";
 
-    return degrees;
+    if (type === "latitude") {
+        if (degrees >= "0") { locationString = `${degrees}° ${minutes}' ${seconds}" N`; }
+        else if (degrees < "0") { locationString = `${degrees}° ${minutes}' ${seconds}" S`; }
+    }
+    else if (type === "longtitude") {
+        if (degrees >= "0") { locationString = `${degrees}° ${minutes}' ${seconds}" E`; }
+        else if (degrees < "0") { locationString = `${degrees}° ${minutes}' ${seconds}" W`; }
+    }
+
+    return locationString;
 }
 
 function clearAllColonies() {
