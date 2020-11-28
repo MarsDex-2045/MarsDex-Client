@@ -1,12 +1,17 @@
-function getMessage() {
-    return apiCall("message");
-}
+"use strict";
 
-function apiCall(uri) {
-    const request = new Request(api + uri, {
-        method: 'GET',
-        credentials: 'include'
+function apiGetCall(apiURI, httpVerb, requestBody) {
+    const request = new Request(api + apiURI, {
+        method: httpVerb,
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(requestBody)
     });
     return fetch(request)
         .then(response => response.json());
+}
+
+function getColonies() {
+    return apiGetCall("colony", "GET");
 }
