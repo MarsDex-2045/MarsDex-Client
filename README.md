@@ -11,6 +11,14 @@ Welcome to the Client Repository of the MarsDex. This README.md file will instru
 * [Client Repository](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/client)
 * [Public Web Project](https://project-ii.ti.howest.be/mars-23/)
 
+## Features
+At the time of writing, the following features are implemented:
+* All HTML pages with CSS
+* Colonies Page with JavaScript
+
+**The remaining pages without JavaScript will be implemented in the Beta Phase.**
+
+
 ## Instructions for running locally
 * Clone the [Client Repository](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/client) to your machine.
 * Open the Client Repository in your IDE of choice, make sure it is a gradle project.
