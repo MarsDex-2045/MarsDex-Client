@@ -103,8 +103,12 @@ body {
     text-decoration: none;
     color: #fff;
     padding: 5px;
-    background-color: var(--accent);
+    background-image: linear-gradient(145deg, #43e97b 0%, #38f9d7 100%);
     border-radius: 5px;
+}
+
+.shippingResult > a:hover {
+    cursor: pointer;
 }
 
 .shippingResult > ul li {
@@ -159,13 +163,14 @@ body {
 }
 
 #buttonResult a {
-    width: 8rem;
+    width: 9rem;
     padding: 7px;
-    background-color: #3da9ff;
+    background-image: linear-gradient(145deg, #3da9ff, #b8efff 100%);
     text-align: center;
     color: white;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: bold;
     transition: transform 250ms ease-in-out;
 }
 
@@ -197,13 +202,8 @@ body {
     transform: scale(.9);
 }
 
-.shipping-details-btn {
-    border: 2px solid var(--accent);
-}
-
-.shipping-details-btn:hover {
-    border-color: var(--fill);
-    color: var(--fill);
+.shipping-details-btn span {
+    padding-right: 10px;
 }
 
 /* POPUPS */
@@ -221,25 +221,6 @@ body {
     padding: 20px;
     z-index: 3;
     border-radius: 20px;
-}
-
-#shipping-details .close {
-    color: var(--fill);
-    border: 2px solid var(--fill);
-    font-weight: bold;
-    background-color: #ffffff;
-    display: inline-block;
-    border-radius: 23px;
-    padding: 5px;
-    text-transform: uppercase;
-    font-family: "Arial", sans-serif;
-    font-size: 0.8rem;
-    text-decoration: none;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: translateX(50%) translateY(-50%);
-    cursor: pointer;
 }
 
 #shipping-details .close:hover {
@@ -301,4 +282,12 @@ body {
 
 #shipping-details .shipping-table li p {
     line-height: 1.5rem;
+}
+
+/* FOOTER */
+
+footer {
+    bottom: 0;
+    width: 100%;
+    display: block;
 }

@@ -56,22 +56,6 @@ function buildCompanyHeader() {
                             </ul>
                             <p class="details">details</p>
                         </div>
-                        <div>
-                            <p>Resources Low</p>
-                            <ul>
-                                <li><span class="fas fa-cubes"></span><div>Gold</div></li>
-                                <li><span class="fas fa-box-open"></span><div>10kg left</div></li>
-                            </ul>
-                            <p class="details">details</p>
-                        </div>
-                        <div>
-                            <p>Resources Low</p>
-                            <ul>
-                                <li><span class="fas fa-cubes"></span><div>Gold</div></li>
-                                <li><span class="fas fa-box-open"></span><div>10kg left</div></li>
-                            </ul>
-                            <p class="details">details</p>
-                        </div>
                         <!-- end of example -->
                     </div>
                 </li>
