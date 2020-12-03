@@ -19,7 +19,7 @@
     border-radius: 20px;
 }
 
-#overview-page .close, #settings-page .close, #account-page .close, #notificationDetails .close {
+#overview-page .close, #settings-page .close, #account-page .close, #notificationDetails .close, #shipping-details .close {
     color: var(--fill);
     border: 2px solid var(--fill);
     font-weight: bold;
