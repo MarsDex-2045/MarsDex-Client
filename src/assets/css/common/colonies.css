@@ -94,9 +94,12 @@ body {
 }
 
 .colonyInformation ul li {
-    margin: 10px 0;
     line-height: 1.3rem;
-    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    font-family: 'Poppins', 'Arial', 'Helvetica', cursive;
+    margin-left: 1.5rem;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    align-items: baseline;
     display: flex;
     flex-flow: row;
 }
@@ -114,23 +117,16 @@ body {
 }
 
 .martianColonyDetails {
-    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
-    color: var(--accent);
+    font-family: 'Poppins', 'Arial', 'Helvetica', cursive;
+    color: white;
     height: max-content;
     width: max-content;
     padding: 10px;
     margin-left: auto;
-    background-color: var(--fill);
-    border: 2px solid var(--fill);
     border-radius: 5px;
     text-decoration: none;
-}
-
-.martianColonyDetails:hover {
-    cursor: pointer;
-    background-color: var(--accent);
-    color: var(--fill);
-    transition: 0.3s all ease-in;
+    background-image: linear-gradient(145deg, #43e97b 0%, #38f9d7 100%);
+    transition: transform 250ms ease-in-out;
 }
 
 #buttonResult {
@@ -143,7 +139,7 @@ body {
 #buttonResult a {
     width: 8rem;
     padding: 7px;
-    background-color: #3da9ff;
+    background-image: linear-gradient(145deg, #3da9ff, #b8efff 100%);
     text-align: center;
     color: white;
     text-decoration: none;
@@ -163,6 +159,17 @@ body {
 
 #buttonResult span:last-of-type {
     padding-right: 5px;
+}
+
+/* ANIMATION */
+
+#buttonResult a:hover, .martianColonyDetails:hover {
+    cursor: pointer;
+    transform: scale(1.025);
+}
+
+#buttonResult a:active, .martianColonyDetails:active {
+    transform: scale(.9);
 }
 
 /* FOOTER */
