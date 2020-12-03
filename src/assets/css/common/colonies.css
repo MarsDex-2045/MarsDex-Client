@@ -66,14 +66,14 @@ body {
     row-gap: 1rem;
     column-gap: 1rem;
     align-items: center;
-    margin: auto auto 5rem;
+    margin: auto;
 }
 
 .martianColony {
     position: relative;
     flex: 0 1 45%;
     display: flex;
-    height: 10rem;
+    height: 8rem;
     padding: 15px;
     box-shadow: 0 0 15px 10px var(--background);
     border-radius: 5px;
@@ -83,7 +83,7 @@ body {
 
 .martianColony img {
     margin-right: 25px;
-    height: 10rem;
+    height: 8rem;
     border-radius: 10px;
 }
 
@@ -133,9 +133,44 @@ body {
     transition: 0.3s all ease-in;
 }
 
+#buttonResult {
+    width: 80%;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 1.5rem 10% 2.5rem 10%;
+}
+
+#buttonResult a {
+    width: 8rem;
+    padding: 7px;
+    background-color: #3da9ff;
+    text-align: center;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 250ms ease-in-out;
+}
+
+#buttonResult p {
+    color: var(--fill);
+    font-size: 1.3rem;
+    font-weight: lighter;
+}
+
+#buttonResult span:first-of-type {
+    padding-left: 5px;
+}
+
+#buttonResult span:last-of-type {
+    padding-right: 5px;
+}
+
+/* FOOTER */
+
 footer {
     position: fixed;
     bottom: 0;
     width: 100%;
     display: block;
 }
+
