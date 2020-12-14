@@ -15,3 +15,17 @@ function apiGetCall(apiURI, httpVerb, requestBody) {
 function getColonies() {
     return apiGetCall("colony", "GET");
 }
+
+function getColonyDetails(colony_id) {
+    return apiGetCall(`colony/${colony_id}`, "GET");
+}
+
+function addResource(companyId, resourceName, resourceWeight, resourcePrice) {
+    return apiGetCall(`company/${companyId}/resource`, "PUT",
+        {
+            "name": resourceName,
+            "weight": parseFloat(resourceWeight),
+            "price": resourcePrice
+        }
+    );
+}
