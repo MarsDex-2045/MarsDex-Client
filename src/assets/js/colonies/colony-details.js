@@ -28,7 +28,6 @@ function loadGraphs(resources) {
 function resourceFilter(allSortedResources) {
     const resources = [];
     allSortedResources.forEach(resource => {
-        console.log(isDoubleResource(resources, resource));
         if (isDoubleResource(resources, resource)) {
             updateResources(resources, resource);
         } else {
@@ -40,10 +39,7 @@ function resourceFilter(allSortedResources) {
 
 function isDoubleResource(listOfUniqueResources, potentialDoubleResource) {
     for(let i=0; i<listOfUniqueResources.length; i++) {
-        console.log("unique resource name " + listOfUniqueResources[i].name);
-        console.log("potential resource " + potentialDoubleResource.name);
         if(listOfUniqueResources[i].name === (potentialDoubleResource.name)) {
-            console.log("%c I DETECT THE DOUBLE RESOURCE", 'background: #222; color: #bada55');
             return true;
         }
     }
