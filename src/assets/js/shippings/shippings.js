@@ -8,15 +8,16 @@ function init() {
         document.querySelector("#buttonResult a:first-of-type").addEventListener("click", previousPage);
         document.querySelector("#buttonResult a:last-of-type").addEventListener("click", nextPage);
     }
-
     document.querySelector("#filtersShipping").addEventListener("change", dynamicSortShippings);
+    document.querySelector("#search-form").addEventListener("submit", preventSubmit);
+    document.querySelector("#searchShipping").addEventListener("search", searchResult);
 }
 
 const maxShippingsOnPage = 4;
 let currentPage = 1;
 let maxPages;
 
-const companyShippings = []; // Error that it is not used, but is used in shipping-details.js
+const companyShippings = []; // Error, that it is not used, but is used in shipping-details.js
 
 function loadShippings() {
     const companyId = 2;
@@ -25,13 +26,14 @@ function loadShippings() {
         response.forEach(shipping => {
             companyShippings.push(shipping);
         });
-
         maxPages = Math.ceil(response.length / maxShippingsOnPage);
         loadPageShippings(response, 0);
     });
 }
 
 function loadPageShippings(response, indexStart) {
+    maxPages = Math.ceil(response.length / maxShippingsOnPage);
+
     document.querySelector("#shippingResultList").innerHTML = ``;
     document.querySelector("#pageNumber").textContent = `${currentPage}/${maxPages}`;
 
@@ -136,4 +138,32 @@ function dynamicSortShippings(e) {
     );
 
     loadPageShippings(companyShippings, (currentPage - 1) * maxShippingsOnPage);
+}
+
+function preventSubmit(e) {
+    e.preventDefault();
+}
+
+function searchResult(e) {
+    e.preventDefault();
+
+    const searchRequest = e.target.value;
+    if (searchRequest === "" || searchRequest === " ") { return; }
+    const sortValue = document.querySelector("#filtersShipping").value;
+
+    const searchResultShipping = [];
+
+    companyShippings.forEach(shipping => {
+        if (shipping[sortValue] === parseInt(searchRequest)) {
+            searchResultShipping.push(shipping);
+        } else if (sortValue === "status" && JSON.stringify(shipping[sortValue]).toLowerCase().replace("_", " ").match(searchRequest)) {
+            searchResultShipping.push(shipping);
+        }
+    });
+
+    if (searchResultShipping.length === 0) {
+        return;
+    }
+
+    loadPageShippings(searchResultShipping, (currentPage - 1) * maxShippingsOnPage);
 }
