@@ -1,28 +1,3 @@
-"use strict";
-
-const colonyResultDiv = document.querySelector("#martianColonies");
-
-function loadColonies() {
-    clearAllColonies();
-
-    getColonies().then(resultList => {
-        resultList.forEach(colony => {
-            console.log(colony);
-            document.querySelector("#martianColonies").innerHTML += `
-                <article class="martianColony">
-                    <img src="assets/images/colony-flags/colony-flag2.png" alt=${colony.name} title=${colony.name}>
-                    <div class="colonyInformation">
-                        <h2>${colony.name}</h2>
-                        <ul>
-                            <li><span class="fas fa-map-marker-alt"></span><div><strong>Location: </strong>${calculateLocation(colony.location)}</div></li>
-                        </ul>
-                    </div>
-                    <a href="martian-colony-details.html" class="martianColonyDetails"><span class="fas fa-info-circle"></span>details</a>
-                </article>`;
-        });
-    });
-}
-
 function calculateLocation(colonyLocation) {
     const colonyLatitude = colonyLocation.latitude.toString();
     const colonyLongitude = colonyLocation.longitude.toString();
@@ -51,8 +26,4 @@ function locationToDegrees(location, type) {
     }
 
     return locationString;
-}
-
-function clearAllColonies() {
-    colonyResultDiv.innerHTML = "";
 }
