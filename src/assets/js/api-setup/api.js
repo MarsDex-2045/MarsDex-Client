@@ -15,3 +15,7 @@ function apiGetCall(apiURI, httpVerb, requestBody) {
 function getColonies() {
     return apiGetCall("colony", "GET");
 }
+
+function getColonyDetails(colony_id) {
+    return apiGetCall(`colony/${colony_id}`, "GET");
+}

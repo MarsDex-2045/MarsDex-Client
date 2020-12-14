@@ -31,39 +31,27 @@
 
 #upperPart {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
     align-items: center;
+    background-color: var(--accent);
+    padding: 40px 0;
 }
 
-#miningResources, #growingResources, #graph {
-    border-radius: 20px;
-    padding: 20px;
-    margin: 60px 20px;
+#resourcesListWithCircle, #doughnutChar {
+    margin: 20px;
 }
 
-#miningResources > div, #growingResources > div {
-    display: flex;
-    flex-flow: wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-#miningResources > div > div, #growingResources > div > div {
-    margin: 10px 0;
-}
-
-#miningResources h3, #growingResources h3, #graph h3 {
-    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
-    font-size: 1.5rem;
-    color: var(--fill);
-    text-align: center;
+#resourcesListWithCircle {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
 }
 
 .resourceWithCircle {
     display: flex;
     align-items: center;
     color: var(--fill);
-    margin: 10px
+    margin: 5px 0 5px 30px;
+    width: max-content;
 }
 
 .resourceWithCircle p {
@@ -76,10 +64,10 @@
 
 .resourceWithCircle img {
     height: 30px;
+    width: 30px;
     margin-right: 10px;
     background-color: #92FE9D;
     border-radius: 20px;
     border: 1px solid var(--fill);
     padding: 3px;
 }
-

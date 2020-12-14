@@ -25,14 +25,9 @@
 
 #colonyDetailsInformation > div img {
     width: 300px;
+    height: 300px;
     margin: 50px auto;
 }
-
-#miningResources, #growingResources, #graph {
-    background-color: var(--accent);
-    border: 5px solid var(--fill);
-}
-
 
 #colony-title {
     display: flex;
@@ -46,11 +41,12 @@
 
 #colony-title img {
     height: 50px;
+    width: 50px;
     border-radius: 10px;
     margin-right: 20px;
 }
 
-.colony-name {
+.colony-title {
     font-style: italic;
     text-decoration: underline;
 }
@@ -147,6 +143,7 @@ main > a:hover {
 .martianColonyDetailsResource img {
     margin-right: 25px;
     height: 10rem;
+    width: 10rem;
     border-radius: 10px;
 }
 
