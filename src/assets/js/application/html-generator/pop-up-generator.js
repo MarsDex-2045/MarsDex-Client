@@ -113,7 +113,7 @@ function loadShippingHtml() {
                 <ul class="shipping-information">
                     <li><span class="fas fa-clock"></span>Datetime of departure:<span id="send-time" class="info">15/03/2055 08:16:00</span></li>
                     <li><span class="fas fa-city"></span>Colony sender:<span id="sender" class="info">The Crater Bay Colony</span></li>
-                    <li><span class="fas fa-hourglass-half"></span>Estimated time:<span id="duration" class="info">34 hours</span></li>
+                    <li><span class="fas fa-hourglass-half"></span>Receive time:<span id="duration" class="info">34 hours</span></li>
                     <li><span class="fas fa-weight-hanging"></span>Weight:<span id="weight" class="info">3500 kilograms</span></li>
                     <li><span class="fas fa-shuttle-van"></span>Mode of transportation:<span id="status" class="info">train</span></li>
                 </ul>
@@ -128,7 +128,7 @@ function loadShippingHtml() {
                         <span class="fas fa-arrow-right"></span>
                     </li>
                     <li>
-                        <p>Estimated Time</p>
+                        <p>Receive Time</p>
                         <p><span class="fas fa-clock"></span>1h 30m</p>
                     </li>
                     <li>
