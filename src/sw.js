@@ -11,7 +11,7 @@ self.addEventListener("push", e => {
 self.addEventListener("notificationclick", e => {
         if (e.notification.tag === "yes") {
             e.waitUntil(
-                self.clients.openWindow("http://localhost:63343/CLIENT%20notifications/notifications/index.html")
+                self.clients.openWindow("http://localhost:63343/client/src/")
             );
         } else if (e.notification.tag === "no") {
             e.waitUntil(
