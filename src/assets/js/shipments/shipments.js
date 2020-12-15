@@ -58,20 +58,18 @@ function mapResourcesInformation(resources) {
     };
 }
 
-function createNewShippingElement(shipping) {
+function createNewShippingElement(shipment) {
     let receiveTimeDate = ``;
     let receiveTime;
-    const resourcesInformation = mapResourcesInformation(shipping.resources);
+    const resourcesInformation = mapResourcesInformation(shipment.resources);
 
-    if (shipping.receiveTime === null) {
+    if (shipment.receiveTime === null) {
         receiveTime = "to be confirmed";
     } else {
-        receiveTime = shipping.receiveTime.time;
-        receiveTimeDate = shipping.receiveTime.date;
+        receiveTime = shipment.receiveTime.time;
+        receiveTimeDate = shipment.receiveTime.date;
     }
-
-    document.querySelector("#shippingResultList").innerHTML += generateShippingResult(shipping, resourcesInformation, receiveTimeDate, receiveTime);
-
+    document.querySelector("#shippingResultList").innerHTML += generateShippingResult(shipment, resourcesInformation, receiveTimeDate, receiveTime);
     document.querySelectorAll(".shipping-details-btn").forEach(button => button.addEventListener("click", showShippingDetails));
     document.querySelector("#shipping-details .close").addEventListener("click", hideShippingDetails);
 }

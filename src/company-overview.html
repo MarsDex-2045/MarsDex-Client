@@ -32,7 +32,7 @@
 
     <main>
         <section id="overview-page-upper-part">
-            <h2 class="subTitle"><span class="fas fa-door-open"></span>Welcome Back, <span class="colony-title">Company Name</span></h2>
+            <h2 class="subTitle"><span><span class="fas fa-door-open"></span>Welcome Back, <span id="company-name" class="colony-title"><span class="fas fa-user-shield"></span>Company Name</span></span><a class="overview-button" href="company-my-resources.html"><span class="fas fa-cubes"></span>Manage My Resources</a></h2>
             <div id="upperPart">
                 <div id="resourcesListWithCircle">
                     <!-- fill with correct resources -->
@@ -43,70 +43,8 @@
             </div>
         </section>
         <section id="shipping">
-            <h2 class="subTitle"><span class="fas fa-plane-departure"></span>Recent Shipping Details</h2>
-            <div id="shippingResultList">
-                <div class="shippingResult">
-                    <ul>
-                        <li>Shipping ID: 15161978165161</li>
-                        <li><span class="fas fa-shipping-fast"></span>Status: In Train</li>
-                    </ul>
-
-                    <div class="shippingInformation">
-                        <ul>
-                            <li>
-                                <p>Potato</p>
-                                <p><span class="fas fa-weight-hanging"></span>150kg</p>
-                            </li>
-                            <li>
-                                <img src="assets/images/arrow.png" alt="arrow" title="arrow"/>
-                            </li>
-                            <li>
-                                <p>Estimated Time</p>
-                                <p><span class="fas fa-clock"></span>1h 30m</p>
-                            </li>
-                            <li>
-                                <img src="assets/images/arrow.png" alt="arrow" title="arrow"/>
-                            </li>
-                            <li>
-                                <p>Your Colony</p>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <a class="shipping-details-btn"><span class="fas fa-info-circle"></span>details</a>
-                </div>
-
-                <div class="shippingResult">
-                    <ul>
-                        <li>Shipping ID: 15161978165161</li>
-                        <li><span class="fas fa-shipping-fast"></span>Status: In Train</li>
-                    </ul>
-
-                    <div class="shippingInformation">
-                        <ul>
-                            <li>
-                                <p>Potato</p>
-                                <p><span class="fas fa-weight-hanging"></span>150kg</p>
-                            </li>
-                            <li>
-                                <img src="assets/images/arrow.png" alt="arrow" title="arrow"/>
-                            </li>
-                            <li>
-                                <p>Estimated Time</p>
-                                <p><span class="fas fa-clock"></span>1h 30m</p>
-                            </li>
-                            <li>
-                                <img src="assets/images/arrow.png" alt="arrow" title="arrow"/>
-                            </li>
-                            <li>
-                                <p>Your Colony</p>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <a class="shipping-details-btn"><span class="fas fa-info-circle"></span>details</a>
-                </div>
-            </div>
+            <h2 class="subTitle"><span><span class="fas fa-plane-departure"></span>Recent Shipping Details</span><a class="overview-button" href="company-shipping.html"><span class="fas fa-plane-departure"></span>Manage My Shipments</a></h2>
+            <div id="shippingResultList"></div>
         </section>
     </main>
 
@@ -117,5 +55,12 @@
     <script src="assets/js/application/html-generator/company-header-generator.js"></script>
     <script src="assets/js/application/pop-up.js"></script>
     <script src="assets/js/application/html-generator/pop-up-generator.js"></script>
+    <script src="assets/js/configuration/config.js"></script>
+    <script src="assets/js/configuration/api.js"></script>
+    <script src="assets/js/util/colony-details-util.js"></script>
+    <script src="assets/js/overview/overview.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="assets/js/application/html-generator/colony-details-generator.js"></script>
+    <script src="assets/js/application/html-generator/shipping-generator.js"></script>
 </body>
 </html>
