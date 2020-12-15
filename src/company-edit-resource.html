@@ -31,7 +31,7 @@
     <main>
         <h2>Edit Resource</h2>
 
-        <form action="#" method="post" id="resourceForm">
+        <form method="post" id="resourceForm" action="#">
 
             <div>
                 <span class="fas fa-cubes"></span>
@@ -41,7 +41,7 @@
 
             <div>
                 <span class="fas fa-weight-hanging"></span>
-                <input value="1 527" title="resourceAmount" required type="text" id="resourceAmount">
+                <input title="resourceAmount" required type="text" id="resourceAmount">
                 <label>
                     <select>
                         <option selected value="KG">KG</option>
@@ -50,16 +50,19 @@
                 </label>
             </div>
 
-            <input type="submit" value="Save Changes" title="Save Changes">
+            <input id="editResourceSubmitButton" type="submit" value="Save Changes" title="Save Changes">
         </form>
     </main>
 
     <footer>
         <p>&copy; Howest MarsDex 2020</p>
     </footer>
-
     <script src="assets/js/application/html-generator/company-header-generator.js"></script>
+    <script src="assets/js/api-setup/main.js"></script>
+    <script src="assets/js/configuration/config.js"></script>
+    <script src="assets/js/api-setup/api.js"></script>
     <script src="assets/js/application/pop-up.js"></script>
     <script src="assets/js/application/html-generator/pop-up-generator.js"></script>
+    <script src="assets/js/resources/edit-resource.js"></script>
 </body>
 </html>
