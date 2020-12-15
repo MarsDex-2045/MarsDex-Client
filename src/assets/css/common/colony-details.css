@@ -23,10 +23,13 @@
     line-height: 2.4rem;
 }
 
-#colonyDetailsInformation > div img {
-    width: 300px;
-    height: 300px;
-    margin: 50px auto;
+#colonyDetailsInformation > div > div {
+    margin: 20px auto;
+}
+
+#colonyDetailsInformation > div > div img {
+    width: 250px;
+    height: 250px;
 }
 
 #colony-title {
@@ -44,11 +47,6 @@
     width: 50px;
     border-radius: 10px;
     margin-right: 20px;
-}
-
-.colony-title {
-    font-style: italic;
-    text-decoration: underline;
 }
 
 main > a {
@@ -148,7 +146,7 @@ main > a:hover {
 }
 
 .martianColonyDetailsResource h2 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     color: var(--accent);
     margin: 0 20px 0.75rem 0;
 }

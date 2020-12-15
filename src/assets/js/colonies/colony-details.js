@@ -110,6 +110,12 @@ function setTitles(colony_name) {
     document.querySelectorAll(".colony-title").forEach(title => {
         title.innerText = colony_name;
     });
+    document.querySelector("#colony-title").innerHTML = `
+        <img src="assets/images/colony-flags/${colony_name}.png" alt=${colony_name} title=${colony_name}>${colony_name}
+    `;
+    document.querySelector("#colony-flag").innerHTML = `
+        <img src="assets/images/colony-flags/${colony_name}.png" alt=${colony_name} title=${colony_name}>
+    `;
 }
 
 function loadColonyResources(resources) {
