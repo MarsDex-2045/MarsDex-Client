@@ -1,7 +1,17 @@
+"use strict";
+
+document.addEventListener("DOMContentLoaded", init);
+
+function init() {
+    if ("serviceWorker" in navigator){
+        navigator.serviceWorker.register("sw.js")
+        navigator.serviceWorker.ready.then(() => registerForNotifications());
+    }
+}
+
 function registerForNotifications() {
     Notification.requestPermission().then(permission => {
-
-        if (permission === "granted") {
+        if(permission === "granted") {
             registerPush();
         } else if (permission === "denied") {
             console.log("Denied");
@@ -9,11 +19,9 @@ function registerForNotifications() {
             console.log("Default");
         }
     });
-
-
 }
 
-const VAPID_PUBLIC_KEY = ""
+const VAPID_PUBLIC_KEY = "BFsOJhekTbobJGOHWHjN6J7u4V5riP4m85wlKLATy8zp6nsBfp3jMWhgfe21S3GpwmBbyqbyNRSN2j2sTx7mVqc";
 
 function registerPush() {
     let subscribeOptions = {
@@ -26,22 +34,19 @@ function registerPush() {
     }).then(sub => {
         console.log(JSON.stringify(sub));
     });
-
 }
 
-function urlBase64ToUint8Array(base64String) {
+function urlBase64ToUint8Array(base64String){
     var padding = '='.repeat((4 - base64String.length % 4) % 4);
     var base64 = (base64String + padding)
         .replace(/-/g, '+')
         .replace(/_/g, '/');
+
     var rawData = window.atob(base64);
     var outputArray = new Uint8Array(rawData.length);
 
-    for (var i = 0; i < rawData; ++i) {
-
+    for (var i = 0; i < rawData.length; ++i){
         outputArray[i] = rawData.charCodeAt(i);
     }
     return outputArray;
-
-
 }
