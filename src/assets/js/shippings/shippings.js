@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
-    loadShippings();
+    loadShipping(2);
     if ( document.querySelector("#buttonResult  a:first-of-type")) {
         document.querySelector("#buttonResult a:first-of-type").addEventListener("click", previousPage);
         document.querySelector("#buttonResult a:last-of-type").addEventListener("click", nextPage);
@@ -19,9 +19,7 @@ let maxPages;
 
 const companyShippings = []; // Error, that it is not used, but is used in shipping-details.js
 
-function loadShippings() {
-    const companyId = 2;
-
+function loadShipping(companyId) {
     getShippings(companyId).then(response => {
         response.forEach(shipping => {
             companyShippings.push(shipping);
@@ -72,36 +70,7 @@ function createNewShippingElement(shipping) {
         receiveTimeDate = shipping.receiveTime.date;
     }
 
-    document.querySelector("#shippingResultList").innerHTML += `
-        <div class="shippingResult">
-                <ul>
-                    <li>Shipping ID: ${shipping.shippingId}</li>
-                    <li><span class="fas fa-shipping-fast"></span>Status: ${shipping.status.replace("_", " ").toLowerCase()}</li>
-                </ul>
-                <div class="shippingInformation">
-                    <ul>
-                        <li>
-                            <p>Resources: ${resourcesInformation.totalResources}</p>
-                            <p><span class="fas fa-weight-hanging"></span>${resourcesInformation.totalWeight}kg</p>
-                        </li>
-                        <li>
-                            <img src="assets/images/arrow.png" alt="arrow" title="arrow"/>
-                        </li>
-                        <li>
-                            <p>Arrival Time</p>
-                            <p><span class="fas fa-clock"></span>${receiveTimeDate} ${receiveTime}</p>
-                        </li>
-                        <li>
-                            <img src="assets/images/arrow.png" alt="arrow" title="arrow"/>
-                        </li>
-                        <li>
-                            <p>Your Colony</p>
-                        </li>
-                    </ul>
-                </div>
-                <a class="shipping-details-btn"><span class="fas fa-info-circle"></span>details</a>
-            </div>
-    `;
+    document.querySelector("#shippingResultList").innerHTML += generateShippingResult(shipping, resourcesInformation, receiveTimeDate, receiveTime);
 
     document.querySelectorAll(".shipping-details-btn").forEach(button => button.addEventListener("click", showShippingDetails));
     document.querySelector("#shipping-details .close").addEventListener("click", hideShippingDetails);
