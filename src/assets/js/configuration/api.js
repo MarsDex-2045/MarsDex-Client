@@ -30,7 +30,7 @@ function addResource(companyId, resourceName, resourceWeight, resourcePrice) {
     );
 }
 
-function getShippings(companyId) {
+function getShipments(companyId) {
     return apiGetCall(`company/${companyId}/transport`, "GET");
 }
 
@@ -47,4 +47,12 @@ function updatedResource(companyId, resourceName, resourceWeight) {
 
 function removeResourceFetch(companyId, resource) {
     return apiGetCall(`company/${companyId}/resource/${resource.id}`, "DELETE");
+}
+
+function getCompanyResources(companyId) {
+    return apiGetCall(`company/${companyId}/resource`, "GET");
+}
+
+function getCompany(companyId) {
+    return apiGetCall(`company/${companyId}`, "GET");
 }

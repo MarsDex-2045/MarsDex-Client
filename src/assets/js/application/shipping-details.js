@@ -37,9 +37,9 @@ function showShippingDetails(e) {
 }
 
 function getShippingInformation(shippingId) {
-    for (let i = 0; i < companyShippings.length; i++) {
-        if (companyShippings[i].shippingId === parseInt(shippingId)) {
-            return companyShippings[i];
+    for (let i = 0; i < companyShipments.length; i++) {
+        if (companyShipments[i].shippingId === parseInt(shippingId)) {
+            return companyShipments[i];
         }
     }
     return false;
