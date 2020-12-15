@@ -22,8 +22,11 @@ function newResourceForm(e) {
     }
 
     resourceWeight = parseFloat(resourceWeight).toFixed(3);
-
     addResource(companyId, resourceName, resourceWeight, resourcePrice).then(function(response) {
-        // Error implementation will be done later
+        if (response.processed === true) {
+            window.location.assign("company-my-resources.html"); // Temporarily
+        } else {
+            // Error implementation will be done later
+        }
     });
 }

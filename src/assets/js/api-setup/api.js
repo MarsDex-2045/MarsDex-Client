@@ -44,3 +44,7 @@ function updatedResource(companyId, resourceName, resourceWeight) {
         "weight": parseFloat(resourceWeight)
     });
 }
+
+function removeResourceFetch(companyId, resource) {
+    return apiGetCall(`company/${companyId}/resource/${resource.id}`, "DELETE");
+}

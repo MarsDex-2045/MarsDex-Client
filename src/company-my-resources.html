@@ -35,27 +35,21 @@
         <form id="search-my-resources-form">
             <div>
                 <label for="searchMyResources"></label>
-                <input type="text" id="searchMyResources" name="search" placeholder="Search for a resource ...">
+                <input type="search" id="searchMyResources" name="search" placeholder="Search for a resource ...">
                 <span class="fas fa-search"></span>
             </div>
 
             <label for="filtersResources"></label>
             <select name="filters" id="filtersResources">
                 <option value="name">Name</option>
-                <option value="resources">Highest Storage</option>
-                <option value="location">Lowest Storage</option>
+                <option value="weight">Weight</option>
+                <option value="price">Price</option>
             </select>
             <a id="add-button" href="company-add-resource.html">ADD RESOURCE <span class="fas fa-plus"></span></a>
         </form>
 
         <!-- fill div with articles and resources -->
         <div id="resourcesResultList"></div>
-
-        <div id="buttonResult">
-            <a href="#"><span class="fas fa-chevron-left"></span>Previous Page</a>
-            <p id="pageNumber">1/2</p>
-            <a href="#">Next Page<span class="fas fa-chevron-right"></span></a>
-        </div>
     </main>
 
     <footer>
@@ -69,6 +63,5 @@
     <script src="assets/js/resources/my-resources.js"></script>
     <script src="assets/js/application/html-generator/pop-up-generator.js"></script>
     <script src="assets/js/application/pop-up.js"></script>
-    <script src="assets/js/resources/remove-resource.js"></script>
 </body>
 </html>
