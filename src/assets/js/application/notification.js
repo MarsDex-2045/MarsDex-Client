@@ -21,7 +21,7 @@ function registerForNotifications() {
     });
 }
 
-const VAPID_PUBLIC_KEY = "BFsOJhekTbobJGOHWHjN6J7u4V5riP4m85wlKLATy8zp6nsBfp3jMWhgfe21S3GpwmBbyqbyNRSN2j2sTx7mVqc";
+const VAPID_PUBLIC_KEY = "BAcgnkauwyqPz1MI31KN9sN8wpIPEMkfhbmEijXcodAUzCoy1u5tIePU7HpATIv2VQOFN45Mu4Wc1qx-6HRxv_g";
 
 function registerPush() {
     let subscribeOptions = {
