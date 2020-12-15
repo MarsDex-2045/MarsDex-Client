@@ -34,6 +34,21 @@ function getShipments(companyId) {
     return apiGetCall(`company/${companyId}/transport`, "GET");
 }
 
+function getMyResources(companyId) {
+    return apiGetCall(`company/${companyId}/resource`, "GET");
+}
+
+function updatedResource(companyId, resourceName, resourceWeight) {
+    return apiGetCall(`company/${companyId}/resource`, "PATCH", {
+        "name": resourceName,
+        "weight": parseFloat(resourceWeight)
+    });
+}
+
+function removeResourceFetch(companyId, resource) {
+    return apiGetCall(`company/${companyId}/resource/${resource.id}`, "DELETE");
+}
+
 function getCompanyResources(companyId) {
     return apiGetCall(`company/${companyId}/resource`, "GET");
 }
