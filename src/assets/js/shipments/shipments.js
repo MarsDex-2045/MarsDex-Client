@@ -3,39 +3,39 @@
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
-    loadShipping(2);
-    if ( document.querySelector("#buttonResult  a:first-of-type")) {
+    loadShipments(2);
+    if (document.querySelector("#buttonResult a:first-of-type")) {
         document.querySelector("#buttonResult a:first-of-type").addEventListener("click", previousPage);
         document.querySelector("#buttonResult a:last-of-type").addEventListener("click", nextPage);
     }
-    document.querySelector("#filtersShipping").addEventListener("change", dynamicSortShippings);
+    document.querySelector("#filtersShipping").addEventListener("change", dynamicSortShipments);
     document.querySelector("#search-form").addEventListener("submit", preventSubmit);
     document.querySelector("#searchShipping").addEventListener("search", searchResult);
 }
 
-const maxShippingsOnPage = 4;
+const maxShipmentsOnPage = 4;
 let currentPage = 1;
 let maxPages;
 
-const companyShippings = []; // Error, that it is not used, but is used in shipping-details.js
+const companyShipments = [];
 
-function loadShipping(companyId) {
-    getShippings(companyId).then(response => {
+function loadShipments(companyId) {
+    getShipments(companyId).then(response => {
         response.forEach(shipping => {
-            companyShippings.push(shipping);
+            companyShipments.push(shipping);
         });
-        maxPages = Math.ceil(response.length / maxShippingsOnPage);
-        loadPageShippings(response, 0);
+        maxPages = Math.ceil(response.length / maxShipmentsOnPage);
+        loadPageShipments(response, 0);
     });
 }
 
-function loadPageShippings(response, indexStart) {
-    maxPages = Math.ceil(response.length / maxShippingsOnPage);
+function loadPageShipments(response, indexStart) {
+    maxPages = Math.ceil(response.length / maxShipmentsOnPage);
 
     document.querySelector("#shippingResultList").innerHTML = ``;
     document.querySelector("#pageNumber").textContent = `${currentPage}/${maxPages}`;
 
-    for (let i = 0; i < maxShippingsOnPage;) {
+    for (let i = 0; i < maxShipmentsOnPage;) {
         if (response[indexStart + i] !== undefined) {
             createNewShippingElement(response[indexStart + i]);
         }
@@ -81,7 +81,7 @@ function nextPage(e) {
 
     if (currentPage === maxPages) { return; }
     currentPage++;
-    loadPageShippings(companyShippings, (currentPage - 1) * maxShippingsOnPage);
+    loadPageShipments(companyShipments, (currentPage - 1) * maxShipmentsOnPage);
 }
 
 function previousPage(e) {
@@ -89,13 +89,13 @@ function previousPage(e) {
 
     if (currentPage === 1) { return; }
     currentPage--;
-    loadPageShippings(companyShippings, (currentPage - 1) * maxShippingsOnPage);
+    loadPageShipments(companyShipments, (currentPage - 1) * maxShipmentsOnPage);
 }
 
-function dynamicSortShippings(e) {
+function dynamicSortShipments(e) {
     const sortValue = e.currentTarget.value;
 
-    companyShippings.sort(
+    companyShipments.sort(
         function (a, b) {
             if (a[sortValue] > b[sortValue]) {
                 return 1;
@@ -106,7 +106,7 @@ function dynamicSortShippings(e) {
         }
     );
 
-    loadPageShippings(companyShippings, (currentPage - 1) * maxShippingsOnPage);
+    loadPageShipments(companyShipments, (currentPage - 1) * maxShipmentsOnPage);
 }
 
 function preventSubmit(e) {
@@ -122,7 +122,7 @@ function searchResult(e) {
 
     const searchResultShipping = [];
 
-    companyShippings.forEach(shipping => {
+    companyShipments.forEach(shipping => {
         if (shipping[sortValue] === parseInt(searchRequest)) {
             searchResultShipping.push(shipping);
         } else if (sortValue === "status" && JSON.stringify(shipping[sortValue]).toLowerCase().replace("_", " ").match(searchRequest)) {
@@ -134,5 +134,5 @@ function searchResult(e) {
         return;
     }
 
-    loadPageShippings(searchResultShipping, (currentPage - 1) * maxShippingsOnPage);
+    loadPageShipments(searchResultShipping, (currentPage - 1) * maxShipmentsOnPage);
 }

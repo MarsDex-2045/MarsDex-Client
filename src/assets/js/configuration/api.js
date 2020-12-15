@@ -30,6 +30,6 @@ function addResource(companyId, resourceName, resourceWeight, resourcePrice) {
     );
 }
 
-function getShippings(companyId) {
+function getShipments(companyId) {
     return apiGetCall(`company/${companyId}/transport`, "GET");
 }
