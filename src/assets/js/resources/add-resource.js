@@ -11,7 +11,7 @@ function newResourceForm(e) {
 
     const formElement = document.querySelector("#resourceForm");
 
-    const companyId = 1;
+    const companyId = 2;
 
     const resourceName = formElement.querySelector("#resourceName").value;
     let resourceWeight = formElement.querySelector("#resourceAmount").value;

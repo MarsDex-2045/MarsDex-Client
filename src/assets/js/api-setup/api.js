@@ -37,3 +37,10 @@ function getShippings(companyId) {
 function getMyResources(companyId) {
     return apiGetCall(`company/${companyId}/resource`, "GET");
 }
+
+function updatedResource(companyId, resourceName, resourceWeight) {
+    return apiGetCall(`company/${companyId}/resource`, "PATCH", {
+        "name": resourceName,
+        "weight": parseFloat(resourceWeight)
+    });
+}
