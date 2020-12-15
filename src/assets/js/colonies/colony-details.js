@@ -17,7 +17,7 @@ function loadColonyDetails(colony_id) {
 }
 
 function loadGraphs(resources) {
-    loadDoughnutChart(createListOfResourceWeights(resources));
+    loadDoughnutChart(resources, createListOfResourceWeights(resources));
     emptyResourceList();
     const totalAmountOfResources = calcTotalAmountOfResources(resources);
     resources.forEach(resource => {
@@ -137,12 +137,12 @@ function addResource(resource) {
     `;
 }
 
-function loadDoughnutChart(listOfSortedWeights) {
+function loadDoughnutChart(resources, listOfSortedWeights) {
     const ctx = document.getElementById('myDoughnutChart').getContext('2d');
     new Chart(ctx, {
         type: 'doughnut',
         data: {
-            labels: ['Alexandrite', 'Bauxite', 'Benitoite', 'Bertrandite', 'Coltan', 'LT Diamonds', 'Painite', 'Void Opals'],
+            labels: resources.map(resource => resource.name),
             datasets: [{
                 label: 'Amount',
                 backgroundColor: ['rgb(87, 85, 217)', 'rgb(241, 241, 252)', 'rgb(50, 182, 67)', 'rgb(255, 183, 0)', 'rgb(232, 86, 0)', 'rgb(69, 77, 93)', 'rgb(114, 126, 150)'],
