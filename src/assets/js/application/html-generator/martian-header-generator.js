@@ -21,7 +21,7 @@ function buildMartianHeader() {
                     <a href="martian-global-map.html"><span class="fas fa-map-marked-alt"></span><div>Global Map</div></a>
                 </li>
                 <li>
-                    <a href="martian-about-us.html"><span class="fas fa-info"></span><div>About Us</div></a>
+                    <a href="index.html"><span class="fas fa-info"></span><div>About Us</div></a>
                 </li>
                 <li>
                     <a href="martian-contact.html"><span class="fas fa-comment"></span><div>Contact</div></a>
@@ -30,7 +30,7 @@ function buildMartianHeader() {
                     <a href="register.html" class="white"><span class="fas fa-user-plus white"></span><div>Register</div></a>
                 </li>
                 <li id="login-button">
-                    <a href="index.html" class="white"><span class="fas fa-sign-in-alt white"></span><div>Login</div></a>
+                    <a href="login.html" class="white"><span class="fas fa-sign-in-alt white"></span><div>Login</div></a>
                 </li>
             </ul>
         </nav>`;
