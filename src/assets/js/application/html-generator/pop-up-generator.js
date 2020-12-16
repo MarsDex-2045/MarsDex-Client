@@ -115,7 +115,7 @@ function loadShippingHtml() {
                     <li><span class="fas fa-city"></span>Colony sender:<span id="sender" class="info">The Crater Bay Colony</span></li>
                     <li><span class="fas fa-hourglass-half"></span>Receive time:<span id="duration" class="info">34 hours</span></li>
                     <li><span class="fas fa-weight-hanging"></span>Weight:<span id="weight" class="info">3500 kilograms</span></li>
-                    <li><span class="fas fa-shuttle-van"></span>Mode of transportation:<span id="status" class="info">train</span></li>
+                    <li><span class="fas fa-shuttle-van"></span>Status:<span id="status" class="info">train</span></li>
                 </ul>
             </div>
             <div class="tableWrapper">
