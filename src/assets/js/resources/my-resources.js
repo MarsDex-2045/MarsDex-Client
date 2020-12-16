@@ -1,4 +1,5 @@
 "use strict";
+import {createModifiableResourceElement as createResourceHTML} from "./modules/factory.js";
 
 loadMyResources();
 
@@ -18,43 +19,12 @@ function loadMyResources() {
 
         document.querySelector("#filtersResources").addEventListener("change", dynamicSortResources);
         document.querySelector("#search-my-resources-form").addEventListener("submit", preventSubmitForm);
-        document.querySelector("#searchMyResources").addEventListener("search", searchResultResources);
+        document.querySelector("#searchMyResources").addEventListener("change", searchResultResources);
     });
 }
 
 function createNewResourceElement(resource) {
-    document.querySelector("#resourcesResultList").innerHTML += `
-                <article class="resourceResult">
-                <img src="assets/images/resources/${resource.name}.jpg" height="100" width="100" alt="resource-image" title="resource-image">
-
-                <div class="resourceInformation">
-                    <h2>${resource.name}</h2>
-
-                    <ul>
-                        <li>
-                            <span class="fas fa-box-open"></span>
-                            Available Storage - ${resource.weight}kg
-                        </li>
-                        <li>
-                            <span class="fas fa-clock"></span>
-                            Resource Added: ${resource.added}
-                        </li>
-                        <li>
-                            <span class="fas fa-dollar-sign"></span>
-                            Price per unit - €${resource.price}
-                        </li>
-                    </ul>
-                </div>
-
-                <ul>
-                    <li>
-                        <a class="edit-resource-button" href="company-edit-resource.html"><span class="fas fa-edit"></span>Edit</a>
-                    </li>
-                    <li>
-                        <a class="delete-resource-button" href="#"><span class="fas fa-trash"></span>Delete</a>
-                    </li>
-                </ul>
-           </article>`;
+    createResourceHTML(resource, "#resourcesResultList");
     document.querySelectorAll(".edit-resource-button").forEach(editResourceButton => {
         editResourceButton.addEventListener("click", getResourceFromTarget);
     });

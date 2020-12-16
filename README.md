@@ -21,9 +21,9 @@ At the time of writing, the following features are implemented:
 ## Bugs
 ### Global map
 - If a marker's popup is opened, but the user opens another maker without closing the first one, the link to go to the details of a colony, doesn't work anymore.
-    This is because Leaflet doesn't have any way to detect if a pop has been closed **implicit** (e.g. The pop-up is closed because another one was selected). The popup needs to be closed implicit.
+    This is because Leaflet doesn't have any way to detect if a pop has been closed **implicit** (e.g. The pop-up is closed because another one was selected). The popup needs to be closed explicit *(With the **X** of the popup)*.
   
-  The workaround is to close the original popup that has been closed implicit or to close the new pop-up that has been opened. 
+  The workaround is to close the original popup that has been closed explicit or to close the new pop-up that has been opened explicit. 
 
 ## Instructions for running locally
 * Clone the [Client Repository](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/client) to your machine.
