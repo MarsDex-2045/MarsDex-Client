@@ -5,10 +5,9 @@ loadMyResources();
 const myResources = [];
 
 function loadMyResources() {
-    if (!document.querySelector("#resourcesResultList")) {return;} // SonarLint Issue: cannot be resolved.
-    const companyId = 2;
+    if (!document.querySelector("#resourcesResultList")) {return;}
 
-    getMyResources(companyId).then(response => {
+    getMyResources(localStorage.getItem("company-id")).then(response => {
         const companyResources = response.resources;
 
         document.querySelector("#resourcesResultList").innerHTML = ``;

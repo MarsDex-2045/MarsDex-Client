@@ -43,6 +43,36 @@ main h3 {
     font-size: 2rem;
     font-weight: lighter;
     padding-bottom: 1em;
+    color: var(--fill);
+}
+
+#coloniesDiv {
+    border-bottom: none;
+    width: 90%;
+    height: 1.7em;
+}
+
+#coloniesDiv label {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    margin-left: 10px;
+    margin-right: 20px;
+    color: rgb(133, 133, 133);
+    width: max-content;
+}
+
+#coloniesDiv select {
+    width: 100%;
+    border: 2px solid var(--fill);
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: var(--fill);
+}
+
+#coloniesDiv select:hover {
+    cursor: pointer;
 }
 
 #loginEmail, #loginPassword, #registerEmail, #registerCompanyName, #registerColonyName, #registerCompanyPhoneNumber, #registerPassword, #registerPasswordRepeat {
@@ -62,6 +92,7 @@ main h3 {
     margin: 8px 0;
     border-bottom: 1px solid var(--accent);
     width: 90%;
+    color: var(--fill);
 }
 
 .formBox span {

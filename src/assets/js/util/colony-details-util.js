@@ -108,6 +108,6 @@ function setLocation(location) {
 }
 
 function addResourceCircle(resource, totalAmountOfResources) {
-    const percentage = Math.ceil(calcPercentageResource(resource, totalAmountOfResources));
+    const percentage = parseFloat(calcPercentageResource(resource, totalAmountOfResources)).toFixed(1);
     document.querySelector("#resourcesListWithCircle").innerHTML += addResourceWithCircle(resource, percentage);
 }

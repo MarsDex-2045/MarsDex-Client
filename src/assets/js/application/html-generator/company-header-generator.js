@@ -3,14 +3,16 @@
 document.addEventListener("DOMContentLoaded", initHtmlGenerator);
 
 function initHtmlGenerator() {
-    buildCompanyHeader();
+    localStorage.setItem("company-id", 2);
+    buildCompanyHeader("MaMiCo");
+    getCompany(2).then(company => {
+        console.log(company);
+    });
 }
 
-function buildCompanyHeader() {
+function buildCompanyHeader(name) {
     const container = document.querySelector("header");
-
-    if (container !== undefined && container !== null) {
-        container.innerHTML =
+    container.innerHTML =
         `<h1><span id="companyName"><em class="dropCap">M</em>ars<em class="dropCap">D</em>ex</span></h1>
 
         <nav>
@@ -60,9 +62,8 @@ function buildCompanyHeader() {
                     </div>
                 </li>
                 <li id="company-button">
-                    <p>Company</p>
+                    <p>${name}</p>
                 </li>
             </ul>
         </nav>`;
-    }
 }

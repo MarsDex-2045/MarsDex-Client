@@ -49,17 +49,17 @@
 
                 <div class="formBox">
                     <span class="fas fa-building"></span>
-                    <input placeholder="Company Name" title="companyName" required type="text" id="registerCompanyName">
+                    <input placeholder="Company" title="companyName" required type="text" id="registerCompanyName">
                 </div>
 
-                <div class="formBox">
-                    <span class="fas fa-monument"></span>
-                    <input placeholder="Colony Name" title="colonyName" required type="text" id="registerColonyName">
+                <div class="formBox" id="coloniesDiv">
+                    <span class="fas fa-monument"></span><label for="colonies">Colony</label>
+                    <select id="colonies" name="colonyList"></select>
                 </div>
 
                 <div class="formBox">
                     <span class="fas fa-mobile"></span>
-                    <input placeholder="Company Phone Number" title="companyPhoneNumber" required type="tel" id="registerCompanyPhoneNumber">
+                    <input placeholder="Phone Number" title="companyPhoneNumber" required type="tel" id="registerCompanyPhoneNumber">
                 </div>
 
                 <div class="formBox">
@@ -76,7 +76,7 @@
 
             </form>
 
-            <a href="index.html">I already have an account.</a>
+            <a href="login.html">I already have an account.</a>
         </div>
     </main>
 
@@ -86,5 +86,8 @@
 
     <script src="assets/js/application/html-generator/martian-header-generator.js"></script>
     <script src="assets/js/application/error.js"></script>
+    <script src="assets/js/configuration/config.js"></script>
+    <script src="assets/js/configuration/api.js"></script>
+    <script src="assets/js/application/register.js"></script>
 </body>
 </html>
