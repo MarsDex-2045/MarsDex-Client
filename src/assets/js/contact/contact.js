@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
-    document.querySelector("#contact-form-submit").addEventListener("click", sendMail);
+    document.querySelector("#formSendButton").addEventListener("click", sendMail);
     document.querySelector("#contactUsForm").addEventListener("submit", prevent);
 }
 
