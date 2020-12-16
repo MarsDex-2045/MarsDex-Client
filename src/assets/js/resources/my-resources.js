@@ -5,7 +5,7 @@ loadMyResources();
 const myResources = [];
 
 function loadMyResources() {
-    if (!document.querySelector("#resourcesResultList")) {return;}
+    if (!document.querySelector("#resourcesResultList")) {return;} // SonarLint Issue: cannot be resolved.
     const companyId = 2;
 
     getMyResources(companyId).then(response => {
@@ -26,7 +26,7 @@ function loadMyResources() {
 function createNewResourceElement(resource) {
     document.querySelector("#resourcesResultList").innerHTML += `
                 <article class="resourceResult">
-                <img src="assets/images/resources/${resource.name}.jpg" height="100" width="100" alt="resource-image" title="resource-image">
+                <img src="assets/images/resources/${resource.name.replace(/ /g,"-")}.jpg" height="100" width="100" alt="resource-image" title="resource-image">
 
                 <div class="resourceInformation">
                     <h2>${resource.name}</h2>

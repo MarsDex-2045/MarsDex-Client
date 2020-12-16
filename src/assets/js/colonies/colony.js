@@ -14,7 +14,7 @@ function loadColonies() {
         resultList.forEach(colony => {
             document.querySelector("#martianColonies").innerHTML += `
                 <article class="martianColony">
-                    <img src="assets/images/colony-flags/${colony.name}.png" alt=${colony.name} title=${colony.name}>
+                    <img src="assets/images/colony-flags/${colony.name.replace(/ /g,"-")}.png" alt="colony-icon">
                     <div class="colonyInformation">
                         <h2>${colony.name}</h2>
                         <ul>
