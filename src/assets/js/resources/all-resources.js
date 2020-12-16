@@ -7,6 +7,7 @@ let page = 0;
 const maxResults = 6;
 let maxPages;
 let totalResources;
+let searchResults;
 const pageCounter = "#pageNumber";
 
 function init() {
@@ -26,6 +27,8 @@ function init() {
     document.querySelector("#nextPage").addEventListener("click", nextPage);
     document.querySelector("#previousPage").addEventListener("click", previousPage);
     document.querySelector("#filtersResources").addEventListener("change", sortResults);
+    document.querySelector("#searchAllResources").addEventListener("change", filterResults);
+    document.querySelector("#search-all-resources-form").addEventListener("submit", e => e.preventDefault());
 }
 
 function getColonyOfCompany() {
@@ -93,4 +96,15 @@ function sortResults(e) {
             break;
         }
     }
+}
+
+function filterResults(e) {
+    e.preventDefault();
+    searchResults = totalResources;
+    const filter = document.querySelector("#searchAllResources").value.toLowerCase();
+    if(filter === ""){
+        searchResults = null;
+        return displayResults(totalResources);
+    }
+    return displayResults(searchResults.filter(resource => resource.name.toLowerCase().includes(filter)));
 }
