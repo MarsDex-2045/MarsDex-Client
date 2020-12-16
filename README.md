@@ -1,9 +1,9 @@
 # MarsDex Client Repository
 Welcome to the Client Repository of the MarsDex. This README.md file will instruct you to run a local version of the MarsDex Client.
 
-|Version|Security|Bugs|Vulnerabilities|
-|---|---|---|---|
-|[![Generic badge](https://img.shields.io/badge/Version-Alpha-red.svg)](https://shields.io/)|![Repository Security](https://sonar.ti.howest.be/sonar/api/project_badges/measure?project=2020.project-ii%3Amars-client-23&metric=security_rating)|![Repository Bugs](https://sonar.ti.howest.be/sonar/api/project_badges/measure?project=2020.project-ii%3Amars-client-23&metric=bugs)|![Repository Vulnerabilities](https://sonar.ti.howest.be/sonar/api/project_badges/measure?project=2020.project-ii%3Amars-client-23&metric=vulnerabilities)|
+|Version|
+|---|
+|[![Generic badge](https://img.shields.io/badge/Version-Live-blue.svg)](https://shields.io/)|
 
 ## Important URLs
 
@@ -18,6 +18,12 @@ At the time of writing, the following features are implemented:
 
 **The remaining pages without JavaScript will be implemented in the Beta Phase.**
 
+## Bugs
+### Global map
+- If a marker's popup is opened, but the user opens another maker without closing the first one, the link to go to the details of a colony, doesn't work anymore.
+    This is because Leaflet doesn't have any way to detect if a pop has been closed **implicit** (e.g. The pop-up is closed because another one was selected). The popup needs to be closed implicit.
+  
+  The workaround is to close the original popup that has been closed implicit or to close the new pop-up that has been opened. 
 
 ## Instructions for running locally
 * Clone the [Client Repository](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/client) to your machine.

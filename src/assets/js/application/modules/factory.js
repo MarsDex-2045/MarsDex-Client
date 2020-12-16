@@ -20,6 +20,9 @@ function addColonyMarkers(dataset, target, user) {
         const marker = L.marker([colony.location.longitude, colony.location.latitude])
             .bindPopup(`<p><b>${colony.name}</b></p><a href="#" id="${colony.id}" class="colony-link">See Details</a>`).addTo(target);
         marker.on('click', makeLinkable);
+        marker.on('remove', function () {
+            marker.on('click', makeLinkable);
+        });
     });
     L.circle(user, {color: 'blue', fillColor: 'blue', fillOpacity: 0.3, radius:50}).addTo(target);
     L.popup().setLatLng(user).setContent("<b>You are here</b>").openOn(target);
