@@ -1,4 +1,5 @@
 "use strict";
+import {createNewResourceElement} from "./modules/factory.js";
 
 document.addEventListener("DOMContentLoaded", init);
 
