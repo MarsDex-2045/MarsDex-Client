@@ -33,7 +33,33 @@ function registerPush() {
         return reg.pushManager.subscribe(subscribeOptions);
     }).then(sub => {
         console.log(JSON.stringify(sub));
+        let json =JSON.parse(JSON.stringify(sub));
+        console.log(json.endpoint);
+        console.log(json.keys.auth);
+        console.log(json.keys.p256dh);
+        return sub;
     });
+}
+function sendSubscriptionToBackEnd(sub) {
+    return fetch('/api/save-subscription/', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(sub)
+    })
+        .then(function(response) {
+            if (!response.ok) {
+                throw new Error('Bad status code from server.');
+            }
+
+            return response.json();
+        })
+        .then(function(responseData) {
+            if (!(responseData.data && responseData.data.success)) {
+                throw new Error('Bad response from server.');
+            }
+        });
 }
 
 function urlBase64ToUint8Array(base64String){
