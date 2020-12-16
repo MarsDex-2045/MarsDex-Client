@@ -1,17 +1,17 @@
-export function baseMap(target) {
-    let userCoordinates;
+export function baseMap(target, colonies) {
     navigator.geolocation.getCurrentPosition((location) => {
-        userCoordinates = [location.coords.longitude, location.coords.latitude];
+        const userCoordinates = [location.coords.longitude, location.coords.latitude];
+        const markers = generateColonyMarkers(colonies);
         new ol.Map({
-            controls: ol.control.defaults({
-                attribution: false
-            }).extend(
-                [new ol.control.Attribution({collapsible: false})]
-            ),
             layers: [
                 new ol.layer.Tile({
                     source: new ol.source.XYZ({
                         url: 'https://cartocdn-gusc.global.ssl.fastly.net/opmbuilder/api/v1/map/named/opm-mars-basemap-v0-2/all/{z}/{x}/{y}.png'
+                    })
+                }),
+                new ol.layer.Vector({
+                    source: new ol.source.Vector({
+                        features: markers
                     })
                 })
             ],
@@ -23,4 +23,14 @@ export function baseMap(target) {
             })
         });
     });
+
+    function generateColonyMarkers(dataset){
+        const markers = [];
+        dataset.forEach(colony => {
+            markers.push(new ol.Feature({
+                geometry: new ol.geom.Point(ol.proj.fromLonLat([colony.location.longitude, colony.location.latitude]))
+            }));
+        });
+        return markers;
+    }
 }
