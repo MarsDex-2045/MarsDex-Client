@@ -41,8 +41,8 @@ function createNewResourceElement(resource) {
                             Resource Added: ${resource.added}
                         </li>
                         <li>
-                            <span class="fas fa-coins"></span>
-                            Price - ${resource.price}
+                            <span class="fas fa-dollar-sign"></span>
+                            Price per unit - €${resource.price}
                         </li>
                     </ul>
                 </div>
@@ -138,8 +138,9 @@ function removeResource(resourceName) {
     removeResourceFetch(companyId, resourceToFind).then(response => {
         if (response.deleted === true) {
             loadMyResources();
+            sendError("success", "Resource removed", "Resource is removed successfully from your resources.");
         } else {
-            // Error Implementation
+            sendError("error", "Failed removing resource", "Something went wrong removing the resource, try again later.");
         }
     });
 }
