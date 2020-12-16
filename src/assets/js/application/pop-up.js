@@ -31,7 +31,6 @@ function addHtmlDetailsPopup() {
 }
 
 function showDetails(e) {
-    console.log("removing hidden from notification details");
     e.preventDefault();
     document.getElementById('notificationDetails').classList.remove('hidden');
 }

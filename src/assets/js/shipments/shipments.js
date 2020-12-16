@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
-    loadShipments(2);
+    loadShipments(localStorage.getItem("company-id"));
     if (document.querySelector("#buttonResult a:first-of-type")) {
         document.querySelector("#buttonResult a:first-of-type").addEventListener("click", previousPage);
         document.querySelector("#buttonResult a:last-of-type").addEventListener("click", nextPage);
