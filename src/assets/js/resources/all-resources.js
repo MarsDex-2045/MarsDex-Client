@@ -1,4 +1,5 @@
 "use strict";
+import {createNewUnmodifiableResourceElement as resourceElement} from "./modules/factory.js";
 
 document.addEventListener("DOMContentLoaded", init);
 const companyId = 2;
@@ -8,8 +9,7 @@ function init() {
         getColonyOfCompany().then(response => {
             console.log(response[0].id, response);
             getColonyDetails(response[0].id).then(details => {
-                let resources = resourceFilter(sortResourcesByAlphabet(details.resources));
-                console.log(resources);
+               resourceFilter(sortResourcesByAlphabet(details.resources)).forEach(resource => resourceElement(resource, "#resourcesResultList"));
             });
         });
     } catch (ex) {
@@ -18,7 +18,7 @@ function init() {
 }
 
 function getColonyOfCompany() {
-    return getCompany(2).then(company => {
+    return getCompany(companyId).then(company => {
         return getColonies().then(colonies => {
             return crossReferenceColonyName(company, colonies);
         });
