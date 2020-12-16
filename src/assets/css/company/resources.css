@@ -81,7 +81,7 @@ body {
 
 #resourcesResultList {
     width: 80%;
-    margin: auto;
+    margin: auto auto 1.5rem auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     align-items: center;

@@ -28,11 +28,13 @@ function submitEditResource(e) {
 
     updatedWeight = parseFloat(updatedWeight).toFixed(3);
     const companyId = 2;
+
     updatedResource(companyId, resource.name, updatedWeight).then(response => {
         if (response.updated === true) {
             window.location.assign("company-my-resources.html");
         } else {
             // Error Implementation
+            sendError("error", "Resource updating failed", "The resource weight is not correctly changed.");
         }
     });
 }

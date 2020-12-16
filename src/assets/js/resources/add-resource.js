@@ -26,7 +26,7 @@ function newResourceForm(e) {
         if (response.processed === true) {
             window.location.assign("company-my-resources.html"); // Temporarily
         } else {
-            // Error implementation will be done later
+            sendError("error", "Failed adding resource", "The resource name already exist.");
         }
     });
 }
