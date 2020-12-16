@@ -10,6 +10,5 @@ function init() {
 function loadMap() {
     getColonies().then(data => {
         baseMap('map-container', data);
-
     });
 }

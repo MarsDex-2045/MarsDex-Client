@@ -17,10 +17,16 @@ function addBaseLayer(target){
 
 function addColonyMarkers(dataset, target, user) {
     dataset.forEach(colony => {
-        L.marker([colony.location.longitude, colony.location.latitude]).bindPopup(`<b>${colony.name}</b>`).addTo(target);
+        const colonyId = `colony${colony.id}`;
+        const marker = L.marker([colony.location.longitude, colony.location.latitude])
+            .bindPopup(`<p><b>${colony.name}</b></p><a href="#" id="${colonyId}" class="colony-link">See Details</a>`).addTo(target);
+        marker.on('click', makeLinkable);
     });
     L.circle(user, {color: 'blue', fillColor: 'blue', fillOpacity: 0.3, radius:50}).addTo(target);
     L.popup().setLatLng(user).setContent("<b>You are here</b>").openOn(target);
+    function makeLinkable(){
+        document.querySelector('.colony-link').addEventListener('click', changeToColony);
+    }
 }
 
 function addColonyLines(dataset, target) {
