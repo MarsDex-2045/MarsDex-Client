@@ -15,10 +15,7 @@ function init() {
         getColonyOfCompany().then(response => {
             getColonyDetails(response[0].id).then(details => {
                 totalResources = resourceFilter(sortResourcesByAlphabet(details.resources));
-                maxPages = Math.ceil(totalResources.length / maxResults);
                 displayResults(totalResources);
-                console.log(totalResources);
-                document.querySelector(pageCounter).innerHTML = `${page + 1}/${maxPages}`;
             });
         });
     } catch (ex) {
@@ -50,11 +47,13 @@ function getColonyOfCompany() {
 
 function displayResults(resources) {
     document.querySelector("#resourcesResultList").innerHTML = "";
-    const max = (maxResults + (page * maxResults)) > totalResources.length ? totalResources.length : (maxResults + (page * maxResults));
+    maxPages = Math.ceil(resources.length / maxResults);
+    const max = (maxResults + (page * maxResults)) > resources.length ? resources.length : (maxResults + (page * maxResults));
     const count = (page * maxResults);
     for (let i = count; i < max; i++) {
         resourceElement(resources[i], "#resourcesResultList");
     }
+    document.querySelector(pageCounter).innerHTML = `${page + 1}/${maxPages}`;
 }
 
 function nextPage(e) {
@@ -80,15 +79,21 @@ function sortResults(e) {
     const filter = document.querySelector("#filtersResources").value;
     switch (filter) {
         case "name": {
-            displayResults(totalResources.sort((a, b) => a.name > b.name));
+            searchResults === null
+                ? displayResults(totalResources.sort((a, b) => a.name > b.name))
+                : displayResults(searchResults.sort((a, b) => a.name > b.name));
             break;
         }
         case "weight": {
-            displayResults(totalResources.sort((a,b) => a.weight > b.weight));
+            searchResults === null
+                ? displayResults(totalResources.sort((a, b) => a.weight > b.weight))
+                : displayResults(searchResults.sort((a, b) => a.weight > b.weight));
             break;
         }
         case "price": {
-            displayResults(totalResources.sort((a,b) => a.price > b.price));
+            searchResults === null
+                ? displayResults(totalResources.sort((a, b) => a.price > b.price))
+                : displayResults(searchResults.sort((a, b) => a.price > b.price));
             break;
         }
         default: {
@@ -102,7 +107,7 @@ function filterResults(e) {
     e.preventDefault();
     searchResults = totalResources;
     const filter = document.querySelector("#searchAllResources").value.toLowerCase();
-    if(filter === ""){
+    if (filter === "") {
         searchResults = null;
         return displayResults(totalResources);
     }
