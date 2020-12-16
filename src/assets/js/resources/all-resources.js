@@ -79,21 +79,21 @@ function sortResults(e) {
     const filter = document.querySelector("#filtersResources").value;
     switch (filter) {
         case "name": {
-            searchResults === null
+            searchResults === null || searchResults === undefined
                 ? displayResults(totalResources.sort((a, b) => a.name > b.name))
                 : displayResults(searchResults.sort((a, b) => a.name > b.name));
             break;
         }
         case "weight": {
-            searchResults === null
-                ? displayResults(totalResources.sort((a, b) => a.weight > b.weight))
-                : displayResults(searchResults.sort((a, b) => a.weight > b.weight));
+            searchResults === null || searchResults === undefined
+                ? displayResults(totalResources.sort((a, b) => a.weight < b.weight))
+                : displayResults(searchResults.sort((a, b) => a.weight < b.weight));
             break;
         }
         case "price": {
-            searchResults === null
-                ? displayResults(totalResources.sort((a, b) => a.price > b.price))
-                : displayResults(searchResults.sort((a, b) => a.price > b.price));
+            searchResults === null || searchResults === undefined
+                ? displayResults(totalResources.sort((a, b) => a.price < b.price))
+                : displayResults(searchResults.sort((a, b) => a.price < b.price));
             break;
         }
         default: {
@@ -105,11 +105,11 @@ function sortResults(e) {
 
 function filterResults(e) {
     e.preventDefault();
-    searchResults = totalResources;
     const filter = document.querySelector("#searchAllResources").value.toLowerCase();
     if (filter === "") {
         searchResults = null;
         return displayResults(totalResources);
     }
-    return displayResults(searchResults.filter(resource => resource.name.toLowerCase().includes(filter)));
+    searchResults = totalResources.filter(resource => resource.name.toLowerCase().includes(filter));
+    return displayResults(searchResults);
 }
