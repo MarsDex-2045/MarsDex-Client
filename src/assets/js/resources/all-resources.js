@@ -16,6 +16,7 @@ function init() {
                 totalResources = resourceFilter(sortResourcesByAlphabet(details.resources));
                 maxPages = Math.ceil(totalResources.length / maxResults);
                 displayResults(totalResources);
+                console.log(totalResources);
                 document.querySelector(pageCounter).innerHTML = `${page + 1}/${maxPages}`;
             });
         });
@@ -24,6 +25,7 @@ function init() {
     }
     document.querySelector("#nextPage").addEventListener("click", nextPage);
     document.querySelector("#previousPage").addEventListener("click", previousPage);
+    document.querySelector("#filtersResources").addEventListener("change", sortResults);
 }
 
 function getColonyOfCompany() {
@@ -47,25 +49,48 @@ function displayResults(resources) {
     document.querySelector("#resourcesResultList").innerHTML = "";
     const max = (maxResults + (page * maxResults)) > totalResources.length ? totalResources.length : (maxResults + (page * maxResults));
     const count = (page * maxResults);
-    for (let i = count ; i < max; i++) {
+    for (let i = count; i < max; i++) {
         resourceElement(resources[i], "#resourcesResultList");
     }
 }
 
-function nextPage(e){
+function nextPage(e) {
     e.preventDefault();
-    if(page < maxPages - 1 && totalResources.length > maxResults){
+    if (page < maxPages - 1 && totalResources.length > maxResults) {
         page++;
         displayResults(totalResources);
         document.querySelector(pageCounter).innerHTML = `${page + 1}/${maxPages}`;
     }
 }
 
-function previousPage(e){
+function previousPage(e) {
     e.preventDefault();
-    if(page > 0){
+    if (page > 0) {
         page--;
         displayResults(totalResources);
         document.querySelector(pageCounter).innerHTML = `${page + 1}/${maxPages}`;
+    }
+}
+
+function sortResults(e) {
+    e.preventDefault();
+    const filter = document.querySelector("#filtersResources").value;
+    switch (filter) {
+        case "name": {
+            displayResults(totalResources.sort((a, b) => a.name > b.name));
+            break;
+        }
+        case "weight": {
+            displayResults(totalResources.sort((a,b) => a.weight > b.weight));
+            break;
+        }
+        case "price": {
+            displayResults(totalResources.sort((a,b) => a.price > b.price));
+            break;
+        }
+        default: {
+            displayResults(totalResources);
+            break;
+        }
     }
 }
