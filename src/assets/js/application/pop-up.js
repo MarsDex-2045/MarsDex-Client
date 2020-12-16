@@ -20,6 +20,7 @@ function init() {
     document.querySelector('#settings-page .close').addEventListener('click', showOverview);
     document.querySelector('#account-page .close').addEventListener('click', showOverview);
     document.querySelector('#notificationDetails .close').addEventListener('click', hidePopUp);
+
 }
 
 function addHtmlPopUp() {
@@ -31,7 +32,6 @@ function addHtmlDetailsPopup() {
 }
 
 function showDetails(e) {
-    console.log("removing hidden from notification details");
     e.preventDefault();
     document.getElementById('notificationDetails').classList.remove('hidden');
 }

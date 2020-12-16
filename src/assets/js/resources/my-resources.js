@@ -6,9 +6,8 @@ const myResources = [];
 
 function loadMyResources() {
     if (!document.querySelector("#resourcesResultList")) {return;}
-    const companyId = 2;
 
-    getMyResources(companyId).then(response => {
+    getMyResources(localStorage.getItem("company-id")).then(response => {
         const companyResources = response.resources;
 
         document.querySelector("#resourcesResultList").innerHTML = ``;

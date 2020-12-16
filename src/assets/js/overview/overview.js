@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
-    const id = 2;
+    const id = localStorage.getItem("company-id");
     loadCompanyResources(id);
     loadCompanyRecentShipments(id);
     loadCompanyName(id);

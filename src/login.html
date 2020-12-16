@@ -18,11 +18,10 @@
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/common/header.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/martian/header-martian.css"/>
-    <link rel="stylesheet" href="assets/css/martian/login-register.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/common/error.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/martian/login-register.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/common/footer.css"/>
     <!-- title -->
-    <title>MarsDex | Register</title>
+    <title>MarsDex | Login</title>
 </head>
 <body>
 
@@ -33,50 +32,30 @@
     <main>
 
         <div class="cartDiv"> <!-- Image Source: https://undraw.co/search -->
-            <img width="490" height="545" src="assets/images/rocket%20mars.png" alt="rocket-mars" title="rocket-mars"/>
+            <img width="450" height="500" src="assets/images/rocket%20mars.png" alt="rocket-mars" title="rocket-mars"/>
         </div>
 
         <div class="cartDiv">
-            <h2>Register</h2>
+            <h2>Login</h2>
             <h3>Company</h3>
 
-            <form action="#" method="post" id="registerForm">
+            <form action="#" method="post" id="loginForm">
 
                 <div class="formBox">
                     <span class="fas fa-envelope"></span>
-                    <input autofocus title="email" required type="email" id="registerEmail" placeholder="E-mail">
-                </div>
-
-                <div class="formBox">
-                    <span class="fas fa-building"></span>
-                    <input placeholder="Company" title="companyName" required type="text" id="registerCompanyName">
-                </div>
-
-                <div class="formBox" id="coloniesDiv">
-                    <span class="fas fa-monument"></span><label for="colonies">Colony</label>
-                    <select id="colonies" name="colonyList"></select>
-                </div>
-
-                <div class="formBox">
-                    <span class="fas fa-mobile"></span>
-                    <input placeholder="Phone Number" title="companyPhoneNumber" required type="tel" id="registerCompanyPhoneNumber">
+                    <input autofocus title="email" required type="email" id="loginEmail" placeholder="E-mail">
                 </div>
 
                 <div class="formBox">
                     <span class="fas fa-lock"></span>
-                    <input placeholder="Password" title="password" required type="password" id="registerPassword">
+                    <input title="password" required type="password" placeholder="Password" id="loginPassword">
                 </div>
 
-                <div class="formBox">
-                    <span class="fas fa-lock"></span>
-                    <input placeholder="Repeat Password" title="password" required type="password" id="registerPasswordRepeat">
-                </div>
-
-                <input type="submit" value="Register" title="Register">
+                <input type="submit" value="Login" title="Login">
 
             </form>
 
-            <a href="login.html">I already have an account.</a>
+            <a href="register.html">I don't have an account yet.</a>
         </div>
     </main>
 
@@ -85,9 +64,5 @@
     </footer>
 
     <script src="assets/js/application/html-generator/martian-header-generator.js"></script>
-    <script src="assets/js/application/error.js"></script>
-    <script src="assets/js/configuration/config.js"></script>
-    <script src="assets/js/configuration/api.js"></script>
-    <script src="assets/js/application/register.js"></script>
 </body>
 </html>
