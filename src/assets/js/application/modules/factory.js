@@ -17,9 +17,8 @@ function addBaseLayer(target){
 
 function addColonyMarkers(dataset, target, user) {
     dataset.forEach(colony => {
-        const colonyId = `colony${colony.id}`;
         const marker = L.marker([colony.location.longitude, colony.location.latitude])
-            .bindPopup(`<p><b>${colony.name}</b></p><a href="#" id="${colonyId}" class="colony-link">See Details</a>`).addTo(target);
+            .bindPopup(`<p><b>${colony.name}</b></p><a href="#" id="${colony.id}" class="colony-link">See Details</a>`).addTo(target);
         marker.on('click', makeLinkable);
     });
     L.circle(user, {color: 'blue', fillColor: 'blue', fillOpacity: 0.3, radius:50}).addTo(target);
@@ -49,4 +48,11 @@ function getRandomColor() {
         color += letters[Math.floor(Math.random() * 16)];
     }
     return color;
+}
+
+function changeToColony(e){
+    e.preventDefault();
+    const id = e.target.getAttribute('id');
+    localStorage.setItem("colony-id", id);
+    window.location.assign("martian-colony-details.html");
 }
