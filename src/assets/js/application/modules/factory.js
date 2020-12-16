@@ -54,5 +54,10 @@ function changeToColony(e){
     e.preventDefault();
     const id = e.target.getAttribute('id');
     localStorage.setItem("colony-id", id);
-    window.location.assign("martian-colony-details.html");
+    console.log(window.location.href);
+    if(window.location.href.includes("company")){
+        window.location.assign("company-colony-details.html");
+    } else{
+        window.location.assign("martian-colony-details.html");
+    }
 }
