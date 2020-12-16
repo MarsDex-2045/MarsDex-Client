@@ -7,6 +7,7 @@ let page = 0;
 const maxResults = 6;
 let maxPages;
 let totalResources;
+const pageCounter = "#pageNumber";
 
 function init() {
     try {
@@ -15,7 +16,7 @@ function init() {
                 totalResources = resourceFilter(sortResourcesByAlphabet(details.resources));
                 maxPages = Math.ceil(totalResources.length / maxResults);
                 displayResults(totalResources);
-                document.querySelector("#pageNumber").innerHTML = `${page + 1}/${maxPages}`;
+                document.querySelector(pageCounter).innerHTML = `${page + 1}/${maxPages}`;
             });
         });
     } catch (ex) {
@@ -56,7 +57,7 @@ function nextPage(e){
     if(page < maxPages - 1 && totalResources.length > maxResults){
         page++;
         displayResults(totalResources);
-        document.querySelector("#pageNumber").innerHTML = `${page + 1}/${maxPages}`;
+        document.querySelector(pageCounter).innerHTML = `${page + 1}/${maxPages}`;
     }
 }
 
@@ -65,6 +66,6 @@ function previousPage(e){
     if(page > 0){
         page--;
         displayResults(totalResources);
-        document.querySelector("#pageNumber").innerHTML = `${page + 1}/${maxPages}`;
+        document.querySelector(pageCounter).innerHTML = `${page + 1}/${maxPages}`;
     }
 }
