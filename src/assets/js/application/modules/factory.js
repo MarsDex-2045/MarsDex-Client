@@ -3,7 +3,7 @@ export function baseMap(target, colonies) {
         const userCoordinates = [location.coords.longitude, location.coords.latitude];
         const map = L.map(target).setView(userCoordinates, 4);
         addBaseLayer(map);
-        addColonyMarkers(colonies, map);
+        addColonyMarkers(colonies, map, userCoordinates);
         addColonyLines(colonies, map);
     });
 }
@@ -15,10 +15,12 @@ function addBaseLayer(target){
     }).addTo(target).setZIndex(0);
 }
 
-function addColonyMarkers(dataset, target) {
+function addColonyMarkers(dataset, target, user) {
     dataset.forEach(colony => {
         L.marker([colony.location.longitude, colony.location.latitude]).bindPopup(`<b>${colony.name}</b>`).addTo(target);
     });
+    L.circle(user, {color: 'blue', fillColor: 'blue', fillOpacity: 0.3, radius:50}).addTo(target);
+    L.popup().setLatLng(user).setContent("<b>You are here</b>").openOn(target);
 }
 
 function addColonyLines(dataset, target) {
