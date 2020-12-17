@@ -1,4 +1,4 @@
-# MarsDex Client Repository
+# MarsDex Client Repository (MD-CR)
 Welcome to the Client Repository of the MarsDex. This README.md file will instruct you to run a local version of the MarsDex Client.
 
 |Version|
@@ -13,10 +13,25 @@ Welcome to the Client Repository of the MarsDex. This README.md file will instru
 
 ## Features
 At the time of writing, the following features are implemented:
-* All HTML pages with CSS
-* Colonies Page with JavaScript
+### Martian
+- Listing of all colonies  *(Includes searching & sorting)*
+- View details of a colony
+- Open a map with 
+    - Transport Lines
+    - Locations pulled from the database
+    - Popup that links to the detail page
+- Accessing a contact page
+- Viewing more information about our company.
+### Company
+***Note:** We received a suggestion to lower the priority of the login & register mechanism. While there is a register page & login page, if you try to register/login, you'll be authenticated as MaMiCo automatically.*
 
-**The remaining pages without JavaScript will be implemented in the Beta Phase.**
+Including all the features above, the following functions have been implemented:
+- Viewing the resources of your home colony *(Includes searching & sorting)*
+- Viewing the resources of your company *(Includes searching & sorting)*
+- Adding a new resource
+- Editing a new resource
+- Deleting a resource
+- Accessing an overview of your company
 
 ## Bugs
 ### Global map
