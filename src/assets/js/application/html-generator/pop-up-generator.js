@@ -63,7 +63,7 @@ function addPopUp() {
                 <input title="companyName" required type="text" value="MaMiCo" id="registerCompanyName">
 
                 <label for="registerEmail">Email</label>
-                <input autofocus title="email" required type="text" value="mamico@mars.com" id="registerEmail">
+                <input title="email" required type="text" value="mamico@mars.com" id="registerEmail">
 
                 <label for="registerColonyName">Colony Name</label>
                 <input title="colonyName" required type="text" value="Durrance Camp" id="registerColonyName">

@@ -10,7 +10,7 @@ export function createModifiableResourceElement(resource, target){
 
 function constructBaseHTML(resource, editble){
     let res =`<article class="resourceResult">
-        <img src="assets/images/resources/${resource.name}.jpg" height="100" width="100" alt="resource-image" title="resource-image">
+        <img src="assets/images/resources/${resource.name.replace(/ /g,"-")}.jpg" height="100" width="100" alt="resource-image" title="resource-image">
             <div class="resourceInformation">
                 <h2>${resource.name}</h2>
                 <ul>

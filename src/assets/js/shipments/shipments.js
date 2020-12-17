@@ -98,6 +98,12 @@ function previousPage(e) {
 function dynamicSortShipments(e) {
     const sortValue = e.currentTarget.value;
 
+    if (sortValue === "status") {
+        document.querySelector("#searchShipping").setAttribute("placeholder", `Search for a Shipping Status...`);
+    } else {
+        document.querySelector("#searchShipping").setAttribute("placeholder", `Search for a Shipping ID...`);
+    }
+
     companyShipments.sort(
         function (a, b) {
             if (a[sortValue] > b[sortValue]) {
@@ -121,7 +127,12 @@ function searchResult(e) {
     e.preventDefault();
 
     const searchRequest = e.target.value;
-    if (searchRequest === "" || searchRequest === " ") { return; }
+    if (searchRequest === "" || searchRequest === " ") {
+        getCompany(localStorage.getItem("company-id")).then(company => {
+            loadPageShipments(companyShipments, (currentPage - 1) * maxShipmentsOnPage, company);
+        });
+        return;
+    }
     const sortValue = document.querySelector("#filtersShipping").value;
 
     const searchResultShipping = [];
