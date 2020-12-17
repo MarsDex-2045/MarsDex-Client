@@ -13,7 +13,7 @@ function addResourceWithCircle(resource, percentage) {
                     <text class="circle-chart__percent" x="16.91549431" y="16.91549431" alignment-baseline="central" text-anchor="middle" font-size="10">${percentage}%</text>
                 </g>
             </svg>
-            <img src="assets/images/resources/${resource.name}.jpg" alt=${resource.name} title=${resource.name}>
+            <img src="assets/images/resources/${resource.name.replace(/ /g,"-")}.jpg" alt="resource-icon">
             <p>${resource.name}</p>
         </div>
     `;
@@ -22,7 +22,7 @@ function addResourceWithCircle(resource, percentage) {
 function addColonyResourceDetails(resource) {
     return `
         <article class="martianColonyDetailsResource">
-            <img src="assets/images/resources/${resource.name}.jpg" alt="${resource.name}" title="${resource.name}">
+            <img src="assets/images/resources/${resource.name.replace(/ /g,"-")}.jpg" alt="resource-icon">
             <div class="resourceInformation">
                 <h2>${resource.name}</h2>
                 <ul>

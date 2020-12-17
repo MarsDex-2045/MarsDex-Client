@@ -107,7 +107,7 @@ function removeResource(resourceName) {
     removeResourceFetch(companyId, resourceToFind).then(response => {
         if (response.deleted === true) {
             loadMyResources();
-            sendError("success", "Resource removed", "Resource is removed successfully from your resources.");
+            sendError("success", "Resource removed", "Resource is successfully removed from your resources.");
         } else {
             sendError("error", "Failed removing resource", "Something went wrong removing the resource, try again later.");
         }
