@@ -24,7 +24,7 @@ function buildCompanyHeader(name) {
                             <a href="company-my-resources.html" class="resourcesDropDown"><span class="fas fa-user-shield"></span><div>my resources</div></a>
                         </div>
                         <div>
-                            <a href="company-all-resources.html" class="resourcesDropDown"><span class="fas fa-globe-europe"></span><div>all resources</div></a>
+                            <a href="company-all-resources.html" class="resourcesDropDown"><span class="fas fa-globe-europe"></span><div>Colony resources</div></a>
                         </div>
                     </div>
                 </li>
