@@ -1,6 +1,6 @@
 "use strict";
 
-function generateShippingResult(shipment, resourcesInformation, receiveTimeDate, receiveTime) {
+function generateShippingResult(shipment, resourcesInformation, receiveTimeDate, receiveTime, colony) {
     return `
         <div class="shippingResult">
                 <ul>
@@ -24,7 +24,7 @@ function generateShippingResult(shipment, resourcesInformation, receiveTimeDate,
                             <img src="assets/images/arrow.png" alt="arrow" title="arrow"/>
                         </li>
                         <li>
-                            <p>Your colony</p>
+                            <p>${colony}</p>
                         </li>
                     </ul>
                 </div>
