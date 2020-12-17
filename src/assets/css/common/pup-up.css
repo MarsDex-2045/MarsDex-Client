@@ -15,7 +15,7 @@
     background-color: var(--fill);
     border: 3px solid var(--fill);
     padding: 20px;
-    z-index: 3;
+    z-index: 999;
     border-radius: 20px;
 }
 
@@ -58,11 +58,11 @@ section > h2 {
 
 /* OVERVIEW */
 
-section > h2 span, section > h2 div, #overview-page div nav ul li span, #overview-page div nav ul li div, #settings-page div h3 span, #settings-page div h3 div, #settings-page #privacy-policy span, #settings-page #privacy-policy div, #notificationDetails ul li span, #notificationDetails ul li div, #notificationDetails h3 span, #notificationDetails h3 div {
+section > h2 span, section > h2 div, #overview-page div nav ul li span, #overview-page div nav ul li strong, #settings-page div h3 span, #settings-page div h3 strong, #settings-page #privacy-policy span, #settings-page #privacy-policy div, #notificationDetails ul li span, #notificationDetails ul li strong, #notificationDetails h3 span, #notificationDetails h3 strong {
     display: inline;
 }
 
-section > h2 div, #overview-page div nav ul li div, #settings-page div h3 div, #notificationDetails ul li div, #notificationDetails h3 div {
+section > h2 strong, #overview-page div nav ul li strong, #settings-page div h3 strong, #notificationDetails ul li strong, #notificationDetails h3 strong {
     margin-left: 15px;
 }
 

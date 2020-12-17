@@ -21,10 +21,10 @@ function setTitles(colony_name) {
         title.innerText = colony_name;
     });
     document.querySelector("#colony-title").innerHTML = `
-        <img src="assets/images/colony-flags/${colony_name}.png" alt=${colony_name} title=${colony_name}>${colony_name}
+        <img src="assets/images/colony-flags/${colony_name.replace(/ /g,"-")}.png" alt="colony-icon">${colony_name}
     `;
     document.querySelector("#colony-flag").innerHTML = `
-        <img src="assets/images/colony-flags/${colony_name}.png" alt=${colony_name} title=${colony_name}>
+        <img src="assets/images/colony-flags/${colony_name.replace(/ /g,"-")}.png" alt="colony-icon">
     `;
 }
 
