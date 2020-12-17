@@ -30,40 +30,38 @@
     <!-- Dynamic loading header -->
 </header>
 
-    <main>
-        <h2 class="subTitle"><span class="fas fa-user-shield"></span>My Resources</h2>
+<main>
+    <h2 class="subTitle"><span class="fas fa-user-shield"></span>My Resources</h2>
 
-        <form id="search-my-resources-form">
-            <div>
-                <label for="searchMyResources"></label>
-                <input type="search" id="searchMyResources" name="search" placeholder="Search for a resource ...">
-                <span class="fas fa-search"></span>
-            </div>
+    <form id="search-my-resources-form">
+        <div>
+            <label for="searchMyResources"></label>
+            <input type="search" id="searchMyResources" name="search" placeholder="Search for a resource ...">
+            <span class="fas fa-search"></span>
+        </div>
 
-            <label for="filtersResources"></label>
-            <select name="filters" id="filtersResources">
-                <option value="name">Name</option>
-                <option value="weight">Weight</option>
-                <option value="price">Price</option>
-            </select>
-            <a id="add-button" href="company-add-resource.html">ADD RESOURCE <span class="fas fa-plus"></span></a>
-        </form>
+        <label for="filtersResources"></label>
+        <select name="filters" id="filtersResources">
+            <option value="name">Name</option>
+            <option value="weight">Weight</option>
+            <option value="price">Price</option>
+        </select>
+        <a id="add-button" href="company-add-resource.html">ADD RESOURCE <span class="fas fa-plus"></span></a>
+    </form>
 
-        <!-- fill div with articles and resources -->
-        <div id="resourcesResultList"></div>
-    </main>
+    <!-- fill div with articles and resources -->
+    <div id="resourcesResultList"></div>
+</main>
 
-    <footer>
-        <p>&copy; Howest MarsDex 2020</p>
-    </footer>
-    <script src="assets/js/resources/modules/factory.js" type="module"></script>
-    <script src="assets/js/application/html-generator/company-header-generator.js"></script>
-    <script src="assets/js/application/error.js"></script>
-    <script src="assets/js/configuration/main.js"></script>
-    <script src="assets/js/configuration/config.js"></script>
-    <script src="assets/js/configuration/api.js"></script>
-    <script src="assets/js/resources/my-resources.js" type="module"></script>
-    <script src="assets/js/application/html-generator/pop-up-generator.js"></script>
-    <script src="assets/js/application/pop-up.js"></script>
+<script src="assets/js/resources/modules/factory.js" type="module"></script>
+<script src="assets/js/application/html-generator/company-header-generator.js"></script>
+<script src="assets/js/application/error.js"></script>
+<script src="assets/js/configuration/main.js"></script>
+<script src="assets/js/configuration/config.js"></script>
+<script src="assets/js/configuration/api.js"></script>
+<script src="assets/js/resources/my-resources.js" type="module"></script>
+<script src="assets/js/application/html-generator/pop-up-generator.js"></script>
+<script src="assets/js/application/pop-up.js"></script>
+<script src="assets/js/application/html-generator/footer.js"></script>
 </body>
 </html>

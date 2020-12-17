@@ -28,54 +28,51 @@
     <!-- Dynamic loading header -->
 </header>
 
-    <main>
-        <h2>Add Resource</h2>
+<main>
+    <h2>Add Resource</h2>
 
-        <form action="#" method="post" id="resourceForm">
+    <form action="#" method="post" id="resourceForm">
 
-            <div>
-                <label for="resourceExist">Resource already exist?</label>
-                <input type="checkbox" id="resourceExist" title="resourceExist"/>
+        <div>
+            <label for="resourceExist">Resource already exist?</label>
+            <input type="checkbox" id="resourceExist" title="resourceExist"/>
+        </div>
+
+        <div class="inputBox">
+            <span class="fas fa-cubes"></span>
+            <input placeholder="Resource Name" title="resourceName" required type="text" id="resourceName">
+        </div>
+
+        <div class="inputBox">
+            <span class="fas fa-weight-hanging"></span>
+            <input placeholder="Resource Amount" title="resourceAmount" required type="text" id="resourceAmount">
+            <label>
+                <select>
+                    <option selected value="KG">KG</option>
+                    <option value="Liter">Liter</option>
+                </select>
+            </label>
+        </div>
+
+        <div id="resourceImageDiv" class=""> <!-- Remove class hidden to make it back visual-->
+            <p>Resource Image</p>
+
+            <div id="onlyNewResource">
+                <input type="file" name="resourceImage">
             </div>
+        </div>
 
-            <div class="inputBox">
-                <span class="fas fa-cubes"></span>
-                <input placeholder="Resource Name" title="resourceName" required type="text" id="resourceName">
-            </div>
+        <input id="submitResourceButton" type="submit" value="Add Resource" title="Add Resource">
+    </form>
+</main>
 
-            <div class="inputBox">
-                <span class="fas fa-weight-hanging"></span>
-                <input placeholder="Resource Amount" title="resourceAmount" required type="text" id="resourceAmount">
-                <label>
-                    <select>
-                        <option selected value="KG">KG</option>
-                        <option value="Liter">Liter</option>
-                    </select>
-                </label>
-            </div>
-
-            <div id="resourceImageDiv" class=""> <!-- Remove class hidden to make it back visual-->
-                <p>Resource Image</p>
-
-                <div id="onlyNewResource">
-                    <input type="file" name="resourceImage">
-                </div>
-            </div>
-
-            <input id="submitResourceButton" type="submit" value="Add Resource" title="Add Resource">
-        </form>
-    </main>
-
-    <footer>
-        <p>&copy; Howest MarsDex 2020</p>
-    </footer>
-
-    <script src="assets/js/application/html-generator/company-header-generator.js"></script>
-    <script src="assets/js/application/error.js"></script>
-    <script src="assets/js/configuration/config.js"></script>
-    <script src="assets/js/application/pop-up.js"></script>
-    <script src="assets/js/configuration/api.js"></script>
-    <script src="assets/js/application/html-generator/pop-up-generator.js"></script>
-    <script src="assets/js/resources/add-resource.js"></script>
+<script src="assets/js/application/html-generator/company-header-generator.js"></script>
+<script src="assets/js/application/error.js"></script>
+<script src="assets/js/configuration/config.js"></script>
+<script src="assets/js/application/pop-up.js"></script>
+<script src="assets/js/configuration/api.js"></script>
+<script src="assets/js/application/html-generator/pop-up-generator.js"></script>
+<script src="assets/js/resources/add-resource.js"></script>
+<script src="assets/js/application/html-generator/footer.js"></script>
 </body>
 </html>
