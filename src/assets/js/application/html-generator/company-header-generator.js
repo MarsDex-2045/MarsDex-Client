@@ -5,9 +5,6 @@ document.addEventListener("DOMContentLoaded", initHtmlGenerator);
 function initHtmlGenerator() {
     localStorage.setItem("company-id", 2);
     buildCompanyHeader("MaMiCo");
-    getCompany(2).then(company => {
-        console.log(company);
-    });
 }
 
 function buildCompanyHeader(name) {
