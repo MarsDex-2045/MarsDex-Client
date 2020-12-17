@@ -37,41 +37,23 @@ function registerPush() {
         console.log(json.endpoint);
         console.log(json.keys.auth);
         console.log(json.keys.p256dh);
-        return sub;
-    });
-}
-function sendSubscriptionToBackEnd(sub) {
-    return fetch('/api/save-subscription/', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(sub)
-    })
-        .then(function(response) {
-            if (!response.ok) {
-                throw new Error('Bad status code from server.');
-            }
 
-            return response.json();
+        addSubscription(json.endpoint, json.keys.auth, json.keys.p256dh).then(response => {
+            console.log(response);
         })
-        .then(function(responseData) {
-            if (!(responseData.data && responseData.data.success)) {
-                throw new Error('Bad response from server.');
-            }
-        });
+    });
 }
 
 function urlBase64ToUint8Array(base64String){
-    var padding = '='.repeat((4 - base64String.length % 4) % 4);
-    var base64 = (base64String + padding)
+    let padding = '='.repeat((4 - base64String.length % 4) % 4);
+    let base64 = (base64String + padding)
         .replace(/-/g, '+')
         .replace(/_/g, '/');
 
-    var rawData = window.atob(base64);
-    var outputArray = new Uint8Array(rawData.length);
+    let rawData = window.atob(base64);
+    let outputArray = new Uint8Array(rawData.length);
 
-    for (var i = 0; i < rawData.length; ++i){
+    for (let i = 0; i < rawData.length; ++i){
         outputArray[i] = rawData.charCodeAt(i);
     }
     return outputArray;
