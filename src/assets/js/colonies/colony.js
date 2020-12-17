@@ -1,6 +1,6 @@
 "use strict";
 
-const colonyResultDiv = document.querySelector("#martianColonies");
+const colonyResultDiv = "#martianColonies";
 let colonies;
 let searchResults;
 
@@ -22,9 +22,9 @@ function loadColonies() {
 }
 
 function displayResults(dataset){
-    document.querySelector("#martianColonies").innerHTML = "";
+    clearAllColonies();
     dataset.forEach(colony => {
-        document.querySelector("#martianColonies").innerHTML += `
+        document.querySelector(colonyResultDiv).innerHTML += `
                 <article class="martianColony">
                     <img src="assets/images/colony-flags/${colony.name}.png" alt=${colony.name} title=${colony.name}>
                     <div class="colonyInformation">
@@ -42,7 +42,7 @@ function displayResults(dataset){
 }
 
 function clearAllColonies() {
-    colonyResultDiv.innerHTML = "";
+    document.querySelector(colonyResultDiv).innerHTML = "";
 }
 
 function searchColony(e) {
