@@ -10,7 +10,7 @@ Welcome to the Client Repository of the MarsDex. This README.md file will instru
 * [Client](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/client)
 * [Documentation](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/documentation)
 ## Features
-At the time of writing, the following features are implemented:
+At the time of writing (17/12/20), the following features are implemented:
 ### Martian
 - Listing of all colonies  *(Includes searching & sorting)*
 - View details of a colony
@@ -60,5 +60,42 @@ See the [Server Startup Guide](https://git.ti.howest.be/TI/2020-2021/s3/project-
 ## Development environment
 While this application has been made for standard desktop environments (16:9) in mind, the website should be flexible enough to also been used on mobile devices like phones and tablets.
 
+## File Structure
+```
+├── src
+│   ├── assets
+│   │   ├── css
+│   │   │   ├── common -> CSS files meant for recurring styling elements
+│   │   │   ├── company -> CSS files meant for company side of website
+│   │   │   ├── martian -> CSS files meant for martian side of website
+│   │   │   └── reset.css -> Reset file for CSS
+│   │   │
+│   │   ├── images
+│   │   │   ├── colony-flags -> images used to represent colonies
+│   │   │   ├── resources -> Images used to represent resources
+│   │   │   └── Loose files are icons used through the project
+│   │   └── js
+│   │       ├── application -> Contains general JS that is used through the project
+│   │       │   ├── html-generator -> Contains JS files that generates HTML elements
+│   │       │   └── modules -> Contains Leaflet methods for constructing a map.
+│   │       ├── colonies -> JS files that retrieves & manipulate data relating to colonies
+│   │       ├── configuration -> Contains configuration files & calls for the API
+│   │       ├── contact -> JS files that are used in contact forms
+│   │       ├── overview -> JS files that are used in the company overview
+│   │       ├── resources -> JS files that retrieves & manipulate data relating to resources
+│   │       │   └── modules -> Contains factory to generate HTML resource elements
+│   │       ├── shipments -> JS files that retrieves & manipulate data relating to shipments
+│   │       └── util -> Contains JS Subfunctions
+│   │
+│   ├── index.html -> Starting point
+│   ├── martian-*.html -> All HTML files relating to Martian side of website
+│   └── company-*.html -> All HTML files relating to company side of website
+│   
+├── .gitignore
+├── .gitlab-ci.yml
+├── package.json
+├── README.md
+└── sonar-project.properties
+```
 ## Contributing
 Found a fault in the code, that isn't a duplicated issue? Message Yarne Savaete and we investigate the issue in our team.
