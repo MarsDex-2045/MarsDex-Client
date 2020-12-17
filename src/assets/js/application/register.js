@@ -9,7 +9,7 @@ function init() {
 function loadSelection() {
     getColonies().then(colonies => {
         colonies.forEach(colony => {
-            document.querySelector("#colonies").innerHTML += `<option value=${colony.name}>${colony.name}</option>`;
+            document.querySelector("#colonies").innerHTML += `<option value="${colony.name}">${colony.name}</option>`;
         });
     });
 }

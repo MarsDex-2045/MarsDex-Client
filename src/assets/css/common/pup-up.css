@@ -25,7 +25,7 @@
     font-weight: bold;
     background-color: #ffffff;
     display: inline-block;
-    border-radius: 23px;
+    border-radius: 50%;
     padding: 5px;
     text-transform: uppercase;
     font-family: "Arial", sans-serif;
@@ -36,6 +36,12 @@
     top: 0;
     transform: translateX(50%) translateY(-50%);
     cursor: pointer;
+}
+
+.close > span {
+    height: 13px;
+    width: 13px;
+    text-align: center;
 }
 
 #overview-page .close:hover, #settings-page .close:hover, #account-page .close:hover, #notificationDetails .close:hover {
@@ -191,6 +197,13 @@ section > h2 strong, #overview-page div nav ul li strong, #settings-page div h3 
     font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
     font-size: 1em;
     margin: 10px 0;
+    display: flex;
+    flex-flow: row;
+}
+
+#notificationDetails ul li span:first-of-type {
+    height: 15px;
+    width: 15px;
 }
 
 #notificationDetails h3 {

@@ -151,6 +151,14 @@ body {
     padding-bottom: 0.4rem;
 }
 
+.resourceInformation ul li span {
+    padding-right: 10px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    writing-mode: vertical-lr;
+}
+
 #buttonResult {
     width: 80%;
     display: inline-flex;
