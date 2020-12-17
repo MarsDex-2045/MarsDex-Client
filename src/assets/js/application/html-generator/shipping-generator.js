@@ -36,9 +36,9 @@ function generateBaseHTML(shipment, resourcesInformation, receiveTimeDate, recei
                 <li>
                     <img src="assets/images/arrow.png" alt="arrow" title="arrow"/>
                 </li>
-<li>
-                            <p>${colonyName}</p>
-                        </li>
-                    </ul>
-                </div>`;
+                <li>
+                    <p>${colonyName}</p>
+                </li>
+            </ul>
+        </div>`;
 }
