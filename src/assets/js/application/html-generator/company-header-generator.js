@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", initHtmlGenerator);
 function initHtmlGenerator() {
     localStorage.setItem("company-id", 2);
     buildCompanyHeader("MaMiCo");
+    loadFooter();
 }
 
 function buildCompanyHeader(name) {
