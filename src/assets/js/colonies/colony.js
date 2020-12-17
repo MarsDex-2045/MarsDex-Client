@@ -60,4 +60,14 @@ function searchColony(e) {
 function filterColony(e) {
     e.preventDefault();
     console.log("Filtering colonies.");
+    const filter = document.querySelector("#filtersMartianColonies").value;
+    if(filter.toLowerCase() === "name"){
+        searchResults === null || searchResults === undefined
+            ? displayResults(colonies.sort((a, b) => a.name > b.name))
+            : displayResults(searchResults.sort((a, b) => a.name > b.name));
+    } else{
+        searchResults === null || searchResults === undefined
+            ? displayResults(colonies.sort((a,b) => a.location.altitude < b.location.altitude))
+            : displayResults(searchResults.sort((a,b) => a.location.altitude < b.location.altitude));
+    }
 }
