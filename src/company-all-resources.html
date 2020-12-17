@@ -33,18 +33,18 @@
 <main>
     <h2 class="subTitle"><span class="fas fa-globe-europe"></span>All Resources</h2>
 
-    <form id="search-my-resources-form">
+    <form id="search-all-resources-form">
         <div>
-            <label for="searchMyResources"></label>
-            <input type="text" id="searchMyResources" name="search" placeholder="Search for a resource ...">
+            <label for="searchAllResources"></label>
+            <input type="text" id="searchAllResources" name="search" placeholder="Search for a resource ...">
             <span class="fas fa-search"></span>
         </div>
 
         <label for="filtersResources"></label>
         <select name="filters" id="filtersResources">
             <option value="name">Name</option>
-            <option value="resources">Highest Storage</option>
-            <option value="location">Lowest Storage</option>
+            <option value="weight">Weight</option>
+            <option value="price">Price</option>
         </select>
     </form>
 
@@ -52,18 +52,25 @@
     <div id="resourcesResultList"></div>
 
     <div id="buttonResult">
-        <a href="#"><span class="fas fa-chevron-left"></span>Previous Page</a>
+        <a href="#" id="previousPage"><span class="fas fa-chevron-left"></span>Previous Page</a>
         <p id="pageNumber">1/2</p>
-        <a href="#">Next Page<span class="fas fa-chevron-right"></span></a>
+        <a href="#" id="nextPage">Next Page<span class="fas fa-chevron-right"></span></a>
     </div>
 </main>
 
     <footer>
         <p>&copy; Howest MarsDex 2020</p>
     </footer>
+    <script src="assets/js/util/colony-details-util.js"></script>
+    <script src="assets/js/application/error.js"></script>
+    <script src="assets/js/configuration/main.js"></script>
+    <script src="assets/js/configuration/config.js"></script>
+    <script src="assets/js/configuration/api.js"></script>
+    <script src="assets/js/resources/modules/factory.js" type="module"></script>
     <script src="assets/js/application/html-generator/company-header-generator.js"></script>
     <script src="assets/js/application/error.js"></script>
     <script src="assets/js/application/pop-up.js"></script>
     <script src="assets/js/application/html-generator/pop-up-generator.js"></script>
+    <script src="assets/js/resources/all-resources.js" type="module"></script>
 </body>
 </html>
