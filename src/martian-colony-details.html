@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/common/colony-details.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/common/circle-diagrams.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/common/sub-titles.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/common/error.css"/>
     <!-- title -->
     <title>MarsDex | Colony Details</title>
 </head>
@@ -29,7 +30,7 @@
     </header>
 
     <main>
-        <h2 id="colony-title"><img src="assets/images/colony-flags/colony-flag.jpg" alt="The crater bay colony" title="The crater bay colony"><span class="colony-title"></span></h2>
+        <h2 id="colony-title">temp</h2>
         <a class="back" href="martian-colonies.html"><span class="fas fa-arrow-left"></span></a>
         <section>
             <h2 class="subTitle"><span class="fas fa-globe"></span>Overview resources</h2>
@@ -66,7 +67,7 @@
         <section id="colonyDetailsInformation">
             <h2 class="subTitle"><span class="fas fa-info-circle"></span>Colony information</h2>
             <div>
-                <img src="assets/images/colony-flags/colony-flag.jpg" alt="The crater bay colony" title="The crater bay colony">
+                <div id="colony-flag"></div>
                 <ul>
                     <li><strong>Colony name: </strong><span class="colony-title">The crater bay colony</span></li>
                     <li><strong>Population: </strong>63478 inhabitants</li>
@@ -84,10 +85,13 @@
     </footer>
 
     <script src="assets/js/application/html-generator/martian-header-generator.js"></script>
+    <script src="assets/js/application/error.js"></script>
     <script src="assets/js/configuration/config.js"></script>
-    <script src="assets/js/api-setup/main.js"></script>
-    <script src="assets/js/api-setup/api.js"></script>
+    <script src="assets/js/configuration/main.js"></script>
+    <script src="assets/js/configuration/api.js"></script>
     <script src="assets/js/colonies/location-calculations.js"></script>
+    <script src="assets/js/application/html-generator/colony-details-generator.js"></script>
+    <script src="assets/js/util/colony-details-util.js"></script>
     <script src="assets/js/colonies/colony-details.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </body>

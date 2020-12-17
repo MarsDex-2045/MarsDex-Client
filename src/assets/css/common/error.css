@@ -1,0 +1,40 @@
+#error-popup {
+    position: fixed;
+    bottom: 7%;
+    left: 4%;
+    width: 30rem;
+    background-color: #eaeaea;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#error-container {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+}
+
+#error-container img {
+    width: 70px;
+    height: 70px;
+    padding-right: 15px;
+}
+
+#error-information h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding-bottom: 7px;
+}
+
+#error-information p {
+    color: #3e3e3e;
+    font-size: 1rem;
+}
+
+.color-error {
+    color: #ff4944;
+}
+
+.color-success {
+    color: #5eb95e;
+}

@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/solid.css" integrity="sha384-yo370P8tRI3EbMVcDU+ziwsS/s62yNv3tgdMqDSsRSILohhnOrDNl142Df8wuHA+" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/fontawesome.css" integrity="sha384-ijEtygNrZDKunAWYDdV3wAZWvTHSrGhdUfImfngIba35nhQ03lSNgfTJAKaGFjk2" crossorigin="anonymous">
     <!-- stylesheet -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+          integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+          crossorigin=""/>
     <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/common/header.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/company/header-company.css"/>
@@ -32,32 +35,7 @@
     <main>
         <section id="map">
             <h2 class="subTitle"><span class="fas fa-map-marked-alt"></span>Global Map</h2>
-            <div>
-                <!-- example colonies, please only change name of span from p to correct colony -->
-                <p class="location1"><img src="assets/images/pointer.png" alt="Colony 1"><a href="company-colony-details.html" class="colony-details">Colony 1</a></p>
-                <p class="location2"><img src="assets/images/pointer.png" alt="Colony 2"><a href="company-colony-details.html" class="colony-details">Colony 2</a></p>
-                <p class="location3"><img src="assets/images/pointer.png" alt="Colony 3"><a href="company-colony-details.html" class="colony-details">Colony 3</a></p>
-                <p class="location4"><img src="assets/images/pointer.png" alt="Colony 4"><a href="company-colony-details.html" class="colony-details">Colony 4</a></p>
-                <p class="location5"><img src="assets/images/pointer.png" alt="Colony 5"><a href="company-colony-details.html" class="colony-details">Colony 5</a></p>
-                <p class="location6"><img src="assets/images/pointer.png" alt="Colony 6"><a href="company-colony-details.html" class="colony-details">Colony 6</a></p>
-                <p class="location7"><img src="assets/images/pointer.png" alt="Colony 7"><a href="company-colony-details.html" class="colony-details">Colony 7</a></p>
-                <p class="location8"><img src="assets/images/pointer.png" alt="Colony 8"><a href="company-colony-details.html" class="colony-details">Colony 8</a></p>
-                <!-- end example -->
-                <!-- arrows -->
-                <div class="indicator oneTwo"></div>
-                <div class="indicator twoThree"></div>
-                <div class="indicator twoFour"></div>
-                <div class="indicator fourOne"></div>
-                <div class="indicator threeSix"></div>
-                <div class="indicator sixTwo"></div>
-                <div class="indicator fourSix"></div>
-                <div class="indicator fourEight"></div>
-                <div class="indicator eightFive"></div>
-                <div class="indicator fiveFour"></div>
-                <div class="indicator sixSeven"></div>
-                <div class="indicator sevenEight"></div>
-                <div class="indicator eightSix"></div>
-                <div class="indicator sevenThree"></div>
+            <div id="map-container">
             </div>
         </section>
     </main>
@@ -65,10 +43,16 @@
     <footer>
         <p>&copy; Howest MarsDex 2020</p>
     </footer>
-
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+            integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+            crossorigin=""></script>
+    <script src="assets/js/configuration/main.js"></script>
+    <script src="assets/js/configuration/config.js"></script>
+    <script src="assets/js/configuration/api.js"></script>
     <script src="assets/js/application/html-generator/company-header-generator.js"></script>
     <script src="assets/js/application/pop-up.js"></script>
     <script src="assets/js/application/html-generator/pop-up-generator.js"></script>
-    <script src="assets/js/application/global-map.js"></script>
+    <script src="assets/js/application/modules/factory.js" type="module"></script>
+    <script src="assets/js/application/global-map.js" type="module"></script>
 </body>
 </html>

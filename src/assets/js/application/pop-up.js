@@ -20,6 +20,7 @@ function init() {
     document.querySelector('#settings-page .close').addEventListener('click', showOverview);
     document.querySelector('#account-page .close').addEventListener('click', showOverview);
     document.querySelector('#notificationDetails .close').addEventListener('click', hidePopUp);
+
 }
 
 function addHtmlPopUp() {

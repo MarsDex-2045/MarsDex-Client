@@ -3,7 +3,7 @@
 function addPopUp() {
     document.querySelector('body').innerHTML += `
         <section id="overview-page" class="hidden">
-            <h2>Temporary name company</h2>
+            <h2>MaMiCo</h2>
             <div>
                 <nav>
                     <ul>
@@ -60,16 +60,16 @@ function addPopUp() {
             <h2><span class="fas fa-user-circle"></span><div>account</div></h2>
             <form>
                 <label for="registerCompanyName">Company Name</label>
-                <input title="companyName" required type="text" id="registerCompanyName">
+                <input title="companyName" required type="text" value="MaMiCo" id="registerCompanyName">
 
                 <label for="registerEmail">Email</label>
-                <input autofocus title="email" required type="text" id="registerEmail">
+                <input autofocus title="email" required type="text" value="mamico@mars.com" id="registerEmail">
 
                 <label for="registerColonyName">Colony Name</label>
-                <input title="colonyName" required type="text" id="registerColonyName">
+                <input title="colonyName" required type="text" value="Durrance Camp" id="registerColonyName">
 
                 <label for="registerCompanyPhoneNumber">Phone Number</label>
-                <input title="companyPhoneNumber" required type="tel" id="registerCompanyPhoneNumber">
+                <input title="companyPhoneNumber" required type="tel" value="+3422893567" id="registerCompanyPhoneNumber">
 
                 <label for="registerPassword">Password</label>
                 <input title="password" required type="password" id="registerPassword">

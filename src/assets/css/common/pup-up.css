@@ -44,6 +44,11 @@
     transition: 0.3s all ease-in;
 }
 
+#overview-page h2, #settings-page h2, #account-page h2 {
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
 section > h2 {
     text-align: center;
     font-family: 'Big Shoulders Stencil Display', 'Arial', 'Helvetica', cursive;

@@ -18,6 +18,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/company/header-company.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/common/contact.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/common/pup-up.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/common/error.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/common/footer.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/common/sub-titles.css"/>
     <!-- title -->
@@ -41,13 +42,13 @@
                         </div>
                         <div class="formInputBox">
                             <span class="fas fa-building"></span>
-                            <input placeholder="Company Name" title="companyName" required type="text" id="contactUsCompanyName">
+                            <input placeholder="Company" title="companyName" required type="text" id="contactUsCompanyName">
                         </div>
                     </div>
                     <div class="formBoxContact">
                         <div class="formInputBox">
                             <span class="fas fa-mobile"></span>
-                            <input placeholder="Company Phone Number" title="companyPhoneNumber" required type="tel" id="contactUsPhoneNumber">
+                            <input placeholder="Phone Number" title="companyPhoneNumber" required type="tel" id="contactUsPhoneNumber">
                         </div>
                         <div class="formInputBox">
                             <span class="fas fa-envelope"></span>
@@ -67,7 +68,7 @@
                         </div>
                     </div>
                     <div id="formSendButton">
-                        <input type="submit" value="Send" title="Send">
+                        <input id="contact-form-submit" type="submit" value="Send" title="Send">
                     </div>
                 </form>
 
@@ -94,7 +95,9 @@
     </footer>
 
     <script src="assets/js/application/html-generator/company-header-generator.js"></script>
+    <script src="assets/js/application/error.js"></script>
     <script src="assets/js/application/pop-up.js"></script>
     <script src="assets/js/application/html-generator/pop-up-generator.js"></script>
+    <script src="assets/js/contact/contact.js"></script>
 </body>
 </html>

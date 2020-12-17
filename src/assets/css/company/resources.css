@@ -36,24 +36,24 @@ body {
     cursor: pointer;
 }
 
-#search-my-resources-form {
+#search-my-resources-form, #search-all-resources-form {
     width: 80%;
     display: inline-flex;
     margin: 2rem 0 2rem 10%;
 }
 
-#search-my-resources-form div {
+#search-my-resources-form div, #search-all-resources-form div {
     width: 25rem;
     margin-right: 15px;
 }
 
-#search-my-resources-form select {
+#search-my-resources-form select, #search-all-resources-form select {
     width: 11rem;
     color: var(--fill);
     font-size: 1.1rem;
 }
 
-#search-my-resources-form div, #search-my-resources-form select {
+#search-my-resources-form div, #search-my-resources-form select, #search-all-resources-form div, #search-all-resources-form select {
     outline: none;
     border: none;
     background-color: var(--background);
@@ -62,7 +62,7 @@ body {
     transition: 0.5s;
 }
 
-#search-my-resources-form div input {
+#search-my-resources-form div input, #search-all-resources-form div input {
     background: none;
     border: none;
     outline: none;
@@ -71,7 +71,7 @@ body {
     color: var(--fill);
 }
 
-#search-my-resources-form div:hover, #search-my-resources-form select:hover {
+#search-my-resources-form div:hover, #search-my-resources-form select:hover, #search-all-resources-form div:hover, #search-all-resources-form select:hover {
     background-color: #fff;
     box-shadow: 0 0 20px 0 #f3f3f3 inset,
     0 0 20px 0 #f3f3f3 inset;
@@ -81,7 +81,7 @@ body {
 
 #resourcesResultList {
     width: 80%;
-    margin: auto;
+    margin: auto auto 1.5rem auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
     align-items: center;

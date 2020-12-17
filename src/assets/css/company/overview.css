@@ -3,5 +3,28 @@
 }
 
 #shippingResultList {
-    margin-top: 40px;
+    margin: 40px 0;
+}
+
+.overview-button {
+    text-decoration: none;
+    color: var(--fill);
+    font-family: 'Balsamiq Sans', 'Arial', 'Helvetica', cursive;
+    background-color: var(--accent);
+    padding: 5px 10px;
+    border-radius: 10px;
+    margin-right: 20px;
+    border: 3px solid var(--fill);
+}
+
+.subTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.overview-button:hover {
+    transition: 0.3s all ease-in;
+    background-color: #ffffff;
+    border-color: var(--accent);
 }

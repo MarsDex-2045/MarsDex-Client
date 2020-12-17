@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/common/header.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/martian/header-martian.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/common/colonies.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/common/error.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/common/footer.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/common/sub-titles.css"/>
     <!-- title -->
@@ -40,20 +41,13 @@
                 <label for="filtersMartianColonies"></label>
                 <select name="filters" id="filtersMartianColonies">
                     <option value="name">Name</option>
-                    <option value="resources">Highest Storage</option>
-                    <option value="location">Lowest Storage</option>
+                    <option value="altitude">Altitude</option>
                 </select>
             </form>
         </div>
 
         <!-- fill div with articles and colonies -->
         <div id="martianColonies"></div>
-
-        <div id="buttonResult">
-            <a href="#"><span class="fas fa-chevron-left"></span>Previous Page</a>
-            <p id="pageNumber">1/2</p>
-            <a href="#">Next Page<span class="fas fa-chevron-right"></span></a>
-        </div>
     </main>
 
     <footer>
@@ -61,10 +55,12 @@
     </footer>
 
     <script src="assets/js/application/html-generator/martian-header-generator.js"></script>
+    <script src="assets/js/application/error.js"></script>
     <script src="assets/js/configuration/config.js"></script>
-    <script src="assets/js/api-setup/api.js"></script>
-    <script src="assets/js/api-setup/main.js"></script>
+    <script src="assets/js/configuration/api.js"></script>
+    <script src="assets/js/configuration/main.js"></script>
     <script src="assets/js/colonies/location-calculations.js"></script>
+    <script src="assets/js/colonies/colony.js"></script>
     <script src="assets/js/colonies/martian-colony.js"></script>
 </body>
 </html>

@@ -10,9 +10,6 @@ function newResourceForm(e) {
     e.preventDefault();
 
     const formElement = document.querySelector("#resourceForm");
-
-    const companyId = 1;
-
     const resourceName = formElement.querySelector("#resourceName").value;
     let resourceWeight = formElement.querySelector("#resourceAmount").value;
     const resourcePrice = 12.500;
@@ -22,8 +19,11 @@ function newResourceForm(e) {
     }
 
     resourceWeight = parseFloat(resourceWeight).toFixed(3);
-
-    addResource(companyId, resourceName, resourceWeight, resourcePrice).then(function(response) {
-        // Error implementation will be done later
+    addResource(localStorage.getItem("company-id"), resourceName, resourceWeight, resourcePrice).then(function(response) {
+        if (response.processed === true) {
+            window.location.assign("company-my-resources.html"); // Temporarily
+        } else {
+            sendError("error", "Failed adding resource", "The resource name already exist.");
+        }
     });
 }

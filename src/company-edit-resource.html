@@ -17,6 +17,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/common/header.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/company/header-company.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/company/edit-resource.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/common/error.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/common/pup-up.css"/>
     <link rel="stylesheet" type="text/css" href="assets/css/common/footer.css"/>
     <!-- title -->
@@ -31,7 +32,7 @@
     <main>
         <h2>Edit Resource</h2>
 
-        <form action="#" method="post" id="resourceForm">
+        <form method="post" id="resourceForm" action="#">
 
             <div>
                 <span class="fas fa-cubes"></span>
@@ -41,7 +42,7 @@
 
             <div>
                 <span class="fas fa-weight-hanging"></span>
-                <input value="1 527" title="resourceAmount" required type="text" id="resourceAmount">
+                <input title="resourceAmount" required type="text" id="resourceAmount">
                 <label>
                     <select>
                         <option selected value="KG">KG</option>
@@ -50,16 +51,20 @@
                 </label>
             </div>
 
-            <input type="submit" value="Save Changes" title="Save Changes">
+            <input id="editResourceSubmitButton" type="submit" value="Save Changes" title="Save Changes">
         </form>
     </main>
 
     <footer>
         <p>&copy; Howest MarsDex 2020</p>
     </footer>
-
     <script src="assets/js/application/html-generator/company-header-generator.js"></script>
+    <script src="assets/js/application/error.js"></script>
+    <script src="assets/js/configuration/main.js"></script>
+    <script src="assets/js/configuration/config.js"></script>
+    <script src="assets/js/configuration/api.js"></script>
     <script src="assets/js/application/pop-up.js"></script>
     <script src="assets/js/application/html-generator/pop-up-generator.js"></script>
+    <script src="assets/js/resources/edit-resource.js"></script>
 </body>
 </html>
