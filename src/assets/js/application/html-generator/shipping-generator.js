@@ -1,29 +1,19 @@
 "use strict";
 
-function generateShippingResult(shipment, resourcesInformation, receiveTimeDate, receiveTime) {
-    let res = generateBaseHTML(shipment, resourcesInformation, receiveTimeDate, receiveTime);
-    res += `<li>
-                            <p>Your colony</p>
-                        </li>
-                    </ul>
-                </div>
-                <a class="shipping-details-btn"><span class="fas fa-info-circle"></span>details</a>
+function generateShippingResult(shipment, resourcesInformation, receiveTimeDate, receiveTime, colonyName) {
+    let res = generateBaseHTML(shipment, resourcesInformation, receiveTimeDate, receiveTime, colonyName);
+    res += `<a class="shipping-details-btn"><span class="fas fa-info-circle"></span>details</a>
             </div>`;
     return res;
 }
 
 function generateShippingResultWithoutDetails(shipment, resourcesInformation, receiveTimeDate, receiveTime, colonyName) {
-    let res = generateBaseHTML(shipment, resourcesInformation, receiveTimeDate, receiveTime);
-    res += ` <li>
-                            <p>${colonyName}</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>`;
+    let res = generateBaseHTML(shipment, resourcesInformation, receiveTimeDate, receiveTime, colonyName);
+    res += `</div>`;
     return res;
 }
 
-function generateBaseHTML(shipment, resourcesInformation, receiveTimeDate, receiveTime){
+function generateBaseHTML(shipment, resourcesInformation, receiveTimeDate, receiveTime, colonyName){
     return `<div class="shippingResult">
         <ul>
             <li>Shipping ID: ${shipment.shippingId}</li>
@@ -45,5 +35,10 @@ function generateBaseHTML(shipment, resourcesInformation, receiveTimeDate, recei
                 </li>
                 <li>
                     <img src="assets/images/arrow.png" alt="arrow" title="arrow"/>
-                </li>`;
+                </li>
+                <li>
+                    <p>${colonyName}</p>
+                </li>
+            </ul>
+        </div>`;
 }

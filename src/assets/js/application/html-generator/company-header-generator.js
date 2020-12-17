@@ -10,7 +10,7 @@ function initHtmlGenerator() {
 function buildCompanyHeader(name) {
     const container = document.querySelector("header");
     container.innerHTML =
-        `<h1><span id="companyName"><em class="dropCap">M</em>ars<em class="dropCap">D</em>ex</span></h1>
+        `<h1><a href="company-overview.html"><span id="companyName"><em class="dropCap">M</em>ars<em class="dropCap">D</em>ex</span></a></h1>
 
         <nav>
             <ul>
