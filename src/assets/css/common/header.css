@@ -12,6 +12,15 @@ h1 {
     padding: 10px;
 }
 
+h1 a {
+    text-decoration: none;
+}
+
+h1 #companyName:hover {
+    color: var(--accent);
+    transition: .3s ease-in;
+}
+
 h1 .dropCap{
     font-style: italic;
     margin-right: 10px;
