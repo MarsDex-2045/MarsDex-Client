@@ -162,5 +162,8 @@ main > a:hover {
 }
 
 .resourceInformation ul li span {
-    margin-right: 20px;
+    margin-right: 10px;
+    height: 15px;
+    width: 15px;
+    writing-mode: vertical-lr;
 }
