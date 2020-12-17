@@ -1,6 +1,7 @@
 "use strict";
 
 const colonyResultDiv = document.querySelector("#martianColonies");
+let colonies;
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -11,7 +12,8 @@ function init () {
 function loadColonies() {
     clearAllColonies();
     getColonies().then(resultList => {
-        resultList.forEach(colony => {
+        colonies = resultList;
+        colonies.forEach(colony => {
             document.querySelector("#martianColonies").innerHTML += `
                 <article class="martianColony">
                     <img src="assets/images/colony-flags/${colony.name}.png" alt=${colony.name} title=${colony.name}>
@@ -27,9 +29,22 @@ function loadColonies() {
         document.querySelectorAll(".martianColonyDetails").forEach(detailsButton => {
             detailsButton.addEventListener("click", loadColonyDetails);
         });
+        document.querySelector("#searchMartianColonies").addEventListener('change', searchColony);
+        document.querySelector("#filtersMartianColonies").addEventListener('change', filterColony);
+        document.querySelector("#search-martian-colonies-form").addEventListener("submit", e => e.preventDefault());
     });
 }
 
 function clearAllColonies() {
     colonyResultDiv.innerHTML = "";
+}
+
+function searchColony(e) {
+    e.preventDefault();
+    console.log("Searching colonies.");
+}
+
+function filterColony(e) {
+    e.preventDefault();
+    console.log("Filtering colonies.");
 }
