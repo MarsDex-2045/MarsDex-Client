@@ -1,10 +1,11 @@
 "use strict";
 
 self.addEventListener("install", e => {
+    //empty just installing a listener for the notification
 });
 
 self.addEventListener("push", e => {
-    let msg = e.data.text();
+    const msg = e.data.text();
     self.registration.showNotification(msg);
 });
 
@@ -20,3 +21,4 @@ self.addEventListener("notificationclick", e => {
         }
     }
 );
+
