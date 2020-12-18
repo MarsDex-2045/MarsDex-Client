@@ -60,6 +60,11 @@ See the [Server Startup Guide](https://git.ti.howest.be/TI/2020-2021/s3/project-
 ## Development environment
 While this application has been made for standard desktop environments (16:9) in mind, the website should be flexible enough to also been used on mobile devices like phones and tablets.
 
+## Account Credentials
+In the application, you can choose between creating an account & logging in with an account. We suggest that you use an existing account so that you have a view of a populated account. The credentials are as follows:
+
+- **Email:** mamico@mars.com
+- **Password:** B1g1r0n
 ## File Structure
 ```
 ├── src
