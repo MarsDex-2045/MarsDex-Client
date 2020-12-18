@@ -1,8 +1,5 @@
 "use strict";
 
-self.addEventListener("install", e => {
-    //empty just installing a listener for the notification
-});
 
 self.addEventListener("push", e => {
     const msg = e.data.text();
