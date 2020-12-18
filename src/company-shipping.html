@@ -30,47 +30,44 @@
     <!-- Dynamic loading header -->
 </header>
 
-    <main>
-        <h2 class="subTitle"><span class="fas fa-plane-departure"></span>Shipping</h2>
-        <div class="margin-left">
-            <form id="search-form">
-                <div>
-                    <label for="searchShipping"></label>
-                    <input type="search" id="searchShipping" name="search" placeholder="Search for a Shipping ID ...">
-                    <span class="fas fa-search"></span>
-                </div>
-                <label for="filtersShipping"></label>
-                <select name="filters" id="filtersShipping">
-                    <option value="shippingId">Shipping ID</option>
-                    <option value="status">Status</option>
-                </select>
-            </form>
-        </div>
-
-        <!-- fill div with articles and shipping's -->
-        <div id="shippingResultList"></div>
-
-        <div class="margin-left">
-            <div id="buttonResult">
-                <a href="#"><span class="fas fa-chevron-left"></span>Previous Page</a>
-                <p id="pageNumber">1/2</p>
-                <a href="#">Next Page<span class="fas fa-chevron-right"></span></a>
+<main>
+    <h2 class="subTitle"><span class="fas fa-plane-departure"></span>Shipping</h2>
+    <div class="margin-left">
+        <form id="search-form">
+            <div>
+                <label for="searchShipping"></label>
+                <input type="search" id="searchShipping" name="search" placeholder="Search for a Shipping ID ...">
+                <span class="fas fa-search"></span>
             </div>
+            <label for="filtersShipping"></label>
+            <select name="filters" id="filtersShipping">
+                <option value="shippingId">Shipping ID</option>
+                <option value="status">Status</option>
+            </select>
+        </form>
+    </div>
+
+    <!-- fill div with articles and shipping's -->
+    <div id="shippingResultList"></div>
+
+    <div class="margin-left">
+        <div id="buttonResult">
+            <a href="#"><span class="fas fa-chevron-left"></span>Previous Page</a>
+            <p id="pageNumber">1/2</p>
+            <a href="#">Next Page<span class="fas fa-chevron-right"></span></a>
         </div>
-    </main>
+    </div>
+</main>
 
-    <footer>
-        <p>&copy; Howest MarsDex 2020</p>
-    </footer>
-
-    <script src="assets/js/application/html-generator/company-header-generator.js"></script>
-    <script src="assets/js/application/error.js"></script>
-    <script src="assets/js/configuration/config.js"></script>
-    <script src="assets/js/application/html-generator/pop-up-generator.js"></script>
-    <script src="assets/js/application/html-generator/shipping-generator.js"></script>
-    <script src="assets/js/configuration/api.js"></script>
-    <script src="assets/js/application/shipping-details.js"></script>
-    <script src="assets/js/application/pop-up.js"></script>
-    <script src="assets/js/shipments/shipments.js"></script>
+<script src="assets/js/application/html-generator/company-header-generator.js"></script>
+<script src="assets/js/application/error.js"></script>
+<script src="assets/js/application/html-generator/pop-up-generator.js"></script>
+<script src="assets/js/application/html-generator/shipping-generator.js"></script>
+<script src="assets/js/configuration/config.js"></script>
+<script src="assets/js/configuration/api.js"></script>
+<script src="assets/js/shipments/shipping-details.js"></script>
+<script src="assets/js/application/pop-up.js"></script>
+<script src="assets/js/shipments/shipments.js"></script>
+<script src="assets/js/application/html-generator/footer-generator.js"></script>
 </body>
 </html>

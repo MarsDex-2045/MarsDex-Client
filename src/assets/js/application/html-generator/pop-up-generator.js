@@ -7,10 +7,10 @@ function addPopUp() {
             <div>
                 <nav>
                     <ul>
-                        <li id="settings"><span class="fas fa-cog"></span><div>settings</div></li>
-                        <li id="account"><span class="fas fa-user-circle"></span><div>account</div></li>
-                        <li><a href="#"><span class="fas fa-info-circle"></span><div>help</div></a></li>
-                        <li><a href="index.html"><span class="fas fa-sign-out-alt"></span><div>logout</div></a></li>
+                        <li id="settings"><span class="fas fa-cog"></span><strong>settings</strong></li>
+                        <li id="account"><span class="fas fa-user-circle"></span><strong>account</strong></li>
+                        <li><a href="company-about-us.html"><span class="fas fa-info-circle"></span><strong>help</strong></a></li>
+                        <li><a href="index.html"><span class="fas fa-sign-out-alt"></span><strong>logout</strong></a></li>
                     </ul>
                 </nav>
                 <a href="#" class="close"><span class="fas fa-times"></span></a>
@@ -18,9 +18,9 @@ function addPopUp() {
         </section>
 
         <section id="settings-page" class="hidden">
-            <h2><span class="fas fa-cog"></span><div>settings</div></h2>
+            <h2><span class="fas fa-cog"></span><strong>settings</strong></h2>
             <div>
-                <h3><span class="fas fa-volume-down"></span><div>sound</div></h3>
+                <h3><span class="fas fa-volume-down"></span><strong>sound</strong></h3>
                 <form>
                     <div>
                         <input type="radio" name="sound" id="soundOn" value="on"/>
@@ -33,7 +33,7 @@ function addPopUp() {
                 </form>
             </div>
             <div>
-                <h3><span class="fas fa-language"></span><div>language</div></h3>
+                <h3><span class="fas fa-language"></span><strong>language</strong></h3>
                 <form>
                     <div>
                         <input type="radio" name="language" id="english" value="english" checked="checked"/>
@@ -57,13 +57,13 @@ function addPopUp() {
         </section>
 
         <section id="account-page" class="hidden">
-            <h2><span class="fas fa-user-circle"></span><div>account</div></h2>
+            <h2><span class="fas fa-user-circle"></span><strong>account</strong></h2>
             <form>
                 <label for="registerCompanyName">Company Name</label>
                 <input title="companyName" required type="text" value="MaMiCo" id="registerCompanyName">
 
                 <label for="registerEmail">Email</label>
-                <input autofocus title="email" required type="text" value="mamico@mars.com" id="registerEmail">
+                <input title="email" required type="text" value="mamico@mars.com" id="registerEmail">
 
                 <label for="registerColonyName">Colony Name</label>
                 <input title="colonyName" required type="text" value="Durrance Camp" id="registerColonyName">
@@ -93,7 +93,7 @@ function generateDetails() {
                 <li><span class="fas fa-box-open"></span><div>Remaining resources: <span id="resourceLeft">15kg</span></div></li>
                 <li><span class="fas fa-clock"></span><div>Date and time: <span id="dateAndTime">15/03/2065 14:45</span></div></li>
             </ul>
-            <h3><span class="fas fa-envelope"></span><div>Message</div></h3>
+            <h3><span class="fas fa-envelope"></span><strong>Message</strong></h3>
             <div>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -115,7 +115,7 @@ function loadShippingHtml() {
                     <li><span class="fas fa-city"></span>Colony sender:<span id="sender" class="info">The Crater Bay Colony</span></li>
                     <li><span class="fas fa-hourglass-half"></span>Receive time:<span id="duration" class="info">34 hours</span></li>
                     <li><span class="fas fa-weight-hanging"></span>Weight:<span id="weight" class="info">3500 kilograms</span></li>
-                    <li><span class="fas fa-shuttle-van"></span>Mode of transportation:<span id="status" class="info">train</span></li>
+                    <li><span class="fas fa-shuttle-van"></span>Status:<span id="status" class="info">train</span></li>
                 </ul>
             </div>
             <div class="tableWrapper">

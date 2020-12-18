@@ -5,15 +5,13 @@ document.addEventListener("DOMContentLoaded", initHtmlGenerator);
 function initHtmlGenerator() {
     localStorage.setItem("company-id", 2);
     buildCompanyHeader("MaMiCo");
-    getCompany(2).then(company => {
-        console.log(company);
-    });
+    loadFooter();
 }
 
 function buildCompanyHeader(name) {
     const container = document.querySelector("header");
     container.innerHTML =
-        `<h1><span id="companyName"><em class="dropCap">M</em>ars<em class="dropCap">D</em>ex</span></h1>
+        `<h1><a href="company-overview.html"><span id="companyName"><em class="dropCap">M</em>ars<em class="dropCap">D</em>ex</span></a></h1>
 
         <nav>
             <ul>
@@ -27,7 +25,7 @@ function buildCompanyHeader(name) {
                             <a href="company-my-resources.html" class="resourcesDropDown"><span class="fas fa-user-shield"></span><div>my resources</div></a>
                         </div>
                         <div>
-                            <a href="company-all-resources.html" class="resourcesDropDown"><span class="fas fa-globe-europe"></span><div>all resources</div></a>
+                            <a href="company-all-resources.html" class="resourcesDropDown"><span class="fas fa-globe-europe"></span><div>Colony resources</div></a>
                         </div>
                     </div>
                 </li>

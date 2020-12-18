@@ -25,19 +25,20 @@ function loadShipments(companyId) {
             companyShipments.push(shipping);
         });
         maxPages = Math.ceil(response.length / maxShipmentsOnPage);
-        loadPageShipments(response, 0);
+        getCompany(localStorage.getItem("company-id")).then(company => {
+            loadPageShipments(response, 0, company);
+        });
     });
 }
 
-function loadPageShipments(response, indexStart) {
+function loadPageShipments(response, indexStart, company) {
     maxPages = Math.ceil(response.length / maxShipmentsOnPage);
-
     document.querySelector("#shippingResultList").innerHTML = ``;
     document.querySelector("#pageNumber").textContent = `${currentPage}/${maxPages}`;
 
     for (let i = 0; i < maxShipmentsOnPage;) {
         if (response[indexStart + i] !== undefined) {
-            createNewShippingElement(response[indexStart + i]);
+            createNewShippingElement(response[indexStart + i], company);
         }
         i++;
     }
@@ -58,7 +59,7 @@ function mapResourcesInformation(resources) {
     };
 }
 
-function createNewShippingElement(shipment) {
+function createNewShippingElement(shipment, company) {
     let receiveTimeDate = ``;
     let receiveTime;
     const resourcesInformation = mapResourcesInformation(shipment.resources);
@@ -69,7 +70,7 @@ function createNewShippingElement(shipment) {
         receiveTime = shipment.receiveTime.time;
         receiveTimeDate = shipment.receiveTime.date;
     }
-    document.querySelector("#shippingResultList").innerHTML += generateShippingResult(shipment, resourcesInformation, receiveTimeDate, receiveTime);
+    document.querySelector("#shippingResultList").innerHTML += generateShippingResult(shipment, resourcesInformation, receiveTimeDate, receiveTime, company.colony);
     document.querySelectorAll(".shipping-details-btn").forEach(button => button.addEventListener("click", showShippingDetails));
     document.querySelector("#shipping-details .close").addEventListener("click", hideShippingDetails);
 }
@@ -79,7 +80,9 @@ function nextPage(e) {
 
     if (currentPage === maxPages) { return; }
     currentPage++;
-    loadPageShipments(companyShipments, (currentPage - 1) * maxShipmentsOnPage);
+    getCompany(localStorage.getItem("company-id")).then(company => {
+        loadPageShipments(companyShipments, (currentPage - 1) * maxShipmentsOnPage, company);
+    });
 }
 
 function previousPage(e) {
@@ -87,11 +90,19 @@ function previousPage(e) {
 
     if (currentPage === 1) { return; }
     currentPage--;
-    loadPageShipments(companyShipments, (currentPage - 1) * maxShipmentsOnPage);
+    getCompany(localStorage.getItem("company-id")).then(company => {
+        loadPageShipments(companyShipments, (currentPage - 1) * maxShipmentsOnPage, company);
+    });
 }
 
 function dynamicSortShipments(e) {
     const sortValue = e.currentTarget.value;
+
+    if (sortValue === "status") {
+        document.querySelector("#searchShipping").setAttribute("placeholder", `Search for a Shipping Status...`);
+    } else {
+        document.querySelector("#searchShipping").setAttribute("placeholder", `Search for a Shipping ID...`);
+    }
 
     companyShipments.sort(
         function (a, b) {
@@ -103,8 +114,9 @@ function dynamicSortShipments(e) {
             return 0;
         }
     );
-
-    loadPageShipments(companyShipments, (currentPage - 1) * maxShipmentsOnPage);
+    getCompany(localStorage.getItem("company-id")).then(company => {
+        loadPageShipments(companyShipments, (currentPage - 1) * maxShipmentsOnPage, company);
+    });
 }
 
 function preventSubmit(e) {
@@ -115,7 +127,12 @@ function searchResult(e) {
     e.preventDefault();
 
     const searchRequest = e.target.value;
-    if (searchRequest === "" || searchRequest === " ") { return; }
+    if (searchRequest === "" || searchRequest === " ") {
+        getCompany(localStorage.getItem("company-id")).then(company => {
+            loadPageShipments(companyShipments, (currentPage - 1) * maxShipmentsOnPage, company);
+        });
+        return;
+    }
     const sortValue = document.querySelector("#filtersShipping").value;
 
     const searchResultShipping = [];
@@ -131,6 +148,7 @@ function searchResult(e) {
     if (searchResultShipping.length === 0) {
         return;
     }
-
-    loadPageShipments(searchResultShipping, (currentPage - 1) * maxShipmentsOnPage);
+    getCompany(localStorage.getItem("company-id")).then(company => {
+        loadPageShipments(searchResultShipping, (currentPage - 1) * maxShipmentsOnPage, company);
+    });
 }
