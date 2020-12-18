@@ -3,15 +3,15 @@
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
-    if ("serviceWorker" in navigator){
-        navigator.serviceWorker.register("sw.js")
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js");
         navigator.serviceWorker.ready.then(() => registerForNotifications());
     }
 }
 
 function registerForNotifications() {
     Notification.requestPermission().then(permission => {
-        if(permission === "granted") {
+        if (permission === "granted") {
             registerPush();
         } else if (permission === "denied") {
             console.log("Denied");
@@ -24,7 +24,7 @@ function registerForNotifications() {
 const VAPID_PUBLIC_KEY = "BAcgnkauwyqPz1MI31KN9sN8wpIPEMkfhbmEijXcodAUzCoy1u5tIePU7HpATIv2VQOFN45Mu4Wc1qx-6HRxv_g";
 
 function registerPush() {
-    let subscribeOptions = {
+    const subscribeOptions = {
         userVisibleOnly: true,
         applicationServerKey: urlBase64ToUint8Array(VAPID_PUBLIC_KEY)
     };
@@ -33,27 +33,27 @@ function registerPush() {
         return reg.pushManager.subscribe(subscribeOptions);
     }).then(sub => {
         console.log(JSON.stringify(sub));
-        let json =JSON.parse(JSON.stringify(sub));
+        const json = JSON.parse(JSON.stringify(sub));
         console.log(json.endpoint);
         console.log(json.keys.auth);
         console.log(json.keys.p256dh);
 
         addSubscription(json.endpoint, json.keys.auth, json.keys.p256dh).then(response => {
             console.log(response);
-        })
+        });
     });
 }
 
-function urlBase64ToUint8Array(base64String){
-    let padding = '='.repeat((4 - base64String.length % 4) % 4);
-    let base64 = (base64String + padding)
+function urlBase64ToUint8Array(base64String) {
+    const padding = '='.repeat((4 - base64String.length % 4) % 4);
+    const base64 = (base64String + padding)
         .replace(/-/g, '+')
         .replace(/_/g, '/');
 
-    let rawData = window.atob(base64);
-    let outputArray = new Uint8Array(rawData.length);
+    const rawData = window.atob(base64);
+    const outputArray = new Uint8Array(rawData.length);
 
-    for (let i = 0; i < rawData.length; ++i){
+    for (let i = 0; i < rawData.length; ++i) {
         outputArray[i] = rawData.charCodeAt(i);
     }
     return outputArray;

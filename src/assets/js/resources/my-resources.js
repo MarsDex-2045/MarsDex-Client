@@ -16,13 +16,14 @@ function loadMyResources() {
             myResources.push(resource)
             createNewResourceElement(resource);
         });
-        getNotifications().then(response => {
-            console.log(response);
-        })
+
 
         document.querySelector("#filtersResources").addEventListener("change", dynamicSortResources);
         document.querySelector("#search-my-resources-form").addEventListener("submit", preventSubmitForm);
         document.querySelector("#searchMyResources").addEventListener("change", searchResultResources);
+    });
+    getNotifications().then(response => {
+        console.log(response);
     });
 }
 
