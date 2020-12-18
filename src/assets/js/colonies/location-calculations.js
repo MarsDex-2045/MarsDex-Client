@@ -27,3 +27,5 @@ function locationToDegrees(location, type) {
 
     return locationString;
 }
+
+module.exports = calculateLocation();
