@@ -57,7 +57,6 @@ function changeToColony(e){
     e.preventDefault();
     const id = e.target.getAttribute('id');
     localStorage.setItem("colony-id", id);
-    console.log(window.location.href);
     if(window.location.href.includes("company")){
         window.location.assign("company-colony-details.html");
     } else{

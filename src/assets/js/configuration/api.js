@@ -1,15 +1,19 @@
 "use strict";
 
+let apiAddress;
+
 function apiGetCall(apiURI, httpVerb, requestBody) {
-    const request = new Request(api + apiURI, {
-        method: httpVerb,
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(requestBody)
+    return loadAPI().then((api) => {
+        const request = new Request(api + apiURI, {
+            method: httpVerb,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(requestBody)
+        });
+        return fetch(request)
+            .then(response => response.json());
     });
-    return fetch(request)
-        .then(response => response.json());
 }
 
 function getColonies() {
