@@ -13,9 +13,12 @@ function loadMyResources() {
 
         document.querySelector("#resourcesResultList").innerHTML = ``;
         companyResources.forEach(resource => {
-            myResources.push(resource);
+            myResources.push(resource)
             createNewResourceElement(resource);
         });
+        getNotifications().then(response => {
+            console.log(response);
+        })
 
         document.querySelector("#filtersResources").addEventListener("change", dynamicSortResources);
         document.querySelector("#search-my-resources-form").addEventListener("submit", preventSubmitForm);
