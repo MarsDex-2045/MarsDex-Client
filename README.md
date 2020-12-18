@@ -65,6 +65,8 @@ In the application, you can choose between creating an account & logging in with
 
 - **Email:** mamico@mars.com
 - **Password:** B1g1r0n
+
+If you wish to use any other mock account that is available in our DB, you can use the [following page](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/server/-/wikis/Configuration/Credentials#database-credentials) to get their credentials.
 ## File Structure
 ```
 ├── src
