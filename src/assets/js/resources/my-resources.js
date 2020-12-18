@@ -13,7 +13,7 @@ function loadMyResources() {
 
         document.querySelector("#resourcesResultList").innerHTML = ``;
         companyResources.forEach(resource => {
-            myResources.push(resource)
+            myResources.push(resource);
             createNewResourceElement(resource);
         });
 
