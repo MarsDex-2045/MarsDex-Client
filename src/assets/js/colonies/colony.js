@@ -54,15 +54,11 @@ function searchColony(e) {
     }
     searchResults = colonies.filter(colony => colony.name.toLowerCase().includes(filter));
     displayResults(searchResults);
-    console.log("Searching colonies.");
 }
 
 function filterColony(e) {
     e.preventDefault();
-    console.log("Filtering colonies.");
     const sortValue = document.querySelector("#filtersMartianColonies").value.toLowerCase();
-
-    console.log(colonies);
 
     if (searchResults === undefined || searchResults === null) {
         sortColoniesWithoutSearchResult(sortValue);
