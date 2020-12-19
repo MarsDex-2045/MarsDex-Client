@@ -44,23 +44,22 @@ function sortResourceResult(e) {
     const sortValue = document.querySelector("#filtersColonyDetailsResources").value;
     if (searchResourceResults === null || searchResourceResults === undefined) {
         loadColonyResources(sortedResources.sort((a, b) => {
-            if (a[sortValue] > b[sortValue]) {
-                return 1;
-            } else if (a[sortValue] < b[sortValue]) {
-                return -1;
-            }
-            return 0;
+            return sortFunction(a, b, sortValue);
         }));
     } else {
         loadColonyResources(searchResourceResults.sort((a, b) => {
-            if (a[sortValue] > b[sortValue]) {
-                return 1;
-            } else if (a[sortValue] < b[sortValue]) {
-                return -1;
-            }
-            return 0;
+            return sortFunction(a, b, sortValue);
         }));
     }
+}
+
+function sortFunction(a, b, sortValue) {
+    if (a[sortValue] > b[sortValue]) {
+        return 1;
+    } else if (a[sortValue] < b[sortValue]) {
+        return -1;
+    }
+    return 0;
 }
 
 function filterResourceResults(e) {

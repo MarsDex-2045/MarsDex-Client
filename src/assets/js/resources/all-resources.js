@@ -79,23 +79,22 @@ function sortResults(e) {
     const filter = document.querySelector("#filtersResources").value;
     if (searchResults === null || searchResults === undefined) {
         displayResults(totalResources.sort((a, b) => {
-            if (a[filter] > b[filter]) {
-                return 1;
-            } else if (a[filter] < b[filter]) {
-                return -1;
-            }
-            return 0;
+            return sortFunction(a, b, filter);
         }));
     } else {
         displayResults(searchResults.sort((a, b) => {
-            if (a[filter] > b[filter]) {
-                return 1;
-            } else if (a[filter] < b[filter]) {
-                return -1;
-            }
-            return 0;
+            return sortFunction(a, b, filter);
         }));
     }
+}
+
+function sortFunction(a, b, sortValue) {
+    if (a[sortValue] > b[sortValue]) {
+        return 1;
+    } else if (a[sortValue] < b[sortValue]) {
+        return -1;
+    }
+    return 0;
 }
 
 function filterResults(e) {
