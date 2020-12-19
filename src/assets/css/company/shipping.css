@@ -262,12 +262,15 @@ body {
     margin: 1rem 0;
 }
 
-#shipping-details .shipping-information span {
+#shipping-details .shipping-information span:first-of-type {
     margin-right: 15px;
+    width: 15px;
+    height: 15px;
+    writing-mode: vertical-lr;
 }
 
 #shipping-details .info {
-    margin-left: 15px;
+    margin-left: 8px;
 }
 
 #shipping-details .shipping-table {

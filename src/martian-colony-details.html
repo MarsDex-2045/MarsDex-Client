@@ -25,74 +25,57 @@
     <title>MarsDex | Colony Details</title>
 </head>
 <body>
-    <header>
-        <!-- Dynamic loading header -->
-    </header>
+<header>
+    <!-- Dynamic loading header -->
+</header>
 
-    <main>
-        <h2 id="colony-title">temp</h2>
-        <a class="back" href="martian-colonies.html"><span class="fas fa-arrow-left"></span></a>
-        <section>
-            <h2 class="subTitle"><span class="fas fa-globe"></span>Overview resources</h2>
-            <div id="upperPart">
-                <div id="resourcesListWithCircle">
-                    <!-- fill with correct resources -->
-                </div>
-                <div id="doughnutChart">
-                    <canvas id="myDoughnutChart"></canvas>
-                </div>
+<main>
+    <h2 id="colony-title">temp</h2>
+    <a class="back" href="martian-colonies.html"><span class="fas fa-arrow-left"></span></a>
+    <section>
+        <h2 class="subTitle"><span class="fas fa-globe"></span>Overview resources</h2>
+        <div id="upperPart">
+            <div id="resourcesListWithCircle">
+                <!-- fill with correct resources -->
             </div>
-        </section>
-        <section id="resources">
-            <h2 class="subTitle"><span class="fas fa-cubes"></span>Details resources</h2>
-            <form id="search-colony-details-resources-form">
-                <div>
-                    <label for="searchMyColonyDetailsResources"></label>
-                    <input type="text" id="searchMyColonyDetailsResources" name="search" placeholder="Search for a resource ...">
-                    <span class="fas fa-search"></span>
-                </div>
-
-                <label for="filtersColonyDetailsResources"></label>
-                <select name="filters" id="filtersColonyDetailsResources">
-                    <option value="name">Name</option>
-                    <option value="resources">Highest Storage</option>
-                    <option value="location">Lowest Storage</option>
-                </select>
-            </form>
-            <div class="martianColonyDetailsResources">
-                <!-- fill with articles of resources -->
+            <div id="doughnutChart">
+                <canvas id="myDoughnutChart"></canvas>
             </div>
-        </section>
-
-        <section id="colonyDetailsInformation">
-            <h2 class="subTitle"><span class="fas fa-info-circle"></span>Colony information</h2>
+        </div>
+    </section>
+    <section id="resources">
+        <h2 class="subTitle"><span class="fas fa-cubes"></span>Details resources</h2>
+        <form id="search-colony-details-resources-form">
             <div>
-                <div id="colony-flag"></div>
-                <ul>
-                    <li><strong>Colony name: </strong><span class="colony-title">The crater bay colony</span></li>
-                    <li><strong>Population: </strong>63478 inhabitants</li>
-                    <li><strong>Surface: </strong>60,4 km²</li>
-                    <li><strong>Location: </strong><span class="colony-location"></span></li>
-                    <li><strong>Population density: </strong>1050,97 inhabitants/km²</li>
-                    <li><strong>Mayor: </strong>X Æ A-12 (Mars Ruling Party MRP)</li>
-                </ul>
+                <label for="searchMyColonyDetailsResources"></label>
+                <input type="text" id="searchMyColonyDetailsResources" name="search"
+                       placeholder="Search for a resource ...">
+                <span class="fas fa-search"></span>
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy; Howest MarsDex 2020</p>
-    </footer>
+            <label for="filtersColonyDetailsResources"></label>
+            <select name="filters" id="filtersColonyDetailsResources">
+                <option value="name">Name</option>
+                <option value="weight">Weight</option>
+                <option value="price">Price</option>
+            </select>
+        </form>
+        <div class="martianColonyDetailsResources">
+            <!-- fill with articles of resources -->
+        </div>
+    </section>
+</main>
 
-    <script src="assets/js/application/html-generator/martian-header-generator.js"></script>
-    <script src="assets/js/application/error.js"></script>
-    <script src="assets/js/configuration/config.js"></script>
-    <script src="assets/js/configuration/main.js"></script>
-    <script src="assets/js/configuration/api.js"></script>
-    <script src="assets/js/colonies/location-calculations.js"></script>
-    <script src="assets/js/application/html-generator/colony-details-generator.js"></script>
-    <script src="assets/js/util/colony-details-util.js"></script>
-    <script src="assets/js/colonies/colony-details.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="assets/js/configuration/main.js"></script>
+<script src="assets/js/configuration/api.js"></script>
+<script src="assets/js/application/html-generator/martian-header-generator.js"></script>
+<script src="assets/js/application/html-generator/colony-information-generator.js"></script>
+<script src="assets/js/application/error.js"></script>
+<script src="assets/js/colonies/location-calculations.js"></script>
+<script src="assets/js/application/html-generator/colony-details-generator.js"></script>
+<script src="assets/js/util/colony-details-util.js"></script>
+<script src="assets/js/colonies/colony-details.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="assets/js/application/html-generator/footer-generator.js"></script>
 </body>
 </html>

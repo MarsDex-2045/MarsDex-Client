@@ -1,15 +1,19 @@
 "use strict";
 
+let apiAddress;
+
 function apiGetCall(apiURI, httpVerb, requestBody) {
-    const request = new Request(api + apiURI, {
-        method: httpVerb,
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(requestBody)
+    return loadAPI().then((api) => {
+        const request = new Request(api + apiURI, {
+            method: httpVerb,
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(requestBody)
+        });
+        return fetch(request)
+            .then(response => response.json());
     });
-    return fetch(request)
-        .then(response => response.json());
 }
 
 function getColonies() {
@@ -55,4 +59,16 @@ function getCompanyResources(companyId) {
 
 function getCompany(companyId) {
     return apiGetCall(`company/${companyId}`, "GET");
+}
+function getNotifications(companyId, pushId) {
+    return apiGetCall(`push/${pushId}/${companyId}`, "GET");
+}
+function addSubscription(endpoint, auth, p256dh) {
+    return apiGetCall(`saveSubscription`, "POST",
+        {
+            "endpoint": endpoint,
+            "auth": auth,
+            "p256dh": p256dh
+        }
+    );
 }

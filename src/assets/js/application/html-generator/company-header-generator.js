@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", initHtmlGenerator);
 function initHtmlGenerator() {
     localStorage.setItem("company-id", 2);
     buildCompanyHeader("MaMiCo");
+    loadFooter();
 }
 
 function buildCompanyHeader(name) {
@@ -24,7 +25,7 @@ function buildCompanyHeader(name) {
                             <a href="company-my-resources.html" class="resourcesDropDown"><span class="fas fa-user-shield"></span><div>my resources</div></a>
                         </div>
                         <div>
-                            <a href="company-all-resources.html" class="resourcesDropDown"><span class="fas fa-globe-europe"></span><div>all resources</div></a>
+                            <a href="company-all-resources.html" class="resourcesDropDown"><span class="fas fa-globe-europe"></span><div>Colony resources</div></a>
                         </div>
                     </div>
                 </li>
@@ -50,8 +51,8 @@ function buildCompanyHeader(name) {
                         <div>
                             <p>Resources Low</p>
                             <ul>
-                                <li><span class="fas fa-cubes"></span><div>Gold</div></li>
-                                <li><span class="fas fa-box-open"></span><div>10kg left</div></li>
+                                <li><span class="fas fa-cubes"></span><div>Benitoite</div></li>
+                                <li><span class="fas fa-box-open"></span><div>150KG left</div></li>
                             </ul>
                             <p class="details">details</p>
                         </div>

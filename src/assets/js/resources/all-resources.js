@@ -77,30 +77,24 @@ function previousPage(e) {
 function sortResults(e) {
     e.preventDefault();
     const filter = document.querySelector("#filtersResources").value;
-    switch (filter) {
-        case "name": {
-            searchResults === null || searchResults === undefined
-                ? displayResults(totalResources.sort((a, b) => a.name > b.name))
-                : displayResults(searchResults.sort((a, b) => a.name > b.name));
-            break;
-        }
-        case "weight": {
-            searchResults === null || searchResults === undefined
-                ? displayResults(totalResources.sort((a, b) => a.weight < b.weight))
-                : displayResults(searchResults.sort((a, b) => a.weight < b.weight));
-            break;
-        }
-        case "price": {
-            searchResults === null || searchResults === undefined
-                ? displayResults(totalResources.sort((a, b) => a.price < b.price))
-                : displayResults(searchResults.sort((a, b) => a.price < b.price));
-            break;
-        }
-        default: {
-            displayResults(totalResources);
-            break;
-        }
+    if (searchResults === null || searchResults === undefined) {
+        displayResults(totalResources.sort((a, b) => {
+            return sortFunction(a, b, filter);
+        }));
+    } else {
+        displayResults(searchResults.sort((a, b) => {
+            return sortFunction(a, b, filter);
+        }));
     }
+}
+
+function sortFunction(a, b, sortValue) {
+    if (a[sortValue] > b[sortValue]) {
+        return 1;
+    } else if (a[sortValue] < b[sortValue]) {
+        return -1;
+    }
+    return 0;
 }
 
 function filterResults(e) {

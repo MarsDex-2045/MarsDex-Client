@@ -26,69 +26,57 @@
 </head>
 <body>
 
-    <header>
-        <!-- Dynamic loading header -->
-    </header>
+<header>
+    <!-- Dynamic loading header -->
+</header>
 
-    <main>
+<main>
 
-        <div class="cartDiv"> <!-- Image Source: https://undraw.co/search -->
-            <img width="490" height="545" src="assets/images/rocket%20mars.png" alt="rocket-mars" title="rocket-mars"/>
-        </div>
+    <div class="cartDiv"> <!-- Image Source: https://undraw.co/search -->
+        <img width="490" height="545" src="assets/images/rocket%20mars.png" alt="rocket-mars" title="rocket-mars"/>
+    </div>
 
-        <div class="cartDiv">
-            <h2>Register</h2>
-            <h3>Company</h3>
+    <div class="cartDiv">
+        <h2>Register</h2>
+        <h3>Company</h3>
 
-            <form action="#" method="post" id="registerForm">
+        <form action="#" method="post" id="registerForm">
+            <div class="formBox">
+                <span class="fas fa-envelope"></span>
+                <input autofocus title="email" required type="email" id="registerEmail" placeholder="E-mail">
+            </div>
+            <div class="formBox">
+                <span class="fas fa-building"></span>
+                <input placeholder="Company" title="companyName" required type="text" id="registerCompanyName">
+            </div>
+            <div class="formBox" id="coloniesDiv">
+                <span class="fas fa-monument"></span><label for="colonies"></label>
+                <select id="colonies" name="colonyList"></select>
+            </div>
+            <div class="formBox">
+                <span class="fas fa-mobile"></span>
+                <input placeholder="Phone Number" title="companyPhoneNumber" required type="tel" id="registerCompanyPhoneNumber">
+            </div>
+            <div class="formBox">
+                <span class="fas fa-lock"></span>
+                <input placeholder="Password" title="password" required type="password" id="registerPassword">
+            </div>
+            <div class="formBox">
+                <span class="fas fa-lock"></span>
+                <input placeholder="Repeat Password" title="password" required type="password" id="registerPasswordRepeat">
+            </div>
+            <input type="submit" value="Register" title="Register">
+        </form>
+        <a href="login.html">I already have an account.</a>
+    </div>
+</main>
 
-                <div class="formBox">
-                    <span class="fas fa-envelope"></span>
-                    <input autofocus title="email" required type="email" id="registerEmail" placeholder="E-mail">
-                </div>
-
-                <div class="formBox">
-                    <span class="fas fa-building"></span>
-                    <input placeholder="Company" title="companyName" required type="text" id="registerCompanyName">
-                </div>
-
-                <div class="formBox" id="coloniesDiv">
-                    <span class="fas fa-monument"></span><label for="colonies">Colony</label>
-                    <select id="colonies" name="colonyList"></select>
-                </div>
-
-                <div class="formBox">
-                    <span class="fas fa-mobile"></span>
-                    <input placeholder="Phone Number" title="companyPhoneNumber" required type="tel" id="registerCompanyPhoneNumber">
-                </div>
-
-                <div class="formBox">
-                    <span class="fas fa-lock"></span>
-                    <input placeholder="Password" title="password" required type="password" id="registerPassword">
-                </div>
-
-                <div class="formBox">
-                    <span class="fas fa-lock"></span>
-                    <input placeholder="Repeat Password" title="password" required type="password" id="registerPasswordRepeat">
-                </div>
-
-                <input type="submit" value="Register" title="Register">
-
-            </form>
-
-            <a href="login.html">I already have an account.</a>
-        </div>
-    </main>
-
-    <footer>
-        <p>&copy; Howest MarsDex 2020</p>
-    </footer>
-
-    <script src="assets/js/application/html-generator/martian-header-generator.js"></script>
-    <script src="assets/js/application/error.js"></script>
-    <script src="assets/js/configuration/config.js"></script>
-    <script src="assets/js/configuration/api.js"></script>
-    <script src="assets/js/application/register.js"></script>
-    <script src="assets/js/application/login-and-register.js"></script>
+<script src="assets/js/configuration/main.js"></script>
+<script src="assets/js/application/html-generator/martian-header-generator.js"></script>
+<script src="assets/js/application/error.js"></script>
+<script src="assets/js/configuration/api.js"></script>
+<script src="assets/js/application/register.js"></script>
+<script src="assets/js/application/login-and-register.js"></script>
+<script src="assets/js/application/html-generator/footer-generator.js"></script>
 </body>
 </html>

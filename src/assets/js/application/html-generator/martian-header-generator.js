@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", initHtmlGenerator);
 
 function initHtmlGenerator() {
     buildMartianHeader();
+    loadFooter();
 }
 
 function buildMartianHeader() {

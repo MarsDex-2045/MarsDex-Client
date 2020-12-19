@@ -1,30 +1,38 @@
 "use strict";
 import {createModifiableResourceElement as createResourceHTML} from "./modules/factory.js";
 
+const querySelectorResourceResultList = "#resourcesResultList";
+
 loadMyResources();
 
 const myResources = [];
 
 function loadMyResources() {
-    if (!document.querySelector("#resourcesResultList")) {return;}
+    if (!document.querySelector(querySelectorResourceResultList)) {return;}
+    const companyId = localStorage.getItem("company-id");
+    const pushId = localStorage.getItem("push-id");
 
-    getMyResources(localStorage.getItem("company-id")).then(response => {
+    getMyResources(companyId).then(response => {
         const companyResources = response.resources;
 
-        document.querySelector("#resourcesResultList").innerHTML = ``;
+        document.querySelector(querySelectorResourceResultList).innerHTML = ``;
         companyResources.forEach(resource => {
             myResources.push(resource);
             createNewResourceElement(resource);
         });
 
+
         document.querySelector("#filtersResources").addEventListener("change", dynamicSortResources);
         document.querySelector("#search-my-resources-form").addEventListener("submit", preventSubmitForm);
         document.querySelector("#searchMyResources").addEventListener("change", searchResultResources);
+
+        getNotifications(companyId, pushId).then(() => {/*No need for response*/});
     });
+
 }
 
 function createNewResourceElement(resource) {
-    createResourceHTML(resource, "#resourcesResultList");
+    createResourceHTML(resource, querySelectorResourceResultList);
     document.querySelectorAll(".edit-resource-button").forEach(editResourceButton => {
         editResourceButton.addEventListener("click", getResourceFromTarget);
     });
@@ -64,7 +72,7 @@ function dynamicSortResources(e) {
         }
     );
 
-    document.querySelector("#resourcesResultList").innerHTML = ``;
+    document.querySelector(querySelectorResourceResultList).innerHTML = ``;
     myResources.forEach(resource => {
         createNewResourceElement(resource);
     });
@@ -84,7 +92,7 @@ function searchResultResources(e) {
         }
     });
 
-    document.querySelector("#resourcesResultList").innerHTML = ``;
+    document.querySelector(querySelectorResourceResultList).innerHTML = ``;
     searchResultResourcesList.forEach(resource => {
         createNewResourceElement(resource);
     });

@@ -47,7 +47,6 @@ body {
     width: 100%;
     outline: none;
     border: none;
-    margin: 0 10px;
     color: var(--fill);
     font-size: 1.2rem;
     font-weight: lighter;
@@ -68,6 +67,10 @@ body {
 .formInputBox span {
     text-align: center;
     padding-left: 5px;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+    writing-mode: vertical-lr;
 }
 
 .formAreaBox {
@@ -162,7 +165,10 @@ body {
 }
 
 #marsDexInformation ul span {
-   margin-right: 5px;
+    margin-right: 10px;
+    height: 15px;
+    width: 15px;
+    writing-mode: vertical-lr;
 }
 
 #contactUsMessage {

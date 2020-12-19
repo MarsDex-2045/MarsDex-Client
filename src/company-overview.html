@@ -27,42 +27,44 @@
     <title>MarsDex | Overview</title>
 </head>
 <body>
-    <header>
-        <!-- Dynamic loading header -->
-    </header>
+<header>
+    <!-- Dynamic loading header -->
+</header>
 
-    <main>
-        <section id="overview-page-upper-part">
-            <h2 class="subTitle"><span><span class="fas fa-door-open"></span>Welcome Back, <span id="company-name" class="colony-title"><span class="fas fa-user-shield"></span>Company Name</span></span><a class="overview-button" href="company-my-resources.html"><span class="fas fa-cubes"></span>Manage My Resources</a></h2>
-            <div id="upperPart">
-                <div id="resourcesListWithCircle">
-                    <!-- fill with correct resources -->
-                </div>
-                <div id="doughnutChart">
-                    <canvas id="myDoughnutChart"></canvas>
-                </div>
+<main>
+    <section id="overview-page-upper-part">
+        <h2 class="subTitle"><span><span class="fas fa-door-open"></span>Welcome Back, <span id="company-name"
+                                                                                             class="colony-title"><span
+                class="fas fa-user-shield"></span>Company Name</span></span><a class="overview-button"
+                                                                               href="company-my-resources.html"><span
+                class="fas fa-cubes"></span>Manage My Resources</a></h2>
+        <div id="upperPart">
+            <div id="resourcesListWithCircle">
+                <!-- fill with correct resources -->
             </div>
-        </section>
-        <section id="shipping">
-            <h2 class="subTitle"><span><span class="fas fa-plane-departure"></span>Recent Shipping Details</span><a class="overview-button" href="company-shipping.html"><span class="fas fa-plane-departure"></span>Manage My Shipments</a></h2>
-            <div id="shippingResultList"></div>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; Howest MarsDex 2020</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script src="assets/js/application/html-generator/company-header-generator.js"></script>
-    <script src="assets/js/application/error.js"></script>
-    <script src="assets/js/application/pop-up.js"></script>
-    <script src="assets/js/application/html-generator/pop-up-generator.js"></script>
-    <script src="assets/js/configuration/config.js"></script>
-    <script src="assets/js/configuration/api.js"></script>
-    <script src="assets/js/util/colony-details-util.js"></script>
-    <script src="assets/js/overview/overview.js"></script>
-    <script src="assets/js/application/html-generator/colony-details-generator.js"></script>
-    <script src="assets/js/application/html-generator/shipping-generator.js"></script>
+            <div id="doughnutChart">
+                <canvas id="myDoughnutChart"></canvas>
+            </div>
+        </div>
+    </section>
+    <section id="shipping">
+        <h2 class="subTitle"><span><span class="fas fa-plane-departure"></span>Recent Shipping Details</span><a
+                class="overview-button" href="company-shipping.html"><span class="fas fa-plane-departure"></span>Manage
+            My Shipments</a></h2>
+        <div id="shippingResultList"></div>
+    </section>
+</main>
+<script src="assets/js/configuration/main.js"></script>
+<script src="assets/js/configuration/api.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="assets/js/application/html-generator/company-header-generator.js"></script>
+<script src="assets/js/application/error.js"></script>
+<script src="assets/js/application/pop-up.js"></script>
+<script src="assets/js/application/html-generator/pop-up-generator.js"></script>
+<script src="assets/js/util/colony-details-util.js"></script>
+<script src="assets/js/overview/overview.js"></script>
+<script src="assets/js/application/html-generator/colony-details-generator.js"></script>
+<script src="assets/js/application/html-generator/shipping-generator.js"></script>
+<script src="assets/js/application/html-generator/footer-generator.js"></script>
 </body>
 </html>

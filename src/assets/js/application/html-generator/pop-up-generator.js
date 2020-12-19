@@ -63,7 +63,7 @@ function addPopUp() {
                 <input title="companyName" required type="text" value="MaMiCo" id="registerCompanyName">
 
                 <label for="registerEmail">Email</label>
-                <input autofocus title="email" required type="text" value="mamico@mars.com" id="registerEmail">
+                <input title="email" required type="text" value="mamico@mars.com" id="registerEmail">
 
                 <label for="registerColonyName">Colony Name</label>
                 <input title="colonyName" required type="text" value="Durrance Camp" id="registerColonyName">
@@ -89,8 +89,8 @@ function generateDetails() {
         <section id="notificationDetails" class="hidden">
             <h2>Details <span id="notificationTitle">Low Resources</span></h2>
             <ul>
-                <li><span class="fas fa-cubes"></span><div>Resource: <span id="resourceTitle">Gold</span></div></li>
-                <li><span class="fas fa-box-open"></span><div>Remaining resources: <span id="resourceLeft">15kg</span></div></li>
+                <li><span class="fas fa-cubes"></span><div>Resource: <span id="resourceTitle">Benitoite</span></div></li>
+                <li><span class="fas fa-box-open"></span><div>Remaining resources: <span id="resourceLeft">150KG</span></div></li>
                 <li><span class="fas fa-clock"></span><div>Date and time: <span id="dateAndTime">15/03/2065 14:45</span></div></li>
             </ul>
             <h3><span class="fas fa-envelope"></span><strong>Message</strong></h3>
