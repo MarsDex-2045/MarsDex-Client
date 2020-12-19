@@ -51,8 +51,8 @@ function buildCompanyHeader(name) {
                         <div>
                             <p>Resources Low</p>
                             <ul>
-                                <li><span class="fas fa-cubes"></span><div>Gold</div></li>
-                                <li><span class="fas fa-box-open"></span><div>10kg left</div></li>
+                                <li><span class="fas fa-cubes"></span><div>Benitoite</div></li>
+                                <li><span class="fas fa-box-open"></span><div>150KG left</div></li>
                             </ul>
                             <p class="details">details</p>
                         </div>

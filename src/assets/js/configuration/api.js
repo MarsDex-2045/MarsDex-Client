@@ -60,3 +60,15 @@ function getCompanyResources(companyId) {
 function getCompany(companyId) {
     return apiGetCall(`company/${companyId}`, "GET");
 }
+function getNotifications(companyId, pushId) {
+    return apiGetCall(`push/${pushId}/${companyId}`, "GET");
+}
+function addSubscription(endpoint, auth, p256dh) {
+    return apiGetCall(`saveSubscription`, "POST",
+        {
+            "endpoint": endpoint,
+            "auth": auth,
+            "p256dh": p256dh
+        }
+    );
+}
