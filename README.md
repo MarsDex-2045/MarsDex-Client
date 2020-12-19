@@ -10,7 +10,7 @@ Welcome to the Client Repository of the MarsDex. This README.md file will instru
 * [Client](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/client)
 * [Documentation](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/documentation)
 ## Features
-At the time of writing (17/12/20), the following features are implemented:
+At the time of writing (19/12/20), the following features are implemented:
 ### Martian
 - Listing of all colonies  *(Includes searching & sorting)*
 - View details of a colony
@@ -72,13 +72,17 @@ See the [Server Startup Guide](https://git.ti.howest.be/TI/2020-2021/s3/project-
 ### Offsite deployment
 If you want, you can also visit the [version](https://project-ii.ti.howest.be/mars-23/) that is running on Howest's servers, which is fully working and identical to the one on this repo.
 
+## User Flow
+Depending on which actions you want to do, you'll need to do additional actions. You can find a link to a simplified user flow 
+[here](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/client/-/wikis/Markdown/Simplified-User-Flow-SVG).
+
 ## Development environment
 While this application has been made for standard desktop environments (16:9) in mind, the website should be flexible enough to also been used on mobile devices like phones and tablets.
 
 ## Account Credentials
-In the application, you can choose between creating an account & logging in with an account. At the time of writing (19/12/20), authentication is not implemented, but when registering or logging in, you'll be automatically logged in as MaMiCo.
+In the application, you can choose between creating an account & logging in with an account. At the time of writing (19/12/20), authentication is not yet implemented client-side, but when registering or logging in, you'll be automatically logged in as MaMiCo.
 
-If you wish to use any other mock account that is available in our DB, you can use the [following page](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/server/-/wikis/Configuration/Credentials#database-credentials) to get their credentials.
+To see all the mock accounts that are available in our DB, you can use the [following page](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/server/-/wikis/Configuration/Credentials#database-credentials) to get their credentials.
 ## File Structure
 ```
 ├── src
