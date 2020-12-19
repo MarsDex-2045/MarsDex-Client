@@ -31,6 +31,15 @@ Including all the features above, the following functions have been implemented:
 - Deleting a resource
 - Accessing an overview of your company
 
+### Bonus features
+In addition to these features, the following bonus features were also implemented:
+- Geolocation ("You are here" marker on the global map)
+- CSS animations (Found throughout the project)
+- Service Worker ([`sw.js`](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/client/-/blob/master/src/sw.js), you'll also find that it's registered in your dev tools)
+- Push Notifications (This triggers if a resource is lower than 500 KG, a push notification will send to the server)
+
+  ***Note:** If run locally, you'll find that the database does not include an item below 500 KG. If you want to activate a push notification, you can lower the weight of an item to a number below 500 KG to active the push notification.*
+
 ## Bugs
 ### Global map
 - If a marker's popup is opened, but the user opens another maker without closing the first one, the link to go to the details of a colony, doesn't work anymore.
