@@ -7,8 +7,10 @@ const myResources = [];
 
 function loadMyResources() {
     if (!document.querySelector("#resourcesResultList")) {return;}
+    const companyId = localStorage.getItem("company-id");
+    const pushId = localStorage.getItem("push-id");
 
-    getMyResources(localStorage.getItem("company-id")).then(response => {
+    getMyResources(companyId).then(response => {
         const companyResources = response.resources;
 
         document.querySelector("#resourcesResultList").innerHTML = ``;
@@ -21,10 +23,10 @@ function loadMyResources() {
         document.querySelector("#filtersResources").addEventListener("change", dynamicSortResources);
         document.querySelector("#search-my-resources-form").addEventListener("submit", preventSubmitForm);
         document.querySelector("#searchMyResources").addEventListener("change", searchResultResources);
+
+        getNotifications(companyId, pushId).then(() => {/*No need for response*/});
     });
-    getNotifications().then(response => {
-        console.log(response);
-    });
+
 }
 
 function createNewResourceElement(resource) {

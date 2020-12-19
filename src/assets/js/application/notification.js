@@ -34,7 +34,7 @@ function registerPush() {
     }).then(sub => {
         const json = JSON.parse(JSON.stringify(sub));
         addSubscription(json.endpoint, json.keys.auth, json.keys.p256dh).then(response => {
-            localStorage.setItem("pushId", response.id);
+            localStorage.setItem("push-id", response.id);
         });
     });
 }
