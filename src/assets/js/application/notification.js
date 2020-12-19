@@ -32,14 +32,9 @@ function registerPush() {
     navigator.serviceWorker.ready.then(reg => {
         return reg.pushManager.subscribe(subscribeOptions);
     }).then(sub => {
-        console.log(JSON.stringify(sub));
         const json = JSON.parse(JSON.stringify(sub));
-        console.log(json.endpoint);
-        console.log(json.keys.auth);
-        console.log(json.keys.p256dh);
-
         addSubscription(json.endpoint, json.keys.auth, json.keys.p256dh).then(response => {
-            console.log(response);
+            localStorage.setItem("pushId", response.id);
         });
     });
 }
