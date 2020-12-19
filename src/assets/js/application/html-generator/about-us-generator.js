@@ -39,7 +39,7 @@ function loadAboutUs() {
                  title="management-logo" alt="management-logo">
             <div>
                 <h2>Global Management System</h2>
-                <p>Since we should be a system that is used over whole Mars, we have created it so that you can register all your company resources and still have a nice overview.
+                <p>Because we are universally used on mars, you can trade with everyone!
                  On our platform you can manage your resources by adding, editing and removing them in a super easy way.
                   Once our investors are convinced, we will extend our management system to a trading platform. This means you will be able to ask other colonies
                    for resources and you can sell them yourself to through a bidding war on a request for resources. Stay tuned for more!</p>
