@@ -1,6 +1,5 @@
 "use strict";
 
-
 self.addEventListener("push", e => {
     const msg = e.data.text();
     self.registration.showNotification(msg);
@@ -9,7 +8,7 @@ self.addEventListener("push", e => {
 self.addEventListener("notificationclick", e => {
         if (e.notification.tag === "yes") {
             e.waitUntil(
-                self.clients.openWindow("http://localhost:63343/client/src/")
+                self.clients.openWindow("./index.html")
             );
         } else if (e.notification.tag === "no") {
             e.waitUntil(

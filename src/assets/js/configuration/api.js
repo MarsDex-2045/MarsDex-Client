@@ -61,10 +61,10 @@ function getCompany(companyId) {
     return apiGetCall(`company/${companyId}`, "GET");
 }
 function getNotifications() {
-    return apiGetCall(`/pushNotification`, "GET");
+    return apiGetCall(`pushNotification`, "GET");
 }
 function addSubscription(endpoint, auth, p256dh) {
-    return apiGetCall(`/saveSubscription`, "POST",
+    return apiGetCall(`saveSubscription`, "POST",
         {
             "endpoint": endpoint,
             "auth": auth,
