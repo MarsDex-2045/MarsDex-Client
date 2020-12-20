@@ -10,7 +10,7 @@ Welcome to the Client Repository of the MarsDex. This README.md file will instru
 * [Client](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/client)
 * [Documentation](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/documentation)
 ## Features
-At the time of writing (19/12/20), the following features are implemented:
+At the time of writing (20/12/20), the following features are implemented:
 ### Martian
 - Listing of all colonies  *(Includes searching & sorting)*
 - View details of a colony
@@ -21,7 +21,7 @@ At the time of writing (19/12/20), the following features are implemented:
 - Accessing a contact page
 - Viewing more information about our company.
 ### Company
-***Note:** We received a suggestion to lower the priority of the login & register mechanism. While there is a register page & login page, if you try to register/login, you'll be authenticated as MaMiCo automatically.*
+***Note:** We received a suggestion to lower the priority of the login & register mechanism. While there is a register page & login page and there are endpoints provided in the [server](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/server) repository, if you try to register/login, you'll be authenticated as MaMiCo automatically.*
 
 Including all the features above, the following functions have been implemented:
 - Viewing the resources of your home colony *(Includes searching & sorting)*
@@ -30,6 +30,7 @@ Including all the features above, the following functions have been implemented:
 - Editing a new resource
 - Deleting a resource
 - Accessing an overview of your company
+- Viewing transports
 
 ### Bonus features
 In addition to these features, the following bonus features were also implemented:
@@ -47,7 +48,8 @@ In addition to these features, the following bonus features were also implemente
   
   The workaround is to close the original popup that has been closed explicit or to close the new pop-up that has been opened explicit. 
 ### Resources
-- When adding a new resource, we'll add a placeholder picture as photo. We use a XMLHttpRequest(), but this is depreciated. In a more fully fleshed out concept, we'll replace this with an actual link that references a storage location where all the photos are saved.  
+- When adding a new resource, we'll add a placeholder picture as photo. We use a `XMLHttpRequest` to check if we have a mock picture, but this is depreciated. In a more fully fleshed out concept, we'll replace this with an actual link that references a storage location where all the photos are saved that are passed with the form.
+- Price is at this moment hard-coded. In a full concept, we intend to let the user have control over how the price of his resources, so that is can be used on the marketplace.
 
 ## Setup Guide
 ### Local deployment
@@ -73,14 +75,12 @@ See the [Server Startup Guide](https://git.ti.howest.be/TI/2020-2021/s3/project-
 If you want, you can also visit the [version](https://project-ii.ti.howest.be/mars-23/) that is running on Howest's servers, which is fully working and identical to the one on this repo.
 
 ## User Flow
-Depending on which actions you want to do, you'll need to do additional actions. You can find a link to a simplified user flow 
-[here](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/client/-/wikis/Markdown/Simplified-User-Flow-SVG).
-
+In order to make the review process easier, we provide you with a complete [user flow diagram](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/client/-/wikis/Markdown/User-Flow-SVG) that you can use to explore the features of our POC
 ## Development environment
 While this application has been made for standard desktop environments (16:9) in mind, the website should be flexible enough to also been used on mobile devices like phones and tablets.
 
 ## Account Credentials
-In the application, you can choose between creating an account & logging in with an account. At the time of writing (19/12/20), authentication is not yet implemented client-side, but when registering or logging in, you'll be automatically logged in as MaMiCo.
+In the application, you can choose between creating an account & logging in with an account. At the time of writing (20/12/20), authentication is not yet implemented client-side, but when registering or logging in, you'll be automatically logged in as MaMiCo.
 
 To see all the mock accounts that are available in our DB, you can use the [following page](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/server/-/wikis/Configuration/Credentials#database-credentials) to get their credentials.
 ## File Structure
