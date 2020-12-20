@@ -3,7 +3,7 @@
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
-    document.querySelector("#submitResourceButton").addEventListener("click", newResourceForm);
+    document.querySelector("#resourceForm").addEventListener("submit", newResourceForm);
 }
 
 function newResourceForm(e) {
@@ -23,7 +23,8 @@ function newResourceForm(e) {
         if (response.processed === true) {
             window.location.assign("company-my-resources.html"); // Temporarily
         } else {
-            sendError("error", "Failed adding resource", "The resource name already exist.");
+            sendError("error", "Failed adding resource", response.cause);
+            document.querySelector("#resourceForm").addEventListener("submit", newResourceForm);
         }
     });
 }
