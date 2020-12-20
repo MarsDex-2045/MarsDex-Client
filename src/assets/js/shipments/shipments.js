@@ -13,7 +13,7 @@ function init() {
     }
     document.querySelector("#filtersShipping").addEventListener("change", dynamicSortShipments);
     document.querySelector("#search-form").addEventListener("submit", preventSubmit);
-    document.querySelector(querySelectorSearchShipping).addEventListener("search", searchResult);
+    document.querySelector(querySelectorSearchShipping).addEventListener("change", searchResult);
 }
 
 const maxShipmentsOnPage = 4;
@@ -129,7 +129,7 @@ function preventSubmit(e) {
 function searchResult(e) {
     e.preventDefault();
 
-    const searchRequest = e.target.value;
+    const searchRequest = e.currentTarget.value;
     if (searchRequest === "" || searchRequest === " ") {
         getCompany(localStorageCompanyId).then(company => {
             loadPageShipments(companyShipments, (currentPage - 1) * maxShipmentsOnPage, company);
