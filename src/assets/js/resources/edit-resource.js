@@ -6,7 +6,7 @@ let resource;
 
 function init() {
     loadEditResource();
-    document.querySelector("#editResourceSubmitButton").addEventListener("click", submitEditResource);
+    document.querySelector("#resourceForm").addEventListener("submit", submitEditResource);
 }
 
 function loadEditResource() {
@@ -33,7 +33,8 @@ function submitEditResource(e) {
             window.location.assign("company-my-resources.html");
         } else {
             // Error Implementation
-            sendError("error", "Resource updating failed", "The resource weight is not correctly changed.");
+            sendError("error", "Resource updating failed", response.cause);
+            document.querySelector("#resourceForm").addEventListener("submit", submitEditResource);
         }
     });
 }
