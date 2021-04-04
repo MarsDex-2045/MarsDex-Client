@@ -22,7 +22,7 @@ At the time of writing (20/12/20), the following features are implemented:
 - Accessing a contact page
 - Viewing more information about our company.
 ### Company
-***Note:** We received a suggestion to lower the priority of the login & register mechanism. While there is a register page & login page and there are endpoints provided in the [server](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/server) repository, if you try to register/login, you'll be authenticated as MaMiCo automatically.*
+***Note:** We received a suggestion to lower the priority of the login & register mechanism. While there is a register page & login page and there are endpoints provided in the [server](https://github.com/BT-Creator/MarsDex-Server) repository, if you try to register/login, you'll be authenticated as MaMiCo automatically.*
 
 Including all the features above, the following functions have been implemented:
 - Viewing the resources of your home colony *(Includes searching & sorting)*
@@ -37,7 +37,7 @@ Including all the features above, the following functions have been implemented:
 In addition to these features, the following bonus features were also implemented:
 - Geolocation ("You are here" marker on the global map)
 - CSS animations (Found throughout the project)
-- Service Worker ([`sw.js`](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/client/-/blob/master/src/sw.js), you'll also find that it's registered in your dev tools)
+- Service Worker (`sw.js`), you'll also find that it's registered in your dev tools)
 - Push Notifications (This triggers if a resource is lower than 500 KG, a push notification will send to the server)
 
   ***Note:** If run locally, you'll find that the database does not include an item below 500 KG. If you want to activate a push notification, you can lower the weight of an item to a number below 500 KG to active the push notification.*
@@ -55,7 +55,7 @@ In addition to these features, the following bonus features were also implemente
 ## How to Start
 ### Local deployment
 #### 1. Configuring the server
-See the [Server Startup Guide](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/server#how-to-start)
+See the [Server Startup Guide](https://github.com/BT-Creator/MarsDex-Server#how-to-start)
 #### 2. Configuring the web client
 1. Clone the client repository to your machine
 2. Open the Client Repository in your IDE of choice. This is a plain HTML/CSS/JS application (for the time being)
@@ -72,18 +72,13 @@ See the [Server Startup Guide](https://git.ti.howest.be/TI/2020-2021/s3/project-
 6. Reload the page again to make sure you receive your push id.
 
 ***Note:** Some IDE's (Like VSCode), will open the HTML itself in the browser, instead of simulating a webserver environment (Like IntelliJ/PHPStorm). This causes some weird behavior, so we suggest using PHPStorm/IntelliJ to inspect the project.*
-### Offsite deployment
-If you want, you can also visit the [version](https://project-ii.ti.howest.be/mars-23/) that is running on Howest's servers, which is fully working and identical to the one on this repo.
 
-## User Flow
-In order to make the review process easier, we provide you with a complete [user flow diagram](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/client/-/wikis/Markdown/User-Flow-SVG) that you can use to explore the features of our POC
 ## Development environment
 While this application has been made for standard desktop environments (16:9) in mind, the website should be flexible enough to also been used on mobile devices like phones and tablets.
 
 ## Account Credentials
 In the application, you can choose between creating an account & logging in with an account. At the time of writing (20/12/20), authentication is not yet implemented client-side, but when registering or logging in, you'll be automatically logged in as MaMiCo.
 
-To see all the mock accounts that are available in our DB, you can use the [following page](https://git.ti.howest.be/TI/2020-2021/s3/project-ii/projects/groep-23/server/-/wikis/Configuration/Credentials#database-credentials) to get their credentials.
 ## File Structure
 ```
 ├── src
