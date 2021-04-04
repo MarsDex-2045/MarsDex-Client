@@ -116,5 +116,3 @@ In the application, you can choose between creating an account & logging in with
 ├── README.md
 └── sonar-project.properties
 ```
-## Contributing
-Found a fault in the code, that isn't a duplicated issue? Message Yarne Savaete and we investigate the issue in our team.
