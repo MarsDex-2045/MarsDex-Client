@@ -3,7 +3,7 @@ Welcome to the Client Repository of the MarsDex. This README.md file will instru
 
 |Version|Maintenance|
 |---|---|
-|[![Generic badge](https://img.shields.io/badge/Version-Live-blue.svg)](https://shields.io/)|![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)|
+|[![Generic badge](https://img.shields.io/badge/Version-Live-blue.svg)](https://shields.io/)|![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)|
 
 ## Index
 - [Documentation](https://github.com/BT-Creator/MarsDex-Documentation)
